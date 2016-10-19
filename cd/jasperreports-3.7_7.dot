@@ -1,0 +1,15 @@
+digraph cd {
+	net_sf_jasperreports_engine_query_JRAbstractQueryExecuter [label="<<package_exit>>
+net.sf.jasperreports.engine.query.JRAbstractQueryExecuter",style=filled,color="grey"];
+	net_sf_jasperreports_engine_query_JRQueryExecuterFactory [label="<<package_entry>>
+net.sf.jasperreports.engine.query.JRQueryExecuterFactory",style=filled,color="grey"];
+	net_sf_jasperreports_engine_fill_JRFillParameter [label="<<otherpackage1>>
+net.sf.jasperreports.engine.fill.JRFillParameter"];
+	net_sf_jasperreports_engine_fill_JRFillDataset [label="<<otherpackage2>>
+net.sf.jasperreports.engine.fill.JRFillDataset"];
+	net_sf_jasperreports_engine_fill_JRFillObjectFactory [label="net.sf.jasperreports.engine.fill.JRFillObjectFactory"];
+	net_sf_jasperreports_engine_query_JRAbstractQueryExecuter -> net_sf_jasperreports_engine_fill_JRFillParameter [label=uses];
+	net_sf_jasperreports_engine_fill_JRFillDataset -> net_sf_jasperreports_engine_query_JRQueryExecuterFactory [label=uses];
+	net_sf_jasperreports_engine_fill_JRFillParameter -> net_sf_jasperreports_engine_fill_JRFillObjectFactory [label=uses];
+	net_sf_jasperreports_engine_fill_JRFillObjectFactory -> net_sf_jasperreports_engine_fill_JRFillDataset [label=uses];
+}

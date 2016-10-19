@@ -1,0 +1,10 @@
+digraph cd {
+	net_sf_jasperreports_olap_JRMdxQueryExecuterFactory [label="<<package_exit>>
+net.sf.jasperreports.olap.JRMdxQueryExecuterFactory",style=filled,color="grey"];
+	net_sf_jasperreports_olap_JROlapDataSource [label="<<package_entry>>
+net.sf.jasperreports.olap.JROlapDataSource",style=filled,color="grey"];
+	net_sf_jasperreports_olap_xmla_JRXmlaQueryExecuter [label="<<otherpackage1>>
+net.sf.jasperreports.olap.xmla.JRXmlaQueryExecuter"];
+	net_sf_jasperreports_olap_JRMdxQueryExecuterFactory -> net_sf_jasperreports_olap_xmla_JRXmlaQueryExecuter [label=uses];
+	net_sf_jasperreports_olap_xmla_JRXmlaQueryExecuter -> net_sf_jasperreports_olap_JROlapDataSource [label=uses];
+}

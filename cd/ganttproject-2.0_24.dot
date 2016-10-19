@@ -1,0 +1,13 @@
+digraph cd {
+	net_sourceforge_ganttproject_util_ColorConvertion [label="<<package_exit>>
+net.sourceforge.ganttproject.util.ColorConvertion",style=filled,color="grey"];
+	net_sourceforge_ganttproject_util_TextLengthCalculatorImpl [label="<<package_entry>>
+net.sourceforge.ganttproject.util.TextLengthCalculatorImpl",style=filled,color="grey"];
+	net_sourceforge_ganttproject_GanttGraphicArea [label="<<otherpackage1>>
+net.sourceforge.ganttproject.GanttGraphicArea"];
+	net_sourceforge_ganttproject_TaskTreeImageGenerator [label="<<otherpackage2>>
+net.sourceforge.ganttproject.TaskTreeImageGenerator"];
+	net_sourceforge_ganttproject_util_ColorConvertion -> net_sourceforge_ganttproject_GanttGraphicArea [label=uses];
+	net_sourceforge_ganttproject_TaskTreeImageGenerator -> net_sourceforge_ganttproject_util_TextLengthCalculatorImpl [label=uses];
+	net_sourceforge_ganttproject_GanttGraphicArea -> net_sourceforge_ganttproject_TaskTreeImageGenerator [label=uses];
+}

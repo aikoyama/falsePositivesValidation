@@ -1,0 +1,8 @@
+digraph cd {
+	net_sourceforge_ganttproject_language_GanttLanguage [label="<<package_exit>>
+net.sourceforge.ganttproject.language.GanttLanguage",style=filled,color="grey"];
+	net_sourceforge_ganttproject_GanttCalendar [label="<<otherpackage1>>
+net.sourceforge.ganttproject.GanttCalendar"];
+	net_sourceforge_ganttproject_language_GanttLanguage -> net_sourceforge_ganttproject_GanttCalendar [label=uses];
+	net_sourceforge_ganttproject_GanttCalendar -> net_sourceforge_ganttproject_language_GanttLanguage [label=uses];
+}

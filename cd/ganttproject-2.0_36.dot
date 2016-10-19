@@ -1,0 +1,10 @@
+digraph cd {
+	org_eclipse_core_runtime_Platform [label="<<package_exit>>
+org.eclipse.core.runtime.Platform",style=filled,color="grey"];
+	org_eclipse_core_runtime_IProgressMonitor [label="<<package_entry>>
+org.eclipse.core.runtime.IProgressMonitor",style=filled,color="grey"];
+	org_eclipse_core_runtime_jobs_IJobManager [label="<<otherpackage1>>
+org.eclipse.core.runtime.jobs.IJobManager"];
+	org_eclipse_core_runtime_Platform -> org_eclipse_core_runtime_jobs_IJobManager [label=uses];
+	org_eclipse_core_runtime_jobs_IJobManager -> org_eclipse_core_runtime_IProgressMonitor [label=uses];
+}

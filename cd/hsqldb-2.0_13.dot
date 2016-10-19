@@ -1,0 +1,13 @@
+digraph cd {
+	org_hsqldb_store_ReusableObjectCache [label="<<package_exit>>
+org.hsqldb.store.ReusableObjectCache",style=filled,color="grey"];
+	org_hsqldb_store_BaseHashMap [label="<<package_entry>>
+org.hsqldb.store.BaseHashMap",style=filled,color="grey"];
+	org_hsqldb_lib_HashMappedList [label="<<otherpackage1>>
+org.hsqldb.lib.HashMappedList"];
+	org_hsqldb_lib_HashMap [label="<<otherpackage2>>
+org.hsqldb.lib.HashMap"];
+	org_hsqldb_store_ReusableObjectCache -> org_hsqldb_lib_HashMappedList [label=uses];
+	org_hsqldb_lib_HashMap -> org_hsqldb_store_BaseHashMap [label=extends];
+	org_hsqldb_lib_HashMappedList -> org_hsqldb_lib_HashMap [label=extends];
+}

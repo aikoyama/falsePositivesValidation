@@ -1,0 +1,15 @@
+digraph cd {
+	net_sourceforge_ganttproject_gui_options_ProjectSettingsPanel [label="<<package_exit>>
+net.sourceforge.ganttproject.gui.options.ProjectSettingsPanel",style=filled,color="grey"];
+	net_sourceforge_ganttproject_gui_options_SettingsDialog [label="<<package_entry>>
+net.sourceforge.ganttproject.gui.options.SettingsDialog",style=filled,color="grey"];
+	net_sourceforge_ganttproject_IGanttProject [label="<<otherpackage1>>
+net.sourceforge.ganttproject.IGanttProject"];
+	net_sourceforge_ganttproject_GanttProject [label="<<otherpackage2>>
+net.sourceforge.ganttproject.GanttProject"];
+	net_sourceforge_ganttproject_calendar_GPCalendar [label="net.sourceforge.ganttproject.calendar.GPCalendar"];
+	net_sourceforge_ganttproject_gui_options_ProjectSettingsPanel -> net_sourceforge_ganttproject_IGanttProject [label=uses];
+	net_sourceforge_ganttproject_GanttProject -> net_sourceforge_ganttproject_gui_options_SettingsDialog [label=uses];
+	net_sourceforge_ganttproject_IGanttProject -> net_sourceforge_ganttproject_calendar_GPCalendar [label=uses];
+	net_sourceforge_ganttproject_calendar_GPCalendar -> net_sourceforge_ganttproject_GanttProject [label=uses];
+}

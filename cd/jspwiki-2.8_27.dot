@@ -1,0 +1,13 @@
+digraph cd {
+	com_ecyrd_jspwiki_auth_user_AbstractUserDatabase [label="<<package_exit>>
+com.ecyrd.jspwiki.auth.user.AbstractUserDatabase",style=filled,color="grey"];
+	com_ecyrd_jspwiki_auth_user_UserProfile [label="<<package_entry>>
+com.ecyrd.jspwiki.auth.user.UserProfile",style=filled,color="grey"];
+	com_ecyrd_jspwiki_WikiEngine [label="<<otherpackage1>>
+com.ecyrd.jspwiki.WikiEngine"];
+	com_ecyrd_jspwiki_PageManager [label="<<otherpackage2>>
+com.ecyrd.jspwiki.PageManager"];
+	com_ecyrd_jspwiki_auth_user_AbstractUserDatabase -> com_ecyrd_jspwiki_WikiEngine [label=uses];
+	com_ecyrd_jspwiki_PageManager -> com_ecyrd_jspwiki_auth_user_UserProfile [label=uses];
+	com_ecyrd_jspwiki_WikiEngine -> com_ecyrd_jspwiki_PageManager [label=uses];
+}

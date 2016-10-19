@@ -1,0 +1,10 @@
+digraph cd {
+	org_java_plugin_registry_PluginRegistry [label="<<package_exit>>
+org.java.plugin.registry.PluginRegistry",style=filled,color="grey"];
+	org_java_plugin_registry_Identity [label="<<package_entry>>
+org.java.plugin.registry.Identity",style=filled,color="grey"];
+	org_java_plugin_PathResolver [label="<<otherpackage1>>
+org.java.plugin.PathResolver"];
+	org_java_plugin_registry_PluginRegistry -> org_java_plugin_PathResolver [label=uses];
+	org_java_plugin_PathResolver -> org_java_plugin_registry_Identity [label=uses];
+}

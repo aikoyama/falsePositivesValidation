@@ -1,0 +1,8 @@
+digraph stk {
+	org_apache_log4j_Level [label="<<type>>
+org.apache.log4j.Level",style=filled,color="grey"];
+	org_apache_log4j_Priority [label="<<supertype>>
+org.apache.log4j.Priority",style=filled,color="grey"];
+	org_apache_log4j_Level -> org_apache_log4j_Priority [label=extends];
+	org_apache_log4j_Priority -> org_apache_log4j_Level [label=uses];
+}

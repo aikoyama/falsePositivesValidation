@@ -1,0 +1,18 @@
+digraph stk {
+	org_argouml_uml_diagram_ui_FigEdgeAssociationClass [label="<<type>>
+org.argouml.uml.diagram.ui.FigEdgeAssociationClass",style=filled,color="grey"];
+	org_argouml_uml_diagram_ui_FigEdgeModelElement [label="<<supertype>>
+org.argouml.uml.diagram.ui.FigEdgeModelElement",style=filled,color="grey"];
+	org_argouml_uml_ui_UMLTreeCellRenderer [label="org.argouml.uml.ui.UMLTreeCellRenderer"];
+	org_argouml_ui_DisplayTextTree [label="org.argouml.ui.DisplayTextTree"];
+	org_argouml_uml_diagram_ui_UMLDiagram [label="org.argouml.uml.diagram.ui.UMLDiagram"];
+	org_argouml_cognitive_ui_ActionGoToCritique [label="org.argouml.cognitive.ui.ActionGoToCritique"];
+	org_argouml_cognitive_ui_ToDoPane [label="org.argouml.cognitive.ui.ToDoPane"];
+	org_argouml_uml_diagram_ui_FigEdgeAssociationClass -> org_argouml_uml_diagram_ui_FigEdgeModelElement [label=extends];
+	org_argouml_uml_diagram_ui_FigEdgeModelElement -> org_argouml_cognitive_ui_ActionGoToCritique [label=uses];
+	org_argouml_cognitive_ui_ActionGoToCritique -> org_argouml_cognitive_ui_ToDoPane [label=uses];
+	org_argouml_cognitive_ui_ToDoPane -> org_argouml_ui_DisplayTextTree [label=uses];
+	org_argouml_ui_DisplayTextTree -> org_argouml_uml_ui_UMLTreeCellRenderer [label=uses];
+	org_argouml_uml_ui_UMLTreeCellRenderer -> org_argouml_uml_diagram_ui_UMLDiagram [label=uses];
+	org_argouml_uml_diagram_ui_UMLDiagram -> org_argouml_uml_diagram_ui_FigEdgeAssociationClass [label=uses];
+}

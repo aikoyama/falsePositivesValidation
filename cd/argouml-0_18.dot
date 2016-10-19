@@ -1,0 +1,10 @@
+digraph cd {
+	org_argouml_uml_diagram_use_case_ui_FigUseCase [label="<<package_exit>>
+org.argouml.uml.diagram.use_case.ui.FigUseCase",style=filled,color="grey"];
+	org_argouml_uml_diagram_use_case_ui_FigExtensionPoint [label="<<package_entry>>
+org.argouml.uml.diagram.use_case.ui.FigExtensionPoint",style=filled,color="grey"];
+	org_argouml_uml_diagram_ui_FigExtensionPointsCompartment [label="<<otherpackage1>>
+org.argouml.uml.diagram.ui.FigExtensionPointsCompartment"];
+	org_argouml_uml_diagram_use_case_ui_FigUseCase -> org_argouml_uml_diagram_ui_FigExtensionPointsCompartment [label=uses];
+	org_argouml_uml_diagram_ui_FigExtensionPointsCompartment -> org_argouml_uml_diagram_use_case_ui_FigExtensionPoint [label=uses];
+}

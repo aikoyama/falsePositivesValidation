@@ -1,0 +1,13 @@
+digraph cd {
+	javax_help_plaf_HelpNavigatorUI [label="<<package_exit>>
+javax.help.plaf.HelpNavigatorUI",style=filled,color="grey"];
+	javax_help_NavigatorView [label="<<otherpackage1>>
+javax.help.NavigatorView"];
+	javax_help_JHelpNavigator [label="<<otherpackage2>>
+javax.help.JHelpNavigator"];
+	javax_help_HelpModel [label="javax.help.HelpModel"];
+	javax_help_plaf_HelpNavigatorUI -> javax_help_NavigatorView [label=uses];
+	javax_help_JHelpNavigator -> javax_help_plaf_HelpNavigatorUI [label=uses];
+	javax_help_NavigatorView -> javax_help_HelpModel [label=uses];
+	javax_help_HelpModel -> javax_help_JHelpNavigator [label=uses];
+}

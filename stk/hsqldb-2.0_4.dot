@@ -1,0 +1,14 @@
+digraph stk {
+	org_hsqldb_ExpressionLike [label="<<type>>
+org.hsqldb.ExpressionLike",style=filled,color="grey"];
+	org_hsqldb_ExpressionLogical [label="<<supertype>>
+org.hsqldb.ExpressionLogical",style=filled,color="grey"];
+	org_hsqldb_View [label="org.hsqldb.View"];
+	org_hsqldb_SubQuery [label="org.hsqldb.SubQuery"];
+	org_hsqldb_ParserDQL [label="org.hsqldb.ParserDQL"];
+	org_hsqldb_ExpressionLike -> org_hsqldb_ExpressionLogical [label=extends];
+	org_hsqldb_ExpressionLogical -> org_hsqldb_SubQuery [label=uses];
+	org_hsqldb_SubQuery -> org_hsqldb_View [label=uses];
+	org_hsqldb_View -> org_hsqldb_ParserDQL [label=uses];
+	org_hsqldb_ParserDQL -> org_hsqldb_ExpressionLike [label=uses];
+}

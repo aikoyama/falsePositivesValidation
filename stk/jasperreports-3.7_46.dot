@@ -1,0 +1,14 @@
+digraph stk {
+	net_sf_jasperreports_engine_base_JRBoxPen [label="<<type>>
+net.sf.jasperreports.engine.base.JRBoxPen",style=filled,color="grey"];
+	net_sf_jasperreports_engine_JRPen [label="<<supertype>>
+net.sf.jasperreports.engine.JRPen",style=filled,color="grey"];
+	net_sf_jasperreports_engine_JRStyle [label="net.sf.jasperreports.engine.JRStyle"];
+	net_sf_jasperreports_engine_JRLineBox [label="net.sf.jasperreports.engine.JRLineBox"];
+	net_sf_jasperreports_engine_JRStyleContainer [label="net.sf.jasperreports.engine.JRStyleContainer"];
+	net_sf_jasperreports_engine_base_JRBoxPen -> net_sf_jasperreports_engine_JRPen [label=extends];
+	net_sf_jasperreports_engine_JRPen -> net_sf_jasperreports_engine_JRStyleContainer [label=uses];
+	net_sf_jasperreports_engine_JRStyleContainer -> net_sf_jasperreports_engine_JRStyle [label=uses];
+	net_sf_jasperreports_engine_JRStyle -> net_sf_jasperreports_engine_JRLineBox [label=uses];
+	net_sf_jasperreports_engine_JRLineBox -> net_sf_jasperreports_engine_base_JRBoxPen [label=uses];
+}

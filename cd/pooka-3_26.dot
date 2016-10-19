@@ -1,0 +1,11 @@
+digraph cd {
+	net_suberic_pooka_resource_ResourceManager [label="<<package_exit>>
+net.suberic.pooka.resource.ResourceManager",style=filled,color="grey"];
+	net_suberic_pooka_FolderInfo [label="<<otherpackage1>>
+net.suberic.pooka.FolderInfo"];
+	net_suberic_pooka_Pooka [label="<<otherpackage2>>
+net.suberic.pooka.Pooka"];
+	net_suberic_pooka_resource_ResourceManager -> net_suberic_pooka_FolderInfo [label=uses];
+	net_suberic_pooka_Pooka -> net_suberic_pooka_resource_ResourceManager [label=uses];
+	net_suberic_pooka_FolderInfo -> net_suberic_pooka_Pooka [label=uses];
+}

@@ -1,0 +1,10 @@
+digraph stk {
+	net_suberic_pooka_cache_CachingFolderInfo [label="<<type>>
+net.suberic.pooka.cache.CachingFolderInfo",style=filled,color="grey"];
+	net_suberic_pooka_UIDFolderInfo [label="<<supertype>>
+net.suberic.pooka.UIDFolderInfo",style=filled,color="grey"];
+	net_suberic_pooka_StoreInfo [label="net.suberic.pooka.StoreInfo"];
+	net_suberic_pooka_cache_CachingFolderInfo -> net_suberic_pooka_UIDFolderInfo [label=extends];
+	net_suberic_pooka_UIDFolderInfo -> net_suberic_pooka_StoreInfo [label=uses];
+	net_suberic_pooka_StoreInfo -> net_suberic_pooka_cache_CachingFolderInfo [label=uses];
+}

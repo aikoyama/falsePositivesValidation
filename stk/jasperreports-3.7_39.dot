@@ -1,0 +1,16 @@
+digraph stk {
+	net_sf_jasperreports_engine_base_JRBaseChartDataset [label="<<type>>
+net.sf.jasperreports.engine.base.JRBaseChartDataset",style=filled,color="grey"];
+	net_sf_jasperreports_engine_JRChartDataset [label="<<supertype>>
+net.sf.jasperreports.engine.JRChartDataset",style=filled,color="grey"];
+	net_sf_jasperreports_charts_base_JRBaseTimeSeriesDataset [label="net.sf.jasperreports.charts.base.JRBaseTimeSeriesDataset"];
+	net_sf_jasperreports_engine_design_JRVerifier [label="net.sf.jasperreports.engine.design.JRVerifier"];
+	net_sf_jasperreports_engine_component_ComponentCompiler [label="net.sf.jasperreports.engine.component.ComponentCompiler"];
+	net_sf_jasperreports_engine_base_JRBaseObjectFactory [label="net.sf.jasperreports.engine.base.JRBaseObjectFactory"];
+	net_sf_jasperreports_engine_base_JRBaseChartDataset -> net_sf_jasperreports_engine_JRChartDataset [label=implements];
+	net_sf_jasperreports_engine_JRChartDataset -> net_sf_jasperreports_engine_design_JRVerifier [label=uses];
+	net_sf_jasperreports_engine_design_JRVerifier -> net_sf_jasperreports_engine_component_ComponentCompiler [label=uses];
+	net_sf_jasperreports_engine_component_ComponentCompiler -> net_sf_jasperreports_engine_base_JRBaseObjectFactory [label=uses];
+	net_sf_jasperreports_engine_base_JRBaseObjectFactory -> net_sf_jasperreports_charts_base_JRBaseTimeSeriesDataset [label=uses];
+	net_sf_jasperreports_charts_base_JRBaseTimeSeriesDataset -> net_sf_jasperreports_engine_base_JRBaseChartDataset [label=extends];
+}

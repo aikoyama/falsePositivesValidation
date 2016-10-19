@@ -1,0 +1,13 @@
+digraph cd {
+	com_ecyrd_jspwiki_util_BlogUtil [label="<<package_exit>>
+com.ecyrd.jspwiki.util.BlogUtil",style=filled,color="grey"];
+	com_ecyrd_jspwiki_util_WatchDog [label="<<package_entry>>
+com.ecyrd.jspwiki.util.WatchDog",style=filled,color="grey"];
+	com_ecyrd_jspwiki_WikiContext [label="<<otherpackage1>>
+com.ecyrd.jspwiki.WikiContext"];
+	com_ecyrd_jspwiki_WikiEngine [label="<<otherpackage2>>
+com.ecyrd.jspwiki.WikiEngine"];
+	com_ecyrd_jspwiki_util_BlogUtil -> com_ecyrd_jspwiki_WikiContext [label=uses];
+	com_ecyrd_jspwiki_WikiEngine -> com_ecyrd_jspwiki_util_WatchDog [label=uses];
+	com_ecyrd_jspwiki_WikiContext -> com_ecyrd_jspwiki_WikiEngine [label=uses];
+}

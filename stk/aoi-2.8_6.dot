@@ -1,0 +1,18 @@
+digraph stk {
+	artofillusion_animation_distortion_BendDistortion [label="<<type>>
+artofillusion.animation.distortion.BendDistortion",style=filled,color="grey"];
+	artofillusion_animation_distortion_Distortion [label="<<supertype>>
+artofillusion.animation.distortion.Distortion",style=filled,color="grey"];
+	artofillusion_LayoutWindow [label="artofillusion.LayoutWindow"];
+	artofillusion_object_Object3D [label="artofillusion.object.Object3D"];
+	artofillusion_animation_PoseTrack [label="artofillusion.animation.PoseTrack"];
+	artofillusion_object_Mesh [label="artofillusion.object.Mesh"];
+	artofillusion_animation_distortion_BendTrack [label="artofillusion.animation.distortion.BendTrack"];
+	artofillusion_animation_distortion_BendDistortion -> artofillusion_animation_distortion_Distortion [label=implements];
+	artofillusion_animation_distortion_Distortion -> artofillusion_object_Mesh [label=uses];
+	artofillusion_object_Mesh -> artofillusion_object_Object3D [label=uses];
+	artofillusion_object_Object3D -> artofillusion_animation_PoseTrack [label=uses];
+	artofillusion_animation_PoseTrack -> artofillusion_LayoutWindow [label=uses];
+	artofillusion_LayoutWindow -> artofillusion_animation_distortion_BendTrack [label=uses];
+	artofillusion_animation_distortion_BendTrack -> artofillusion_animation_distortion_BendDistortion [label=uses];
+}

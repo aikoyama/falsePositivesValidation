@@ -1,0 +1,13 @@
+digraph cd {
+	com_ecyrd_jspwiki_parser_VariableContent [label="<<package_exit>>
+com.ecyrd.jspwiki.parser.VariableContent",style=filled,color="grey"];
+	com_ecyrd_jspwiki_parser_WikiDocument [label="<<package_entry>>
+com.ecyrd.jspwiki.parser.WikiDocument",style=filled,color="grey"];
+	com_ecyrd_jspwiki_WikiContext [label="<<otherpackage1>>
+com.ecyrd.jspwiki.WikiContext"];
+	com_ecyrd_jspwiki_WikiEngine [label="<<otherpackage2>>
+com.ecyrd.jspwiki.WikiEngine"];
+	com_ecyrd_jspwiki_parser_VariableContent -> com_ecyrd_jspwiki_WikiContext [label=uses];
+	com_ecyrd_jspwiki_WikiEngine -> com_ecyrd_jspwiki_parser_WikiDocument [label=uses];
+	com_ecyrd_jspwiki_WikiContext -> com_ecyrd_jspwiki_WikiEngine [label=uses];
+}

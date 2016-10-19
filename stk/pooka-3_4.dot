@@ -1,0 +1,8 @@
+digraph stk {
+	com_sun_mail_imap_IMAPNestedMessage [label="<<type>>
+com.sun.mail.imap.IMAPNestedMessage",style=filled,color="grey"];
+	com_sun_mail_imap_IMAPMessage [label="<<supertype>>
+com.sun.mail.imap.IMAPMessage",style=filled,color="grey"];
+	com_sun_mail_imap_IMAPNestedMessage -> com_sun_mail_imap_IMAPMessage [label=extends];
+	com_sun_mail_imap_IMAPMessage -> com_sun_mail_imap_IMAPNestedMessage [label=uses];
+}

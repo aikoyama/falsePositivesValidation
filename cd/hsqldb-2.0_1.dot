@@ -1,0 +1,10 @@
+digraph cd {
+	org_hsqldb_RangeVariable$RangeVariableConditions [label="<<package_exit>>
+org.hsqldb.RangeVariable$RangeVariableConditions",style=filled,color="grey"];
+	org_hsqldb_Row [label="<<package_entry>>
+org.hsqldb.Row",style=filled,color="grey"];
+	org_hsqldb_index_Index [label="<<otherpackage1>>
+org.hsqldb.index.Index"];
+	org_hsqldb_RangeVariable$RangeVariableConditions -> org_hsqldb_index_Index [label=uses];
+	org_hsqldb_index_Index -> org_hsqldb_Row [label=uses];
+}

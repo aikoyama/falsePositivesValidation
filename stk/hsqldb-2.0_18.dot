@@ -1,0 +1,10 @@
+digraph stk {
+	org_hsqldb_TableDerived [label="<<type>>
+org.hsqldb.TableDerived",style=filled,color="grey"];
+	org_hsqldb_Table [label="<<supertype>>
+org.hsqldb.Table",style=filled,color="grey"];
+	org_hsqldb_QueryExpression [label="org.hsqldb.QueryExpression"];
+	org_hsqldb_TableDerived -> org_hsqldb_Table [label=extends];
+	org_hsqldb_Table -> org_hsqldb_QueryExpression [label=uses];
+	org_hsqldb_QueryExpression -> org_hsqldb_TableDerived [label=uses];
+}

@@ -1,0 +1,18 @@
+digraph stk {
+	artofillusion_object_Curve$CurveKeyframe [label="<<type>>
+artofillusion.object.Curve$CurveKeyframe",style=filled,color="grey"];
+	artofillusion_animation_MeshGesture [label="<<supertype>>
+artofillusion.animation.MeshGesture",style=filled,color="grey"];
+	artofillusion_object_TriangleMesh [label="artofillusion.object.TriangleMesh"];
+	artofillusion_object_Object3D [label="artofillusion.object.Object3D"];
+	artofillusion_TriMeshEditorWindow [label="artofillusion.TriMeshEditorWindow"];
+	artofillusion_object_Curve [label="artofillusion.object.Curve"];
+	artofillusion_object_Mesh [label="artofillusion.object.Mesh"];
+	artofillusion_object_Curve$CurveKeyframe -> artofillusion_animation_MeshGesture [label=extends];
+	artofillusion_animation_MeshGesture -> artofillusion_object_Mesh [label=uses];
+	artofillusion_object_Mesh -> artofillusion_object_Object3D [label=uses];
+	artofillusion_object_Object3D -> artofillusion_object_TriangleMesh [label=uses];
+	artofillusion_object_TriangleMesh -> artofillusion_TriMeshEditorWindow [label=uses];
+	artofillusion_TriMeshEditorWindow -> artofillusion_object_Curve [label=uses];
+	artofillusion_object_Curve -> artofillusion_object_Curve$CurveKeyframe [label=uses];
+}

@@ -1,0 +1,13 @@
+digraph cd {
+	org_eclipse_core_runtime_jobs_Job [label="<<package_exit>>
+org.eclipse.core.runtime.jobs.Job",style=filled,color="grey"];
+	org_eclipse_core_runtime_jobs_IJobManager [label="<<package_entry>>
+org.eclipse.core.runtime.jobs.IJobManager",style=filled,color="grey"];
+	org_bardsoftware_impl_eclipsito_InternalJobImpl [label="<<otherpackage1>>
+org.bardsoftware.impl.eclipsito.InternalJobImpl"];
+	org_bardsoftware_impl_eclipsito_JobManagerImpl [label="<<otherpackage2>>
+org.bardsoftware.impl.eclipsito.JobManagerImpl"];
+	org_eclipse_core_runtime_jobs_Job -> org_bardsoftware_impl_eclipsito_InternalJobImpl [label=extends];
+	org_bardsoftware_impl_eclipsito_JobManagerImpl -> org_eclipse_core_runtime_jobs_IJobManager [label=implements];
+	org_bardsoftware_impl_eclipsito_InternalJobImpl -> org_bardsoftware_impl_eclipsito_JobManagerImpl [label=uses];
+}

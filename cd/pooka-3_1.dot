@@ -1,0 +1,8 @@
+digraph cd {
+	net_suberic_pooka_OutgoingMailServer [label="<<package_exit>>
+net.suberic.pooka.OutgoingMailServer",style=filled,color="grey"];
+	net_suberic_pooka_gui_NewMessageProxy [label="<<otherpackage1>>
+net.suberic.pooka.gui.NewMessageProxy"];
+	net_suberic_pooka_OutgoingMailServer -> net_suberic_pooka_gui_NewMessageProxy [label=uses];
+	net_suberic_pooka_gui_NewMessageProxy -> net_suberic_pooka_OutgoingMailServer [label=uses];
+}

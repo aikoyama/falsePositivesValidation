@@ -1,0 +1,10 @@
+digraph cd {
+	org_htmlparser_lexer_Lexer [label="<<package_exit>>
+org.htmlparser.lexer.Lexer",style=filled,color="grey"];
+	org_htmlparser_lexer_Page [label="<<package_entry>>
+org.htmlparser.lexer.Page",style=filled,color="grey"];
+	org_htmlparser_nodes_TagNode [label="<<otherpackage1>>
+org.htmlparser.nodes.TagNode"];
+	org_htmlparser_lexer_Lexer -> org_htmlparser_nodes_TagNode [label=uses];
+	org_htmlparser_nodes_TagNode -> org_htmlparser_lexer_Page [label=uses];
+}

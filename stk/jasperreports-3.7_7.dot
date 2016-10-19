@@ -1,0 +1,16 @@
+digraph stk {
+	net_sf_jasperreports_charts_base_JRBaseHighLowDataset [label="<<type>>
+net.sf.jasperreports.charts.base.JRBaseHighLowDataset",style=filled,color="grey"];
+	net_sf_jasperreports_charts_JRHighLowDataset [label="<<supertype>>
+net.sf.jasperreports.charts.JRHighLowDataset",style=filled,color="grey"];
+	net_sf_jasperreports_engine_design_JRVerifier [label="net.sf.jasperreports.engine.design.JRVerifier"];
+	net_sf_jasperreports_engine_JRChartDataset [label="net.sf.jasperreports.engine.JRChartDataset"];
+	net_sf_jasperreports_engine_component_ComponentCompiler [label="net.sf.jasperreports.engine.component.ComponentCompiler"];
+	net_sf_jasperreports_engine_base_JRBaseObjectFactory [label="net.sf.jasperreports.engine.base.JRBaseObjectFactory"];
+	net_sf_jasperreports_charts_base_JRBaseHighLowDataset -> net_sf_jasperreports_charts_JRHighLowDataset [label=implements];
+	net_sf_jasperreports_charts_JRHighLowDataset -> net_sf_jasperreports_engine_JRChartDataset [label=extends];
+	net_sf_jasperreports_engine_JRChartDataset -> net_sf_jasperreports_engine_design_JRVerifier [label=uses];
+	net_sf_jasperreports_engine_design_JRVerifier -> net_sf_jasperreports_engine_component_ComponentCompiler [label=uses];
+	net_sf_jasperreports_engine_component_ComponentCompiler -> net_sf_jasperreports_engine_base_JRBaseObjectFactory [label=uses];
+	net_sf_jasperreports_engine_base_JRBaseObjectFactory -> net_sf_jasperreports_charts_base_JRBaseHighLowDataset [label=uses];
+}

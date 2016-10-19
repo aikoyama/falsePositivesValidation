@@ -1,0 +1,10 @@
+digraph cd {
+	org_hsqldb_lib_OrderedLongKeyHashMap$KeySet [label="<<package_exit>>
+org.hsqldb.lib.OrderedLongKeyHashMap$KeySet",style=filled,color="grey"];
+	org_hsqldb_lib_Iterator [label="<<package_entry>>
+org.hsqldb.lib.Iterator",style=filled,color="grey"];
+	org_hsqldb_store_BaseHashMap$BaseHashIterator [label="<<otherpackage1>>
+org.hsqldb.store.BaseHashMap$BaseHashIterator"];
+	org_hsqldb_lib_OrderedLongKeyHashMap$KeySet -> org_hsqldb_store_BaseHashMap$BaseHashIterator [label=uses];
+	org_hsqldb_store_BaseHashMap$BaseHashIterator -> org_hsqldb_lib_Iterator [label=implements];
+}

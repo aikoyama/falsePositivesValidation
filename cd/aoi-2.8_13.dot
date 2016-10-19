@@ -1,0 +1,10 @@
+digraph cd {
+	artofillusion_ui_Compound3DManipulator$HandleEvent [label="<<package_exit>>
+artofillusion.ui.Compound3DManipulator$HandleEvent",style=filled,color="grey"];
+	artofillusion_ui_EditingTool [label="<<package_entry>>
+artofillusion.ui.EditingTool",style=filled,color="grey"];
+	artofillusion_ViewerCanvas [label="<<otherpackage1>>
+artofillusion.ViewerCanvas"];
+	artofillusion_ui_Compound3DManipulator$HandleEvent -> artofillusion_ViewerCanvas [label=uses];
+	artofillusion_ViewerCanvas -> artofillusion_ui_EditingTool [label=uses];
+}

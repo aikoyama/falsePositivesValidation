@@ -1,0 +1,13 @@
+digraph cd {
+	net_sf_jasperreports_engine_component_ComponentCompiler [label="<<package_exit>>
+net.sf.jasperreports.engine.component.ComponentCompiler",style=filled,color="grey"];
+	net_sf_jasperreports_engine_component_ComponentManager [label="<<package_entry>>
+net.sf.jasperreports.engine.component.ComponentManager",style=filled,color="grey"];
+	net_sf_jasperreports_engine_base_JRBaseObjectFactory [label="<<otherpackage1>>
+net.sf.jasperreports.engine.base.JRBaseObjectFactory"];
+	net_sf_jasperreports_engine_base_JRBaseComponentElement [label="<<otherpackage2>>
+net.sf.jasperreports.engine.base.JRBaseComponentElement"];
+	net_sf_jasperreports_engine_component_ComponentCompiler -> net_sf_jasperreports_engine_base_JRBaseObjectFactory [label=uses];
+	net_sf_jasperreports_engine_base_JRBaseComponentElement -> net_sf_jasperreports_engine_component_ComponentManager [label=uses];
+	net_sf_jasperreports_engine_base_JRBaseObjectFactory -> net_sf_jasperreports_engine_base_JRBaseComponentElement [label=uses];
+}

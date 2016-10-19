@@ -1,0 +1,18 @@
+digraph stk {
+	net_sf_jasperreports_engine_fill_JRFillChart [label="<<type>>
+net.sf.jasperreports.engine.fill.JRFillChart",style=filled,color="grey"];
+	net_sf_jasperreports_engine_JRChart [label="<<supertype>>
+net.sf.jasperreports.engine.JRChart",style=filled,color="grey"];
+	net_sf_jasperreports_engine_JRElement [label="net.sf.jasperreports.engine.JRElement"];
+	net_sf_jasperreports_engine_component_ComponentManager [label="net.sf.jasperreports.engine.component.ComponentManager"];
+	net_sf_jasperreports_engine_component_ComponentFillFactory [label="net.sf.jasperreports.engine.component.ComponentFillFactory"];
+	net_sf_jasperreports_engine_JRExpressionCollector [label="net.sf.jasperreports.engine.JRExpressionCollector"];
+	net_sf_jasperreports_engine_fill_JRFillObjectFactory [label="net.sf.jasperreports.engine.fill.JRFillObjectFactory"];
+	net_sf_jasperreports_engine_fill_JRFillChart -> net_sf_jasperreports_engine_JRChart [label=implements];
+	net_sf_jasperreports_engine_JRChart -> net_sf_jasperreports_engine_JRElement [label=extends];
+	net_sf_jasperreports_engine_JRElement -> net_sf_jasperreports_engine_JRExpressionCollector [label=uses];
+	net_sf_jasperreports_engine_JRExpressionCollector -> net_sf_jasperreports_engine_component_ComponentManager [label=uses];
+	net_sf_jasperreports_engine_component_ComponentManager -> net_sf_jasperreports_engine_component_ComponentFillFactory [label=uses];
+	net_sf_jasperreports_engine_component_ComponentFillFactory -> net_sf_jasperreports_engine_fill_JRFillObjectFactory [label=uses];
+	net_sf_jasperreports_engine_fill_JRFillObjectFactory -> net_sf_jasperreports_engine_fill_JRFillChart [label=uses];
+}

@@ -1,0 +1,10 @@
+digraph cd {
+	artofillusion_material_LinearMaterialMapping$Editor [label="<<package_exit>>
+artofillusion.material.LinearMaterialMapping$Editor",style=filled,color="grey"];
+	artofillusion_material_MaterialMapping [label="<<package_entry>>
+artofillusion.material.MaterialMapping",style=filled,color="grey"];
+	artofillusion_object_Object3D [label="<<otherpackage1>>
+artofillusion.object.Object3D"];
+	artofillusion_material_LinearMaterialMapping$Editor -> artofillusion_object_Object3D [label=uses];
+	artofillusion_object_Object3D -> artofillusion_material_MaterialMapping [label=uses];
+}

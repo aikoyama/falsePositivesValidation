@@ -1,0 +1,12 @@
+digraph stk {
+	org_hsqldb_StatementSchemaDefinition [label="<<type>>
+org.hsqldb.StatementSchemaDefinition",style=filled,color="grey"];
+	org_hsqldb_StatementSchema [label="<<supertype>>
+org.hsqldb.StatementSchema",style=filled,color="grey"];
+	org_hsqldb_ParserCommand [label="org.hsqldb.ParserCommand"];
+	org_hsqldb_ParserDDL [label="org.hsqldb.ParserDDL"];
+	org_hsqldb_StatementSchemaDefinition -> org_hsqldb_StatementSchema [label=extends];
+	org_hsqldb_StatementSchema -> org_hsqldb_ParserCommand [label=uses];
+	org_hsqldb_ParserCommand -> org_hsqldb_ParserDDL [label=extends];
+	org_hsqldb_ParserDDL -> org_hsqldb_StatementSchemaDefinition [label=uses];
+}

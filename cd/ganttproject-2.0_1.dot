@@ -1,0 +1,15 @@
+digraph cd {
+	net_sourceforge_ganttproject_GanttTree2$3 [label="<<package_exit>>
+net.sourceforge.ganttproject.GanttTree2$3",style=filled,color="grey"];
+	net_sourceforge_ganttproject_GanttCalendar [label="<<package_entry>>
+net.sourceforge.ganttproject.GanttCalendar",style=filled,color="grey"];
+	net_sourceforge_ganttproject_action_GPAction [label="<<otherpackage1>>
+net.sourceforge.ganttproject.action.GPAction"];
+	net_sourceforge_ganttproject_language_GanttLanguage [label="<<otherpackage2>>
+net.sourceforge.ganttproject.language.GanttLanguage"];
+	net_sourceforge_ganttproject_language_GanttLanguage$Event [label="net.sourceforge.ganttproject.language.GanttLanguage$Event"];
+	net_sourceforge_ganttproject_GanttTree2$3 -> net_sourceforge_ganttproject_action_GPAction [label=extends];
+	net_sourceforge_ganttproject_language_GanttLanguage -> net_sourceforge_ganttproject_GanttCalendar [label=uses];
+	net_sourceforge_ganttproject_action_GPAction -> net_sourceforge_ganttproject_language_GanttLanguage$Event [label=uses];
+	net_sourceforge_ganttproject_language_GanttLanguage$Event -> net_sourceforge_ganttproject_language_GanttLanguage [label=uses];
+}

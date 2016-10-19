@@ -1,0 +1,10 @@
+digraph cd {
+	net_sourceforge_ganttproject_action_project_NewProjectAction [label="<<package_exit>>
+net.sourceforge.ganttproject.action.project.NewProjectAction",style=filled,color="grey"];
+	net_sourceforge_ganttproject_action_project_ProjectMenu [label="<<package_entry>>
+net.sourceforge.ganttproject.action.project.ProjectMenu",style=filled,color="grey"];
+	net_sourceforge_ganttproject_GanttProject [label="<<otherpackage1>>
+net.sourceforge.ganttproject.GanttProject"];
+	net_sourceforge_ganttproject_action_project_NewProjectAction -> net_sourceforge_ganttproject_GanttProject [label=uses];
+	net_sourceforge_ganttproject_GanttProject -> net_sourceforge_ganttproject_action_project_ProjectMenu [label=uses];
+}

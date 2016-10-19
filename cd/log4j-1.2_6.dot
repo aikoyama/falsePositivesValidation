@@ -1,0 +1,15 @@
+digraph cd {
+	org_apache_log4j_or_ThreadGroupRenderer [label="<<package_exit>>
+org.apache.log4j.or.ThreadGroupRenderer",style=filled,color="grey"];
+	org_apache_log4j_or_ObjectRenderer [label="<<package_entry>>
+org.apache.log4j.or.ObjectRenderer",style=filled,color="grey"];
+	org_apache_log4j_Layout [label="<<otherpackage1>>
+org.apache.log4j.Layout"];
+	org_apache_log4j_spi_RendererSupport [label="<<otherpackage2>>
+org.apache.log4j.spi.RendererSupport"];
+	org_apache_log4j_spi_LoggingEvent [label="org.apache.log4j.spi.LoggingEvent"];
+	org_apache_log4j_or_ThreadGroupRenderer -> org_apache_log4j_Layout [label=uses];
+	org_apache_log4j_spi_RendererSupport -> org_apache_log4j_or_ObjectRenderer [label=uses];
+	org_apache_log4j_Layout -> org_apache_log4j_spi_LoggingEvent [label=uses];
+	org_apache_log4j_spi_LoggingEvent -> org_apache_log4j_spi_RendererSupport [label=uses];
+}

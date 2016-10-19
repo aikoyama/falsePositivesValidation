@@ -1,0 +1,15 @@
+digraph cd {
+	artofillusion_texture_UVMappingViewer [label="<<package_exit>>
+artofillusion.texture.UVMappingViewer",style=filled,color="grey"];
+	artofillusion_texture_Texture [label="<<package_entry>>
+artofillusion.texture.Texture",style=filled,color="grey"];
+	artofillusion_ui_EditingTool [label="<<otherpackage1>>
+artofillusion.ui.EditingTool"];
+	artofillusion_Scene [label="<<otherpackage2>>
+artofillusion.Scene"];
+	artofillusion_ui_EditingWindow [label="artofillusion.ui.EditingWindow"];
+	artofillusion_texture_UVMappingViewer -> artofillusion_ui_EditingTool [label=uses];
+	artofillusion_Scene -> artofillusion_texture_Texture [label=uses];
+	artofillusion_ui_EditingTool -> artofillusion_ui_EditingWindow [label=uses];
+	artofillusion_ui_EditingWindow -> artofillusion_Scene [label=uses];
+}

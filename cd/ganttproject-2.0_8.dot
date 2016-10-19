@@ -1,0 +1,25 @@
+digraph cd {
+	net_sourceforge_ganttproject_gui_taskproperties_TaskDependenciesPanel [label="<<package_exit>>
+net.sourceforge.ganttproject.gui.taskproperties.TaskDependenciesPanel",style=filled,color="grey"];
+	net_sourceforge_ganttproject_gui_taskproperties_CustomColumnsPanel [label="<<package_entry>>
+net.sourceforge.ganttproject.gui.taskproperties.CustomColumnsPanel",style=filled,color="grey"];
+	net_sourceforge_ganttproject_task_dependency_constraint_FinishFinishConstraintImpl [label="<<otherpackage1>>
+net.sourceforge.ganttproject.task.dependency.constraint.FinishFinishConstraintImpl"];
+	net_sourceforge_ganttproject_gui_GanttTaskPropertiesBean [label="<<otherpackage2>>
+net.sourceforge.ganttproject.gui.GanttTaskPropertiesBean"];
+	net_sourceforge_ganttproject_GanttProject [label="net.sourceforge.ganttproject.GanttProject"];
+	net_sourceforge_ganttproject_task_Task [label="net.sourceforge.ganttproject.task.Task"];
+	net_sourceforge_ganttproject_calendar_GPCalendar [label="net.sourceforge.ganttproject.calendar.GPCalendar"];
+	net_sourceforge_ganttproject_task_TaskManager [label="net.sourceforge.ganttproject.task.TaskManager"];
+	net_sourceforge_ganttproject_gui_GanttDialogProperties [label="net.sourceforge.ganttproject.gui.GanttDialogProperties"];
+	net_sourceforge_ganttproject_action_task_TaskPropertiesAction [label="net.sourceforge.ganttproject.action.task.TaskPropertiesAction"];
+	net_sourceforge_ganttproject_gui_taskproperties_TaskDependenciesPanel -> net_sourceforge_ganttproject_task_dependency_constraint_FinishFinishConstraintImpl [label=uses];
+	net_sourceforge_ganttproject_gui_GanttTaskPropertiesBean -> net_sourceforge_ganttproject_gui_taskproperties_CustomColumnsPanel [label=uses];
+	net_sourceforge_ganttproject_task_dependency_constraint_FinishFinishConstraintImpl -> net_sourceforge_ganttproject_task_Task [label=uses];
+	net_sourceforge_ganttproject_task_Task -> net_sourceforge_ganttproject_task_TaskManager [label=uses];
+	net_sourceforge_ganttproject_task_TaskManager -> net_sourceforge_ganttproject_calendar_GPCalendar [label=uses];
+	net_sourceforge_ganttproject_calendar_GPCalendar -> net_sourceforge_ganttproject_GanttProject [label=uses];
+	net_sourceforge_ganttproject_GanttProject -> net_sourceforge_ganttproject_action_task_TaskPropertiesAction [label=uses];
+	net_sourceforge_ganttproject_action_task_TaskPropertiesAction -> net_sourceforge_ganttproject_gui_GanttDialogProperties [label=uses];
+	net_sourceforge_ganttproject_gui_GanttDialogProperties -> net_sourceforge_ganttproject_gui_GanttTaskPropertiesBean [label=uses];
+}

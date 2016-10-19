@@ -1,0 +1,10 @@
+digraph stk {
+	dog_mail_mbox_MboxDefaultFolder [label="<<type>>
+dog.mail.mbox.MboxDefaultFolder",style=filled,color="grey"];
+	dog_mail_mbox_MboxFolder [label="<<supertype>>
+dog.mail.mbox.MboxFolder",style=filled,color="grey"];
+	dog_mail_mbox_MboxStore [label="dog.mail.mbox.MboxStore"];
+	dog_mail_mbox_MboxDefaultFolder -> dog_mail_mbox_MboxFolder [label=extends];
+	dog_mail_mbox_MboxFolder -> dog_mail_mbox_MboxStore [label=uses];
+	dog_mail_mbox_MboxStore -> dog_mail_mbox_MboxDefaultFolder [label=uses];
+}

@@ -1,0 +1,21 @@
+digraph cd {
+	net_sourceforge_ganttproject_undo_UndoManagerImpl [label="<<package_exit>>
+net.sourceforge.ganttproject.undo.UndoManagerImpl",style=filled,color="grey"];
+	net_sourceforge_ganttproject_undo_GPUndoManager [label="<<package_entry>>
+net.sourceforge.ganttproject.undo.GPUndoManager",style=filled,color="grey"];
+	net_sourceforge_ganttproject_parser_ParserFactory [label="<<otherpackage1>>
+net.sourceforge.ganttproject.parser.ParserFactory"];
+	net_sourceforge_ganttproject_resource_ResourceManager [label="<<otherpackage2>>
+net.sourceforge.ganttproject.resource.ResourceManager"];
+	net_sourceforge_ganttproject_task_Task [label="net.sourceforge.ganttproject.task.Task"];
+	net_sourceforge_ganttproject_task_TaskManager [label="net.sourceforge.ganttproject.task.TaskManager"];
+	net_sourceforge_ganttproject_parser_GPParser [label="net.sourceforge.ganttproject.parser.GPParser"];
+	net_sourceforge_ganttproject_parser_ParsingContext [label="net.sourceforge.ganttproject.parser.ParsingContext"];
+	net_sourceforge_ganttproject_undo_UndoManagerImpl -> net_sourceforge_ganttproject_parser_ParserFactory [label=uses];
+	net_sourceforge_ganttproject_resource_ResourceManager -> net_sourceforge_ganttproject_undo_GPUndoManager [label=uses];
+	net_sourceforge_ganttproject_parser_ParserFactory -> net_sourceforge_ganttproject_parser_GPParser [label=uses];
+	net_sourceforge_ganttproject_parser_GPParser -> net_sourceforge_ganttproject_parser_ParsingContext [label=uses];
+	net_sourceforge_ganttproject_parser_ParsingContext -> net_sourceforge_ganttproject_task_Task [label=uses];
+	net_sourceforge_ganttproject_task_Task -> net_sourceforge_ganttproject_task_TaskManager [label=uses];
+	net_sourceforge_ganttproject_task_TaskManager -> net_sourceforge_ganttproject_resource_ResourceManager [label=uses];
+}

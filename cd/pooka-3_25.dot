@@ -1,0 +1,10 @@
+digraph cd {
+	org_htmlparser_util_NodeTreeWalker [label="<<package_exit>>
+org.htmlparser.util.NodeTreeWalker",style=filled,color="grey"];
+	org_htmlparser_util_NodeList [label="<<package_entry>>
+org.htmlparser.util.NodeList",style=filled,color="grey"];
+	org_htmlparser_Node [label="<<otherpackage1>>
+org.htmlparser.Node"];
+	org_htmlparser_util_NodeTreeWalker -> org_htmlparser_Node [label=uses];
+	org_htmlparser_Node -> org_htmlparser_util_NodeList [label=uses];
+}

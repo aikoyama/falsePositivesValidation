@@ -1,0 +1,24 @@
+digraph stk {
+	net_sf_jasperreports_engine_base_JRBaseReport [label="<<type>>
+net.sf.jasperreports.engine.base.JRBaseReport",style=filled,color="grey"];
+	net_sf_jasperreports_engine_JRReport [label="<<supertype>>
+net.sf.jasperreports.engine.JRReport",style=filled,color="grey"];
+	net_sf_jasperreports_engine_JRElementGroup [label="net.sf.jasperreports.engine.JRElementGroup"];
+	net_sf_jasperreports_charts_JRTimeSeriesDataset [label="net.sf.jasperreports.charts.JRTimeSeriesDataset"];
+	net_sf_jasperreports_engine_JRElement [label="net.sf.jasperreports.engine.JRElement"];
+	net_sf_jasperreports_engine_design_JRVerifier [label="net.sf.jasperreports.engine.design.JRVerifier"];
+	net_sf_jasperreports_engine_JRChartDataset [label="net.sf.jasperreports.engine.JRChartDataset"];
+	net_sf_jasperreports_engine_design_JasperDesign [label="net.sf.jasperreports.engine.design.JasperDesign"];
+	net_sf_jasperreports_engine_JRExpressionCollector [label="net.sf.jasperreports.engine.JRExpressionCollector"];
+	net_sf_jasperreports_engine_JRBand [label="net.sf.jasperreports.engine.JRBand"];
+	net_sf_jasperreports_engine_base_JRBaseReport -> net_sf_jasperreports_engine_JRReport [label=implements];
+	net_sf_jasperreports_engine_JRReport -> net_sf_jasperreports_engine_JRBand [label=uses];
+	net_sf_jasperreports_engine_JRBand -> net_sf_jasperreports_engine_JRElementGroup [label=extends];
+	net_sf_jasperreports_engine_JRElementGroup -> net_sf_jasperreports_engine_JRElement [label=uses];
+	net_sf_jasperreports_engine_JRElement -> net_sf_jasperreports_engine_JRExpressionCollector [label=uses];
+	net_sf_jasperreports_engine_JRExpressionCollector -> net_sf_jasperreports_charts_JRTimeSeriesDataset [label=uses];
+	net_sf_jasperreports_charts_JRTimeSeriesDataset -> net_sf_jasperreports_engine_JRChartDataset [label=extends];
+	net_sf_jasperreports_engine_JRChartDataset -> net_sf_jasperreports_engine_design_JRVerifier [label=uses];
+	net_sf_jasperreports_engine_design_JRVerifier -> net_sf_jasperreports_engine_design_JasperDesign [label=uses];
+	net_sf_jasperreports_engine_design_JasperDesign -> net_sf_jasperreports_engine_base_JRBaseReport [label=extends];
+}

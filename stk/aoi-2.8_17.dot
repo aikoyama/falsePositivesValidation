@@ -1,0 +1,12 @@
+digraph stk {
+	bsh_BSHIfStatement [label="<<type>>
+bsh.BSHIfStatement",style=filled,color="grey"];
+	bsh_SimpleNode [label="<<supertype>>
+bsh.SimpleNode",style=filled,color="grey"];
+	bsh_Interpreter [label="bsh.Interpreter"];
+	bsh_Parser [label="bsh.Parser"];
+	bsh_BSHIfStatement -> bsh_SimpleNode [label=extends];
+	bsh_SimpleNode -> bsh_Interpreter [label=uses];
+	bsh_Interpreter -> bsh_Parser [label=uses];
+	bsh_Parser -> bsh_BSHIfStatement [label=uses];
+}

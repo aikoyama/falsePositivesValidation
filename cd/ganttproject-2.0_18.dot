@@ -1,0 +1,10 @@
+digraph cd {
+	net_sourceforge_ganttproject_gui_previousState_GanttCompareToPreviousStateBean [label="<<package_exit>>
+net.sourceforge.ganttproject.gui.previousState.GanttCompareToPreviousStateBean",style=filled,color="grey"];
+	net_sourceforge_ganttproject_gui_previousState_GanttDialogSaveAsPreviousState [label="<<package_entry>>
+net.sourceforge.ganttproject.gui.previousState.GanttDialogSaveAsPreviousState",style=filled,color="grey"];
+	net_sourceforge_ganttproject_GanttProject [label="<<otherpackage1>>
+net.sourceforge.ganttproject.GanttProject"];
+	net_sourceforge_ganttproject_gui_previousState_GanttCompareToPreviousStateBean -> net_sourceforge_ganttproject_GanttProject [label=uses];
+	net_sourceforge_ganttproject_GanttProject -> net_sourceforge_ganttproject_gui_previousState_GanttDialogSaveAsPreviousState [label=uses];
+}

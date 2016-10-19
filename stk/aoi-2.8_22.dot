@@ -1,0 +1,14 @@
+digraph stk {
+	artofillusion_CurveEditorWindow [label="<<type>>
+artofillusion.CurveEditorWindow",style=filled,color="grey"];
+	artofillusion_ui_EditingWindow [label="<<supertype>>
+artofillusion.ui.EditingWindow",style=filled,color="grey"];
+	artofillusion_LayoutWindow [label="artofillusion.LayoutWindow"];
+	artofillusion_UndoRecord [label="artofillusion.UndoRecord"];
+	artofillusion_object_Curve [label="artofillusion.object.Curve"];
+	artofillusion_CurveEditorWindow -> artofillusion_ui_EditingWindow [label=implements];
+	artofillusion_ui_EditingWindow -> artofillusion_UndoRecord [label=uses];
+	artofillusion_UndoRecord -> artofillusion_LayoutWindow [label=uses];
+	artofillusion_LayoutWindow -> artofillusion_object_Curve [label=uses];
+	artofillusion_object_Curve -> artofillusion_CurveEditorWindow [label=uses];
+}

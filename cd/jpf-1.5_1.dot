@@ -1,0 +1,13 @@
+digraph cd {
+	org_java_plugin_PluginClassLoader [label="<<package_exit>>
+org.java.plugin.PluginClassLoader",style=filled,color="grey"];
+	org_java_plugin_PathResolver [label="<<package_entry>>
+org.java.plugin.PathResolver",style=filled,color="grey"];
+	org_java_plugin_registry_PluginDescriptor [label="<<otherpackage1>>
+org.java.plugin.registry.PluginDescriptor"];
+	org_java_plugin_registry_PluginRegistry [label="<<otherpackage2>>
+org.java.plugin.registry.PluginRegistry"];
+	org_java_plugin_PluginClassLoader -> org_java_plugin_registry_PluginDescriptor [label=uses];
+	org_java_plugin_registry_PluginRegistry -> org_java_plugin_PathResolver [label=uses];
+	org_java_plugin_registry_PluginDescriptor -> org_java_plugin_registry_PluginRegistry [label=uses];
+}

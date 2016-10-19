@@ -1,0 +1,10 @@
+digraph stk {
+	net_sf_jasperreports_components_table_ColumnGroup [label="<<type>>
+net.sf.jasperreports.components.table.ColumnGroup",style=filled,color="grey"];
+	net_sf_jasperreports_components_table_BaseColumn [label="<<supertype>>
+net.sf.jasperreports.components.table.BaseColumn",style=filled,color="grey"];
+	net_sf_jasperreports_components_table_ColumnVisitor [label="net.sf.jasperreports.components.table.ColumnVisitor"];
+	net_sf_jasperreports_components_table_ColumnGroup -> net_sf_jasperreports_components_table_BaseColumn [label=extends];
+	net_sf_jasperreports_components_table_BaseColumn -> net_sf_jasperreports_components_table_ColumnVisitor [label=uses];
+	net_sf_jasperreports_components_table_ColumnVisitor -> net_sf_jasperreports_components_table_ColumnGroup [label=uses];
+}

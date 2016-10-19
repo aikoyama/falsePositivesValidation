@@ -1,0 +1,8 @@
+digraph cd {
+	com_ecyrd_jspwiki_dav_DavProvider [label="<<package_exit>>
+com.ecyrd.jspwiki.dav.DavProvider",style=filled,color="grey"];
+	com_ecyrd_jspwiki_dav_items_DavItem [label="<<otherpackage1>>
+com.ecyrd.jspwiki.dav.items.DavItem"];
+	com_ecyrd_jspwiki_dav_DavProvider -> com_ecyrd_jspwiki_dav_items_DavItem [label=uses];
+	com_ecyrd_jspwiki_dav_items_DavItem -> com_ecyrd_jspwiki_dav_DavProvider [label=uses];
+}

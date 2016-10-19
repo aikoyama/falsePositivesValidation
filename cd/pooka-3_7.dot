@@ -1,0 +1,13 @@
+digraph cd {
+	net_suberic_pooka_gui_crypto_CryptoStatusDisplay [label="<<package_exit>>
+net.suberic.pooka.gui.crypto.CryptoStatusDisplay",style=filled,color="grey"];
+	net_suberic_pooka_MessageCryptoInfo [label="<<otherpackage1>>
+net.suberic.pooka.MessageCryptoInfo"];
+	net_suberic_pooka_gui_MessageProxy [label="<<otherpackage2>>
+net.suberic.pooka.gui.MessageProxy"];
+	net_suberic_pooka_MessageInfo [label="net.suberic.pooka.MessageInfo"];
+	net_suberic_pooka_gui_crypto_CryptoStatusDisplay -> net_suberic_pooka_MessageCryptoInfo [label=uses];
+	net_suberic_pooka_gui_MessageProxy -> net_suberic_pooka_gui_crypto_CryptoStatusDisplay [label=uses];
+	net_suberic_pooka_MessageCryptoInfo -> net_suberic_pooka_MessageInfo [label=uses];
+	net_suberic_pooka_MessageInfo -> net_suberic_pooka_gui_MessageProxy [label=uses];
+}

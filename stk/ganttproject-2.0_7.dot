@@ -1,0 +1,12 @@
+digraph stk {
+	net_sourceforge_ganttproject_task_TaskManagerImpl [label="<<type>>
+net.sourceforge.ganttproject.task.TaskManagerImpl",style=filled,color="grey"];
+	net_sourceforge_ganttproject_task_TaskManager [label="<<supertype>>
+net.sourceforge.ganttproject.task.TaskManager",style=filled,color="grey"];
+	net_sourceforge_ganttproject_GanttTask [label="net.sourceforge.ganttproject.GanttTask"];
+	net_sourceforge_ganttproject_task_TaskImpl [label="net.sourceforge.ganttproject.task.TaskImpl"];
+	net_sourceforge_ganttproject_task_TaskManagerImpl -> net_sourceforge_ganttproject_task_TaskManager [label=implements];
+	net_sourceforge_ganttproject_task_TaskManager -> net_sourceforge_ganttproject_GanttTask [label=uses];
+	net_sourceforge_ganttproject_GanttTask -> net_sourceforge_ganttproject_task_TaskImpl [label=extends];
+	net_sourceforge_ganttproject_task_TaskImpl -> net_sourceforge_ganttproject_task_TaskManagerImpl [label=uses];
+}

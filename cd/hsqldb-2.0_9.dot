@@ -1,0 +1,10 @@
+digraph cd {
+	org_hsqldb_navigator_RowSetNavigatorData [label="<<package_exit>>
+org.hsqldb.navigator.RowSetNavigatorData",style=filled,color="grey"];
+	org_hsqldb_navigator_RowSetNavigatorDataTable [label="<<package_entry>>
+org.hsqldb.navigator.RowSetNavigatorDataTable",style=filled,color="grey"];
+	org_hsqldb_QuerySpecification [label="<<otherpackage1>>
+org.hsqldb.QuerySpecification"];
+	org_hsqldb_navigator_RowSetNavigatorData -> org_hsqldb_QuerySpecification [label=uses];
+	org_hsqldb_QuerySpecification -> org_hsqldb_navigator_RowSetNavigatorDataTable [label=uses];
+}

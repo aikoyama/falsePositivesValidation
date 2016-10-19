@@ -1,0 +1,10 @@
+digraph stk {
+	net_sf_jasperreports_crosstabs_fill_calculation_BucketingService$BucketTreeMap [label="<<type>>
+net.sf.jasperreports.crosstabs.fill.calculation.BucketingService$BucketTreeMap",style=filled,color="grey"];
+	net_sf_jasperreports_crosstabs_fill_calculation_BucketingService$BucketMap [label="<<supertype>>
+net.sf.jasperreports.crosstabs.fill.calculation.BucketingService$BucketMap",style=filled,color="grey"];
+	net_sf_jasperreports_crosstabs_fill_calculation_BucketingService [label="net.sf.jasperreports.crosstabs.fill.calculation.BucketingService"];
+	net_sf_jasperreports_crosstabs_fill_calculation_BucketingService$BucketTreeMap -> net_sf_jasperreports_crosstabs_fill_calculation_BucketingService$BucketMap [label=extends];
+	net_sf_jasperreports_crosstabs_fill_calculation_BucketingService$BucketMap -> net_sf_jasperreports_crosstabs_fill_calculation_BucketingService [label=uses];
+	net_sf_jasperreports_crosstabs_fill_calculation_BucketingService -> net_sf_jasperreports_crosstabs_fill_calculation_BucketingService$BucketTreeMap [label=uses];
+}

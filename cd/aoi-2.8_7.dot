@@ -1,0 +1,15 @@
+digraph cd {
+	artofillusion_animation_SkeletonTool [label="<<package_exit>>
+artofillusion.animation.SkeletonTool",style=filled,color="grey"];
+	artofillusion_animation_Track [label="<<package_entry>>
+artofillusion.animation.Track",style=filled,color="grey"];
+	artofillusion_ui_EditingTool [label="<<otherpackage1>>
+artofillusion.ui.EditingTool"];
+	artofillusion_UndoRecord [label="<<otherpackage2>>
+artofillusion.UndoRecord"];
+	artofillusion_ui_EditingWindow [label="artofillusion.ui.EditingWindow"];
+	artofillusion_animation_SkeletonTool -> artofillusion_ui_EditingTool [label=extends];
+	artofillusion_UndoRecord -> artofillusion_animation_Track [label=uses];
+	artofillusion_ui_EditingTool -> artofillusion_ui_EditingWindow [label=uses];
+	artofillusion_ui_EditingWindow -> artofillusion_UndoRecord [label=uses];
+}

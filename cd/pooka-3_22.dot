@@ -1,0 +1,10 @@
+digraph cd {
+	javax_help_event_HelpSetEvent [label="<<package_exit>>
+javax.help.event.HelpSetEvent",style=filled,color="grey"];
+	javax_help_event_HelpSetListener [label="<<package_entry>>
+javax.help.event.HelpSetListener",style=filled,color="grey"];
+	javax_help_HelpSet [label="<<otherpackage1>>
+javax.help.HelpSet"];
+	javax_help_event_HelpSetEvent -> javax_help_HelpSet [label=uses];
+	javax_help_HelpSet -> javax_help_event_HelpSetListener [label=uses];
+}

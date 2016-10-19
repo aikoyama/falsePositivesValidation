@@ -1,0 +1,10 @@
+digraph cd {
+	org_apache_log4j_lf5_LF5Appender [label="<<package_exit>>
+org.apache.log4j.lf5.LF5Appender",style=filled,color="grey"];
+	org_apache_log4j_lf5_LogRecord [label="<<package_entry>>
+org.apache.log4j.lf5.LogRecord",style=filled,color="grey"];
+	org_apache_log4j_lf5_viewer_LogBrokerMonitor [label="<<otherpackage1>>
+org.apache.log4j.lf5.viewer.LogBrokerMonitor"];
+	org_apache_log4j_lf5_LF5Appender -> org_apache_log4j_lf5_viewer_LogBrokerMonitor [label=uses];
+	org_apache_log4j_lf5_viewer_LogBrokerMonitor -> org_apache_log4j_lf5_LogRecord [label=uses];
+}

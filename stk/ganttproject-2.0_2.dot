@@ -1,0 +1,20 @@
+digraph stk {
+	net_sourceforge_ganttproject_GanttResourcePanel [label="<<type>>
+net.sourceforge.ganttproject.GanttResourcePanel",style=filled,color="grey"];
+	net_sourceforge_ganttproject_resource_ResourceContext [label="<<supertype>>
+net.sourceforge.ganttproject.resource.ResourceContext",style=filled,color="grey"];
+	net_sourceforge_ganttproject_task_Task [label="net.sourceforge.ganttproject.task.Task"];
+	net_sourceforge_ganttproject_task_TaskManager [label="net.sourceforge.ganttproject.task.TaskManager"];
+	net_sourceforge_ganttproject_resource_LoadDistribution [label="net.sourceforge.ganttproject.resource.LoadDistribution"];
+	net_sourceforge_ganttproject_GanttProject [label="net.sourceforge.ganttproject.GanttProject"];
+	net_sourceforge_ganttproject_resource_ProjectResource [label="net.sourceforge.ganttproject.resource.ProjectResource"];
+	net_sourceforge_ganttproject_calendar_GPCalendar [label="net.sourceforge.ganttproject.calendar.GPCalendar"];
+	net_sourceforge_ganttproject_GanttResourcePanel -> net_sourceforge_ganttproject_resource_ResourceContext [label=implements];
+	net_sourceforge_ganttproject_resource_ResourceContext -> net_sourceforge_ganttproject_resource_ProjectResource [label=uses];
+	net_sourceforge_ganttproject_resource_ProjectResource -> net_sourceforge_ganttproject_resource_LoadDistribution [label=uses];
+	net_sourceforge_ganttproject_resource_LoadDistribution -> net_sourceforge_ganttproject_task_Task [label=uses];
+	net_sourceforge_ganttproject_task_Task -> net_sourceforge_ganttproject_task_TaskManager [label=uses];
+	net_sourceforge_ganttproject_task_TaskManager -> net_sourceforge_ganttproject_calendar_GPCalendar [label=uses];
+	net_sourceforge_ganttproject_calendar_GPCalendar -> net_sourceforge_ganttproject_GanttProject [label=uses];
+	net_sourceforge_ganttproject_GanttProject -> net_sourceforge_ganttproject_GanttResourcePanel [label=uses];
+}

@@ -1,0 +1,13 @@
+digraph cd {
+	net_sourceforge_ganttproject_task_event_TaskPropertyEvent [label="<<package_exit>>
+net.sourceforge.ganttproject.task.event.TaskPropertyEvent",style=filled,color="grey"];
+	net_sourceforge_ganttproject_task_event_TaskListener [label="<<package_entry>>
+net.sourceforge.ganttproject.task.event.TaskListener",style=filled,color="grey"];
+	net_sourceforge_ganttproject_task_Task [label="<<otherpackage1>>
+net.sourceforge.ganttproject.task.Task"];
+	net_sourceforge_ganttproject_task_TaskManager [label="<<otherpackage2>>
+net.sourceforge.ganttproject.task.TaskManager"];
+	net_sourceforge_ganttproject_task_event_TaskPropertyEvent -> net_sourceforge_ganttproject_task_Task [label=uses];
+	net_sourceforge_ganttproject_task_TaskManager -> net_sourceforge_ganttproject_task_event_TaskListener [label=uses];
+	net_sourceforge_ganttproject_task_Task -> net_sourceforge_ganttproject_task_TaskManager [label=uses];
+}

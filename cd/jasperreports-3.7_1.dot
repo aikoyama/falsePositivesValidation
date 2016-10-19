@@ -1,0 +1,21 @@
+digraph cd {
+	net_sf_jasperreports_charts_fill_JRFillAreaPlot [label="<<package_exit>>
+net.sf.jasperreports.charts.fill.JRFillAreaPlot",style=filled,color="grey"];
+	net_sf_jasperreports_charts_fill_JRFillThermometerPlot [label="<<package_entry>>
+net.sf.jasperreports.charts.fill.JRFillThermometerPlot",style=filled,color="grey"];
+	net_sf_jasperreports_charts_JRAreaPlot [label="<<otherpackage1>>
+net.sf.jasperreports.charts.JRAreaPlot"];
+	net_sf_jasperreports_engine_fill_JRFillObjectFactory [label="<<otherpackage2>>
+net.sf.jasperreports.engine.fill.JRFillObjectFactory"];
+	net_sf_jasperreports_engine_component_ComponentManager [label="net.sf.jasperreports.engine.component.ComponentManager"];
+	net_sf_jasperreports_engine_component_ComponentFillFactory [label="net.sf.jasperreports.engine.component.ComponentFillFactory"];
+	net_sf_jasperreports_engine_JRExpressionCollector [label="net.sf.jasperreports.engine.JRExpressionCollector"];
+	net_sf_jasperreports_engine_JRChartPlot [label="net.sf.jasperreports.engine.JRChartPlot"];
+	net_sf_jasperreports_charts_fill_JRFillAreaPlot -> net_sf_jasperreports_charts_JRAreaPlot [label=implements];
+	net_sf_jasperreports_engine_fill_JRFillObjectFactory -> net_sf_jasperreports_charts_fill_JRFillThermometerPlot [label=uses];
+	net_sf_jasperreports_charts_JRAreaPlot -> net_sf_jasperreports_engine_JRChartPlot [label=extends];
+	net_sf_jasperreports_engine_JRChartPlot -> net_sf_jasperreports_engine_JRExpressionCollector [label=uses];
+	net_sf_jasperreports_engine_JRExpressionCollector -> net_sf_jasperreports_engine_component_ComponentManager [label=uses];
+	net_sf_jasperreports_engine_component_ComponentManager -> net_sf_jasperreports_engine_component_ComponentFillFactory [label=uses];
+	net_sf_jasperreports_engine_component_ComponentFillFactory -> net_sf_jasperreports_engine_fill_JRFillObjectFactory [label=uses];
+}

@@ -1,0 +1,10 @@
+digraph cd {
+	org_apache_log4j_lf5_viewer_LogBrokerMonitor [label="<<package_exit>>
+org.apache.log4j.lf5.viewer.LogBrokerMonitor",style=filled,color="grey"];
+	org_apache_log4j_lf5_viewer_LogTableColumnFormatException [label="<<package_entry>>
+org.apache.log4j.lf5.viewer.LogTableColumnFormatException",style=filled,color="grey"];
+	org_apache_log4j_lf5_viewer_configure_ConfigurationManager [label="<<otherpackage1>>
+org.apache.log4j.lf5.viewer.configure.ConfigurationManager"];
+	org_apache_log4j_lf5_viewer_LogBrokerMonitor -> org_apache_log4j_lf5_viewer_configure_ConfigurationManager [label=uses];
+	org_apache_log4j_lf5_viewer_configure_ConfigurationManager -> org_apache_log4j_lf5_viewer_LogTableColumnFormatException [label=uses];
+}

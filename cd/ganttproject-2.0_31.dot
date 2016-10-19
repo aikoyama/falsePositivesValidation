@@ -1,0 +1,17 @@
+digraph cd {
+	net_sourceforge_ganttproject_print_PrintManager [label="<<package_exit>>
+net.sourceforge.ganttproject.print.PrintManager",style=filled,color="grey"];
+	net_sourceforge_ganttproject_print_PrintPreview [label="<<package_entry>>
+net.sourceforge.ganttproject.print.PrintPreview",style=filled,color="grey"];
+	net_sourceforge_ganttproject_chart_Chart [label="<<otherpackage1>>
+net.sourceforge.ganttproject.chart.Chart"];
+	net_sourceforge_ganttproject_GanttProject [label="<<otherpackage2>>
+net.sourceforge.ganttproject.GanttProject"];
+	net_sourceforge_ganttproject_calendar_GPCalendar [label="net.sourceforge.ganttproject.calendar.GPCalendar"];
+	net_sourceforge_ganttproject_task_TaskManager [label="net.sourceforge.ganttproject.task.TaskManager"];
+	net_sourceforge_ganttproject_print_PrintManager -> net_sourceforge_ganttproject_chart_Chart [label=uses];
+	net_sourceforge_ganttproject_GanttProject -> net_sourceforge_ganttproject_print_PrintPreview [label=uses];
+	net_sourceforge_ganttproject_chart_Chart -> net_sourceforge_ganttproject_task_TaskManager [label=uses];
+	net_sourceforge_ganttproject_task_TaskManager -> net_sourceforge_ganttproject_calendar_GPCalendar [label=uses];
+	net_sourceforge_ganttproject_calendar_GPCalendar -> net_sourceforge_ganttproject_GanttProject [label=uses];
+}

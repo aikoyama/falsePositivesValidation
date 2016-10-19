@@ -1,0 +1,10 @@
+digraph cd {
+	net_sf_jasperreports_charts_base_JRBasePieSeries [label="<<package_exit>>
+net.sf.jasperreports.charts.base.JRBasePieSeries",style=filled,color="grey"];
+	net_sf_jasperreports_charts_base_JRBaseTimeSeriesPlot [label="<<package_entry>>
+net.sf.jasperreports.charts.base.JRBaseTimeSeriesPlot",style=filled,color="grey"];
+	net_sf_jasperreports_engine_base_JRBaseObjectFactory [label="<<otherpackage1>>
+net.sf.jasperreports.engine.base.JRBaseObjectFactory"];
+	net_sf_jasperreports_charts_base_JRBasePieSeries -> net_sf_jasperreports_engine_base_JRBaseObjectFactory [label=uses];
+	net_sf_jasperreports_engine_base_JRBaseObjectFactory -> net_sf_jasperreports_charts_base_JRBaseTimeSeriesPlot [label=uses];
+}

@@ -1,0 +1,11 @@
+digraph cd {
+	javax_mail_Store [label="<<package_exit>>
+javax.mail.Store",style=filled,color="grey"];
+	javax_mail_event_StoreListener [label="<<otherpackage1>>
+javax.mail.event.StoreListener"];
+	javax_mail_event_StoreEvent [label="<<otherpackage2>>
+javax.mail.event.StoreEvent"];
+	javax_mail_Store -> javax_mail_event_StoreListener [label=uses];
+	javax_mail_event_StoreEvent -> javax_mail_Store [label=uses];
+	javax_mail_event_StoreListener -> javax_mail_event_StoreEvent [label=uses];
+}

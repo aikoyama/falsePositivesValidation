@@ -1,0 +1,10 @@
+digraph cd {
+	org_apache_log4j_spi_LoggerRepository [label="<<package_exit>>
+org.apache.log4j.spi.LoggerRepository",style=filled,color="grey"];
+	org_apache_log4j_spi_LoggingEvent [label="<<package_entry>>
+org.apache.log4j.spi.LoggingEvent",style=filled,color="grey"];
+	org_apache_log4j_Category [label="<<otherpackage1>>
+org.apache.log4j.Category"];
+	org_apache_log4j_spi_LoggerRepository -> org_apache_log4j_Category [label=uses];
+	org_apache_log4j_Category -> org_apache_log4j_spi_LoggingEvent [label=uses];
+}

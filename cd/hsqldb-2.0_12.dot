@@ -1,0 +1,13 @@
+digraph cd {
+	org_hsqldb_index_NodeAVL [label="<<package_exit>>
+org.hsqldb.index.NodeAVL",style=filled,color="grey"];
+	org_hsqldb_index_Index [label="<<package_entry>>
+org.hsqldb.index.Index",style=filled,color="grey"];
+	org_hsqldb_Row [label="<<otherpackage1>>
+org.hsqldb.Row"];
+	org_hsqldb_TableBase [label="<<otherpackage2>>
+org.hsqldb.TableBase"];
+	org_hsqldb_index_NodeAVL -> org_hsqldb_Row [label=uses];
+	org_hsqldb_TableBase -> org_hsqldb_index_Index [label=uses];
+	org_hsqldb_Row -> org_hsqldb_TableBase [label=uses];
+}

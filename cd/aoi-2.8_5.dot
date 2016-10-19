@@ -1,0 +1,10 @@
+digraph cd {
+	artofillusion_RecentFiles [label="<<package_exit>>
+artofillusion.RecentFiles",style=filled,color="grey"];
+	artofillusion_UndoRecord [label="<<package_entry>>
+artofillusion.UndoRecord",style=filled,color="grey"];
+	artofillusion_ui_EditingWindow [label="<<otherpackage1>>
+artofillusion.ui.EditingWindow"];
+	artofillusion_RecentFiles -> artofillusion_ui_EditingWindow [label=uses];
+	artofillusion_ui_EditingWindow -> artofillusion_UndoRecord [label=uses];
+}

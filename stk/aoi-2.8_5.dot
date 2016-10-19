@@ -1,0 +1,8 @@
+digraph stk {
+	nik777_xlate_StringEditor$1 [label="<<type>>
+nik777.xlate.StringEditor$1",style=filled,color="grey"];
+	nik777_xlate_StringEditor [label="<<supertype>>
+nik777.xlate.StringEditor",style=filled,color="grey"];
+	nik777_xlate_StringEditor$1 -> nik777_xlate_StringEditor [label=extends];
+	nik777_xlate_StringEditor -> nik777_xlate_StringEditor$1 [label=uses];
+}

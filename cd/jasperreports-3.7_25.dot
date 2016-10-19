@@ -1,0 +1,10 @@
+digraph cd {
+	net_sf_jasperreports_view_JRViewer [label="<<package_exit>>
+net.sf.jasperreports.view.JRViewer",style=filled,color="grey"];
+	net_sf_jasperreports_view_JRSaveContributor [label="<<package_entry>>
+net.sf.jasperreports.view.JRSaveContributor",style=filled,color="grey"];
+	net_sf_jasperreports_view_save_JRPrintSaveContributor [label="<<otherpackage1>>
+net.sf.jasperreports.view.save.JRPrintSaveContributor"];
+	net_sf_jasperreports_view_JRViewer -> net_sf_jasperreports_view_save_JRPrintSaveContributor [label=uses];
+	net_sf_jasperreports_view_save_JRPrintSaveContributor -> net_sf_jasperreports_view_JRSaveContributor [label=extends];
+}

@@ -1,0 +1,10 @@
+digraph cd {
+	net_suberic_pooka_gui_MessageProxy$SpamAction [label="<<package_exit>>
+net.suberic.pooka.gui.MessageProxy$SpamAction",style=filled,color="grey"];
+	net_suberic_pooka_gui_NewMessageProxy [label="<<package_entry>>
+net.suberic.pooka.gui.NewMessageProxy",style=filled,color="grey"];
+	net_suberic_pooka_MessageInfo [label="<<otherpackage1>>
+net.suberic.pooka.MessageInfo"];
+	net_suberic_pooka_gui_MessageProxy$SpamAction -> net_suberic_pooka_MessageInfo [label=uses];
+	net_suberic_pooka_MessageInfo -> net_suberic_pooka_gui_NewMessageProxy [label=uses];
+}

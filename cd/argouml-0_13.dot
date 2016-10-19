@@ -1,0 +1,10 @@
+digraph cd {
+	org_argouml_persistence_TodoListMemberFilePersister [label="<<package_exit>>
+org.argouml.persistence.TodoListMemberFilePersister",style=filled,color="grey"];
+	org_argouml_persistence_ResolvedCriticXMLHelper [label="<<package_entry>>
+org.argouml.persistence.ResolvedCriticXMLHelper",style=filled,color="grey"];
+	org_argouml_uml_cognitive_ProjectMemberTodoList [label="<<otherpackage1>>
+org.argouml.uml.cognitive.ProjectMemberTodoList"];
+	org_argouml_persistence_TodoListMemberFilePersister -> org_argouml_uml_cognitive_ProjectMemberTodoList [label=uses];
+	org_argouml_uml_cognitive_ProjectMemberTodoList -> org_argouml_persistence_ResolvedCriticXMLHelper [label=uses];
+}

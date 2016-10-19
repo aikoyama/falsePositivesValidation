@@ -1,0 +1,8 @@
+digraph stk {
+	com_sun_mail_imap_DefaultFolder [label="<<type>>
+com.sun.mail.imap.DefaultFolder",style=filled,color="grey"];
+	com_sun_mail_imap_IMAPFolder [label="<<supertype>>
+com.sun.mail.imap.IMAPFolder",style=filled,color="grey"];
+	com_sun_mail_imap_DefaultFolder -> com_sun_mail_imap_IMAPFolder [label=extends];
+	com_sun_mail_imap_IMAPFolder -> com_sun_mail_imap_DefaultFolder [label=uses];
+}

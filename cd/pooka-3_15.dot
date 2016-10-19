@@ -1,0 +1,15 @@
+digraph cd {
+	net_suberic_pooka_cache_CachingMimeMessage [label="<<package_exit>>
+net.suberic.pooka.cache.CachingMimeMessage",style=filled,color="grey"];
+	net_suberic_pooka_cache_CachingFolderInfo [label="<<package_entry>>
+net.suberic.pooka.cache.CachingFolderInfo",style=filled,color="grey"];
+	net_suberic_pooka_UIDMimeMessage [label="<<otherpackage1>>
+net.suberic.pooka.UIDMimeMessage"];
+	net_suberic_pooka_StoreInfo [label="<<otherpackage2>>
+net.suberic.pooka.StoreInfo"];
+	net_suberic_pooka_FolderInfo [label="net.suberic.pooka.FolderInfo"];
+	net_suberic_pooka_cache_CachingMimeMessage -> net_suberic_pooka_UIDMimeMessage [label=extends];
+	net_suberic_pooka_StoreInfo -> net_suberic_pooka_cache_CachingFolderInfo [label=uses];
+	net_suberic_pooka_UIDMimeMessage -> net_suberic_pooka_FolderInfo [label=uses];
+	net_suberic_pooka_FolderInfo -> net_suberic_pooka_StoreInfo [label=uses];
+}

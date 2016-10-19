@@ -1,0 +1,17 @@
+digraph cd {
+	net_sf_jasperreports_engine_scriptlets_DefaultScriptletFactory [label="<<package_exit>>
+net.sf.jasperreports.engine.scriptlets.DefaultScriptletFactory",style=filled,color="grey"];
+	net_sf_jasperreports_engine_scriptlets_ScriptletFactory [label="<<package_entry>>
+net.sf.jasperreports.engine.scriptlets.ScriptletFactory",style=filled,color="grey"];
+	net_sf_jasperreports_engine_JRAbstractScriptlet [label="<<otherpackage1>>
+net.sf.jasperreports.engine.JRAbstractScriptlet"];
+	net_sf_jasperreports_engine_fill_JRFillDataset [label="<<otherpackage2>>
+net.sf.jasperreports.engine.fill.JRFillDataset"];
+	net_sf_jasperreports_engine_fill_JRFillField [label="net.sf.jasperreports.engine.fill.JRFillField"];
+	net_sf_jasperreports_engine_fill_JRFillObjectFactory [label="net.sf.jasperreports.engine.fill.JRFillObjectFactory"];
+	net_sf_jasperreports_engine_scriptlets_DefaultScriptletFactory -> net_sf_jasperreports_engine_JRAbstractScriptlet [label=uses];
+	net_sf_jasperreports_engine_fill_JRFillDataset -> net_sf_jasperreports_engine_scriptlets_ScriptletFactory [label=uses];
+	net_sf_jasperreports_engine_JRAbstractScriptlet -> net_sf_jasperreports_engine_fill_JRFillField [label=uses];
+	net_sf_jasperreports_engine_fill_JRFillField -> net_sf_jasperreports_engine_fill_JRFillObjectFactory [label=uses];
+	net_sf_jasperreports_engine_fill_JRFillObjectFactory -> net_sf_jasperreports_engine_fill_JRFillDataset [label=uses];
+}

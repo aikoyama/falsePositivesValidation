@@ -1,0 +1,10 @@
+digraph cd {
+	org_argouml_uml_reveng_Import$ConfigPanelExtension [label="<<package_exit>>
+org.argouml.uml.reveng.Import$ConfigPanelExtension",style=filled,color="grey"];
+	org_argouml_uml_reveng_SettingsTypes$PathListSelection [label="<<package_entry>>
+org.argouml.uml.reveng.SettingsTypes$PathListSelection",style=filled,color="grey"];
+	org_argouml_uml_reveng_ui_ImportClasspathDialog [label="<<otherpackage1>>
+org.argouml.uml.reveng.ui.ImportClasspathDialog"];
+	org_argouml_uml_reveng_Import$ConfigPanelExtension -> org_argouml_uml_reveng_ui_ImportClasspathDialog [label=uses];
+	org_argouml_uml_reveng_ui_ImportClasspathDialog -> org_argouml_uml_reveng_SettingsTypes$PathListSelection [label=uses];
+}

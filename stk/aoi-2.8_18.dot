@@ -1,0 +1,8 @@
+digraph stk {
+	buoy_widget_WidgetContainer [label="<<type>>
+buoy.widget.WidgetContainer",style=filled,color="grey"];
+	buoy_widget_Widget [label="<<supertype>>
+buoy.widget.Widget",style=filled,color="grey"];
+	buoy_widget_WidgetContainer -> buoy_widget_Widget [label=extends];
+	buoy_widget_Widget -> buoy_widget_WidgetContainer [label=uses];
+}

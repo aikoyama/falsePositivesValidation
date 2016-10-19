@@ -1,0 +1,18 @@
+digraph stk {
+	net_sf_jasperreports_engine_base_JRBaseBand [label="<<type>>
+net.sf.jasperreports.engine.base.JRBaseBand",style=filled,color="grey"];
+	net_sf_jasperreports_engine_JRBand [label="<<supertype>>
+net.sf.jasperreports.engine.JRBand",style=filled,color="grey"];
+	net_sf_jasperreports_engine_JRElementGroup [label="net.sf.jasperreports.engine.JRElementGroup"];
+	net_sf_jasperreports_engine_JRElement [label="net.sf.jasperreports.engine.JRElement"];
+	net_sf_jasperreports_engine_base_JRBaseObjectFactory [label="net.sf.jasperreports.engine.base.JRBaseObjectFactory"];
+	net_sf_jasperreports_engine_JRExpressionCollector [label="net.sf.jasperreports.engine.JRExpressionCollector"];
+	net_sf_jasperreports_charts_util_JRMeterInterval [label="net.sf.jasperreports.charts.util.JRMeterInterval"];
+	net_sf_jasperreports_engine_base_JRBaseBand -> net_sf_jasperreports_engine_JRBand [label=implements];
+	net_sf_jasperreports_engine_JRBand -> net_sf_jasperreports_engine_JRElementGroup [label=extends];
+	net_sf_jasperreports_engine_JRElementGroup -> net_sf_jasperreports_engine_JRElement [label=uses];
+	net_sf_jasperreports_engine_JRElement -> net_sf_jasperreports_engine_JRExpressionCollector [label=uses];
+	net_sf_jasperreports_engine_JRExpressionCollector -> net_sf_jasperreports_charts_util_JRMeterInterval [label=uses];
+	net_sf_jasperreports_charts_util_JRMeterInterval -> net_sf_jasperreports_engine_base_JRBaseObjectFactory [label=uses];
+	net_sf_jasperreports_engine_base_JRBaseObjectFactory -> net_sf_jasperreports_engine_base_JRBaseBand [label=uses];
+}

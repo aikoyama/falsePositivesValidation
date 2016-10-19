@@ -1,0 +1,17 @@
+digraph cd {
+	org_argouml_uml_diagram_static_structure_ui_StylePanelFigInterface [label="<<package_exit>>
+org.argouml.uml.diagram.static_structure.ui.StylePanelFigInterface",style=filled,color="grey"];
+	org_argouml_uml_diagram_static_structure_ui_SelectionCompartmentText [label="<<package_entry>>
+org.argouml.uml.diagram.static_structure.ui.SelectionCompartmentText",style=filled,color="grey"];
+	org_argouml_ui_StylePanelFigNodeModelElement [label="<<otherpackage1>>
+org.argouml.ui.StylePanelFigNodeModelElement"];
+	org_argouml_uml_diagram_ui_CompartmentFigText [label="<<otherpackage2>>
+org.argouml.uml.diagram.ui.CompartmentFigText"];
+	org_argouml_ui_StylePanelFig [label="org.argouml.ui.StylePanelFig"];
+	org_argouml_uml_diagram_ui_FigNodeModelElement [label="org.argouml.uml.diagram.ui.FigNodeModelElement"];
+	org_argouml_uml_diagram_static_structure_ui_StylePanelFigInterface -> org_argouml_ui_StylePanelFigNodeModelElement [label=extends];
+	org_argouml_uml_diagram_ui_CompartmentFigText -> org_argouml_uml_diagram_static_structure_ui_SelectionCompartmentText [label=uses];
+	org_argouml_ui_StylePanelFigNodeModelElement -> org_argouml_ui_StylePanelFig [label=extends];
+	org_argouml_ui_StylePanelFig -> org_argouml_uml_diagram_ui_FigNodeModelElement [label=uses];
+	org_argouml_uml_diagram_ui_FigNodeModelElement -> org_argouml_uml_diagram_ui_CompartmentFigText [label=uses];
+}

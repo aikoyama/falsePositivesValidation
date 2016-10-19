@@ -1,0 +1,12 @@
+digraph stk {
+	org_hsqldb_RowAction [label="<<type>>
+org.hsqldb.RowAction",style=filled,color="grey"];
+	org_hsqldb_RowActionBase [label="<<supertype>>
+org.hsqldb.RowActionBase",style=filled,color="grey"];
+	org_hsqldb_Session [label="org.hsqldb.Session"];
+	org_hsqldb_Row [label="org.hsqldb.Row"];
+	org_hsqldb_RowAction -> org_hsqldb_RowActionBase [label=extends];
+	org_hsqldb_RowActionBase -> org_hsqldb_Session [label=uses];
+	org_hsqldb_Session -> org_hsqldb_Row [label=uses];
+	org_hsqldb_Row -> org_hsqldb_RowAction [label=uses];
+}

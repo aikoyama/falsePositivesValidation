@@ -1,0 +1,15 @@
+digraph cd {
+	artofillusion_script_ScriptedObject$ScriptedObjectKeyframe [label="<<package_exit>>
+artofillusion.script.ScriptedObject$ScriptedObjectKeyframe",style=filled,color="grey"];
+	artofillusion_script_ToolScript [label="<<package_entry>>
+artofillusion.script.ToolScript",style=filled,color="grey"];
+	artofillusion_object_ObjectInfo [label="<<otherpackage1>>
+artofillusion.object.ObjectInfo"];
+	artofillusion_LayoutWindow [label="<<otherpackage2>>
+artofillusion.LayoutWindow"];
+	artofillusion_animation_Track [label="artofillusion.animation.Track"];
+	artofillusion_script_ScriptedObject$ScriptedObjectKeyframe -> artofillusion_object_ObjectInfo [label=uses];
+	artofillusion_LayoutWindow -> artofillusion_script_ToolScript [label=uses];
+	artofillusion_object_ObjectInfo -> artofillusion_animation_Track [label=uses];
+	artofillusion_animation_Track -> artofillusion_LayoutWindow [label=uses];
+}

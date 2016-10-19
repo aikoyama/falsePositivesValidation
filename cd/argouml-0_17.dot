@@ -1,0 +1,13 @@
+digraph cd {
+	org_argouml_uml_TMResults [label="<<package_exit>>
+org.argouml.uml.TMResults",style=filled,color="grey"];
+	org_argouml_uml_CommentEdge [label="<<package_entry>>
+org.argouml.uml.CommentEdge",style=filled,color="grey"];
+	org_argouml_uml_diagram_ui_UMLDiagram [label="<<otherpackage1>>
+org.argouml.uml.diagram.ui.UMLDiagram"];
+	org_argouml_uml_diagram_UMLMutableGraphSupport [label="<<otherpackage2>>
+org.argouml.uml.diagram.UMLMutableGraphSupport"];
+	org_argouml_uml_TMResults -> org_argouml_uml_diagram_ui_UMLDiagram [label=uses];
+	org_argouml_uml_diagram_UMLMutableGraphSupport -> org_argouml_uml_CommentEdge [label=uses];
+	org_argouml_uml_diagram_ui_UMLDiagram -> org_argouml_uml_diagram_UMLMutableGraphSupport [label=uses];
+}

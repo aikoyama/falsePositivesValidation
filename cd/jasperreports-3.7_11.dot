@@ -1,0 +1,21 @@
+digraph cd {
+	net_sf_jasperreports_engine_fill_JRTemplateEllipse [label="<<package_exit>>
+net.sf.jasperreports.engine.fill.JRTemplateEllipse",style=filled,color="grey"];
+	net_sf_jasperreports_engine_fill_JRFillCloneFactory [label="<<package_entry>>
+net.sf.jasperreports.engine.fill.JRFillCloneFactory",style=filled,color="grey"];
+	net_sf_jasperreports_engine_JREllipse [label="<<otherpackage1>>
+net.sf.jasperreports.engine.JREllipse"];
+	net_sf_jasperreports_engine_component_ComponentFillFactory [label="<<otherpackage2>>
+net.sf.jasperreports.engine.component.ComponentFillFactory"];
+	net_sf_jasperreports_engine_component_ComponentManager [label="net.sf.jasperreports.engine.component.ComponentManager"];
+	net_sf_jasperreports_engine_JRGraphicElement [label="net.sf.jasperreports.engine.JRGraphicElement"];
+	net_sf_jasperreports_engine_JRExpressionCollector [label="net.sf.jasperreports.engine.JRExpressionCollector"];
+	net_sf_jasperreports_engine_JRElement [label="net.sf.jasperreports.engine.JRElement"];
+	net_sf_jasperreports_engine_fill_JRTemplateEllipse -> net_sf_jasperreports_engine_JREllipse [label=uses];
+	net_sf_jasperreports_engine_component_ComponentFillFactory -> net_sf_jasperreports_engine_fill_JRFillCloneFactory [label=uses];
+	net_sf_jasperreports_engine_JREllipse -> net_sf_jasperreports_engine_JRGraphicElement [label=extends];
+	net_sf_jasperreports_engine_JRGraphicElement -> net_sf_jasperreports_engine_JRElement [label=extends];
+	net_sf_jasperreports_engine_JRElement -> net_sf_jasperreports_engine_JRExpressionCollector [label=uses];
+	net_sf_jasperreports_engine_JRExpressionCollector -> net_sf_jasperreports_engine_component_ComponentManager [label=uses];
+	net_sf_jasperreports_engine_component_ComponentManager -> net_sf_jasperreports_engine_component_ComponentFillFactory [label=uses];
+}

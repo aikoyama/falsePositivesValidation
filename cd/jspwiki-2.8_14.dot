@@ -1,0 +1,10 @@
+digraph cd {
+	com_ecyrd_jspwiki_content_Exporter [label="<<package_exit>>
+com.ecyrd.jspwiki.content.Exporter",style=filled,color="grey"];
+	com_ecyrd_jspwiki_content_PageRenamer [label="<<package_entry>>
+com.ecyrd.jspwiki.content.PageRenamer",style=filled,color="grey"];
+	com_ecyrd_jspwiki_WikiEngine [label="<<otherpackage1>>
+com.ecyrd.jspwiki.WikiEngine"];
+	com_ecyrd_jspwiki_content_Exporter -> com_ecyrd_jspwiki_WikiEngine [label=uses];
+	com_ecyrd_jspwiki_WikiEngine -> com_ecyrd_jspwiki_content_PageRenamer [label=uses];
+}

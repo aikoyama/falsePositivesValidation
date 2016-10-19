@@ -1,0 +1,11 @@
+digraph cd {
+	net_sourceforge_ganttproject_gui_about_AboutDialog [label="<<package_exit>>
+net.sourceforge.ganttproject.gui.about.AboutDialog",style=filled,color="grey"];
+	net_sourceforge_ganttproject_gui_GeneralDialog [label="<<otherpackage1>>
+net.sourceforge.ganttproject.gui.GeneralDialog"];
+	net_sourceforge_ganttproject_GanttProject [label="<<otherpackage2>>
+net.sourceforge.ganttproject.GanttProject"];
+	net_sourceforge_ganttproject_gui_about_AboutDialog -> net_sourceforge_ganttproject_gui_GeneralDialog [label=extends];
+	net_sourceforge_ganttproject_GanttProject -> net_sourceforge_ganttproject_gui_about_AboutDialog [label=uses];
+	net_sourceforge_ganttproject_gui_GeneralDialog -> net_sourceforge_ganttproject_GanttProject [label=uses];
+}

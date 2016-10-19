@@ -1,0 +1,10 @@
+digraph cd {
+	net_sf_jasperreports_components_table_FillTableFactory [label="<<package_exit>>
+net.sf.jasperreports.components.table.FillTableFactory",style=filled,color="grey"];
+	net_sf_jasperreports_components_table_BaseColumn [label="<<package_entry>>
+net.sf.jasperreports.components.table.BaseColumn",style=filled,color="grey"];
+	net_sf_jasperreports_components_table_fill_FillTable [label="<<otherpackage1>>
+net.sf.jasperreports.components.table.fill.FillTable"];
+	net_sf_jasperreports_components_table_FillTableFactory -> net_sf_jasperreports_components_table_fill_FillTable [label=uses];
+	net_sf_jasperreports_components_table_fill_FillTable -> net_sf_jasperreports_components_table_BaseColumn [label=uses];
+}

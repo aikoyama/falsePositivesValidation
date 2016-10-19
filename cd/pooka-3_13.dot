@@ -1,0 +1,17 @@
+digraph cd {
+	net_suberic_pooka_gui_filechooser_FolderInfoFileWrapper [label="<<package_exit>>
+net.suberic.pooka.gui.filechooser.FolderInfoFileWrapper",style=filled,color="grey"];
+	net_suberic_pooka_gui_filechooser_MailFileSystemView [label="<<package_entry>>
+net.suberic.pooka.gui.filechooser.MailFileSystemView",style=filled,color="grey"];
+	net_suberic_pooka_FolderInfo [label="<<otherpackage1>>
+net.suberic.pooka.FolderInfo"];
+	net_suberic_pooka_gui_StoreNode$SubscribeAction [label="<<otherpackage2>>
+net.suberic.pooka.gui.StoreNode$SubscribeAction"];
+	net_suberic_pooka_gui_StoreNode [label="net.suberic.pooka.gui.StoreNode"];
+	net_suberic_pooka_StoreInfo [label="net.suberic.pooka.StoreInfo"];
+	net_suberic_pooka_gui_filechooser_FolderInfoFileWrapper -> net_suberic_pooka_FolderInfo [label=uses];
+	net_suberic_pooka_gui_StoreNode$SubscribeAction -> net_suberic_pooka_gui_filechooser_MailFileSystemView [label=uses];
+	net_suberic_pooka_FolderInfo -> net_suberic_pooka_StoreInfo [label=uses];
+	net_suberic_pooka_StoreInfo -> net_suberic_pooka_gui_StoreNode [label=uses];
+	net_suberic_pooka_gui_StoreNode -> net_suberic_pooka_gui_StoreNode$SubscribeAction [label=uses];
+}

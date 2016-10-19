@@ -1,0 +1,10 @@
+digraph cd {
+	net_sf_jasperreports_engine_design_JRDesignChart [label="<<package_exit>>
+net.sf.jasperreports.engine.design.JRDesignChart",style=filled,color="grey"];
+	net_sf_jasperreports_engine_design_JRDesignChartDataset [label="<<package_entry>>
+net.sf.jasperreports.engine.design.JRDesignChartDataset",style=filled,color="grey"];
+	net_sf_jasperreports_charts_design_JRDesignPieDataset [label="<<otherpackage1>>
+net.sf.jasperreports.charts.design.JRDesignPieDataset"];
+	net_sf_jasperreports_engine_design_JRDesignChart -> net_sf_jasperreports_charts_design_JRDesignPieDataset [label=uses];
+	net_sf_jasperreports_charts_design_JRDesignPieDataset -> net_sf_jasperreports_engine_design_JRDesignChartDataset [label=extends];
+}

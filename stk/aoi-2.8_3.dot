@@ -1,0 +1,16 @@
+digraph stk {
+	artofillusion_spmanager_InstallSplitPane [label="<<type>>
+artofillusion.spmanager.InstallSplitPane",style=filled,color="grey"];
+	artofillusion_spmanager_SPMSplitPane [label="<<supertype>>
+artofillusion.spmanager.SPMSplitPane",style=filled,color="grey"];
+	artofillusion_spmanager_SPManagerUtils [label="artofillusion.spmanager.SPManagerUtils"];
+	artofillusion_spmanager_SPMObjectInfo [label="artofillusion.spmanager.SPMObjectInfo"];
+	artofillusion_spmanager_SPManagerPlugin [label="artofillusion.spmanager.SPManagerPlugin"];
+	artofillusion_spmanager_SPManagerFrame [label="artofillusion.spmanager.SPManagerFrame"];
+	artofillusion_spmanager_InstallSplitPane -> artofillusion_spmanager_SPMSplitPane [label=extends];
+	artofillusion_spmanager_SPMSplitPane -> artofillusion_spmanager_SPMObjectInfo [label=uses];
+	artofillusion_spmanager_SPMObjectInfo -> artofillusion_spmanager_SPManagerUtils [label=uses];
+	artofillusion_spmanager_SPManagerUtils -> artofillusion_spmanager_SPManagerPlugin [label=uses];
+	artofillusion_spmanager_SPManagerPlugin -> artofillusion_spmanager_SPManagerFrame [label=uses];
+	artofillusion_spmanager_SPManagerFrame -> artofillusion_spmanager_InstallSplitPane [label=uses];
+}

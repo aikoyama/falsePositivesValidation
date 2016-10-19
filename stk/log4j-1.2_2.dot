@@ -1,0 +1,8 @@
+digraph stk {
+	org_apache_log4j_Logger [label="<<type>>
+org.apache.log4j.Logger",style=filled,color="grey"];
+	org_apache_log4j_Category [label="<<supertype>>
+org.apache.log4j.Category",style=filled,color="grey"];
+	org_apache_log4j_Logger -> org_apache_log4j_Category [label=extends];
+	org_apache_log4j_Category -> org_apache_log4j_Logger [label=uses];
+}

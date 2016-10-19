@@ -1,0 +1,10 @@
+digraph cd {
+	artofillusion_image_filter_NoiseReductionFilter [label="<<package_exit>>
+artofillusion.image.filter.NoiseReductionFilter",style=filled,color="grey"];
+	artofillusion_image_filter_ImageFilter [label="<<package_entry>>
+artofillusion.image.filter.ImageFilter",style=filled,color="grey"];
+	artofillusion_object_SceneCamera [label="<<otherpackage1>>
+artofillusion.object.SceneCamera"];
+	artofillusion_image_filter_NoiseReductionFilter -> artofillusion_object_SceneCamera [label=uses];
+	artofillusion_object_SceneCamera -> artofillusion_image_filter_ImageFilter [label=uses];
+}

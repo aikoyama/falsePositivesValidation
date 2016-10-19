@@ -1,0 +1,10 @@
+digraph cd {
+	org_hsqldb_persist_RowStoreAVLHybrid [label="<<package_exit>>
+org.hsqldb.persist.RowStoreAVLHybrid",style=filled,color="grey"];
+	org_hsqldb_persist_PersistentStore [label="<<package_entry>>
+org.hsqldb.persist.PersistentStore",style=filled,color="grey"];
+	org_hsqldb_Row [label="<<otherpackage1>>
+org.hsqldb.Row"];
+	org_hsqldb_persist_RowStoreAVLHybrid -> org_hsqldb_Row [label=uses];
+	org_hsqldb_Row -> org_hsqldb_persist_PersistentStore [label=uses];
+}

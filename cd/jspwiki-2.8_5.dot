@@ -1,0 +1,10 @@
+digraph cd {
+	com_ecyrd_jspwiki_auth_authorize_WebContainerAuthorizer [label="<<package_exit>>
+com.ecyrd.jspwiki.auth.authorize.WebContainerAuthorizer",style=filled,color="grey"];
+	com_ecyrd_jspwiki_auth_authorize_Group [label="<<package_entry>>
+com.ecyrd.jspwiki.auth.authorize.Group",style=filled,color="grey"];
+	com_ecyrd_jspwiki_WikiSession [label="<<otherpackage1>>
+com.ecyrd.jspwiki.WikiSession"];
+	com_ecyrd_jspwiki_auth_authorize_WebContainerAuthorizer -> com_ecyrd_jspwiki_WikiSession [label=uses];
+	com_ecyrd_jspwiki_WikiSession -> com_ecyrd_jspwiki_auth_authorize_Group [label=uses];
+}

@@ -1,0 +1,14 @@
+digraph stk {
+	artofillusion_ui_ObjectTreeElement [label="<<type>>
+artofillusion.ui.ObjectTreeElement",style=filled,color="grey"];
+	artofillusion_ui_TreeElement [label="<<supertype>>
+artofillusion.ui.TreeElement",style=filled,color="grey"];
+	artofillusion_LayoutWindow [label="artofillusion.LayoutWindow"];
+	artofillusion_ui_TreeList [label="artofillusion.ui.TreeList"];
+	artofillusion_UndoRecord [label="artofillusion.UndoRecord"];
+	artofillusion_ui_ObjectTreeElement -> artofillusion_ui_TreeElement [label=extends];
+	artofillusion_ui_TreeElement -> artofillusion_ui_TreeList [label=uses];
+	artofillusion_ui_TreeList -> artofillusion_UndoRecord [label=uses];
+	artofillusion_UndoRecord -> artofillusion_LayoutWindow [label=uses];
+	artofillusion_LayoutWindow -> artofillusion_ui_ObjectTreeElement [label=uses];
+}

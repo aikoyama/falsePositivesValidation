@@ -1,0 +1,19 @@
+digraph cd {
+	net_sf_jasperreports_crosstabs_fill_calculation_MeasureDefinition$MeasureValue [label="<<package_exit>>
+net.sf.jasperreports.crosstabs.fill.calculation.MeasureDefinition$MeasureValue",style=filled,color="grey"];
+	net_sf_jasperreports_crosstabs_fill_calculation_MeasureDefinition [label="<<package_entry>>
+net.sf.jasperreports.crosstabs.fill.calculation.MeasureDefinition",style=filled,color="grey"];
+	net_sf_jasperreports_engine_fill_JRExtendedIncrementer [label="<<otherpackage1>>
+net.sf.jasperreports.engine.fill.JRExtendedIncrementer"];
+	net_sf_jasperreports_engine_fill_JRFillCrosstab [label="<<otherpackage2>>
+net.sf.jasperreports.engine.fill.JRFillCrosstab"];
+	net_sf_jasperreports_engine_fill_JRFillObjectFactory [label="net.sf.jasperreports.engine.fill.JRFillObjectFactory"];
+	net_sf_jasperreports_engine_fill_JRFillVariable [label="net.sf.jasperreports.engine.fill.JRFillVariable"];
+	net_sf_jasperreports_engine_fill_JRIncrementer [label="net.sf.jasperreports.engine.fill.JRIncrementer"];
+	net_sf_jasperreports_crosstabs_fill_calculation_MeasureDefinition$MeasureValue -> net_sf_jasperreports_engine_fill_JRExtendedIncrementer [label=uses];
+	net_sf_jasperreports_engine_fill_JRFillCrosstab -> net_sf_jasperreports_crosstabs_fill_calculation_MeasureDefinition [label=uses];
+	net_sf_jasperreports_engine_fill_JRExtendedIncrementer -> net_sf_jasperreports_engine_fill_JRIncrementer [label=extends];
+	net_sf_jasperreports_engine_fill_JRIncrementer -> net_sf_jasperreports_engine_fill_JRFillVariable [label=uses];
+	net_sf_jasperreports_engine_fill_JRFillVariable -> net_sf_jasperreports_engine_fill_JRFillObjectFactory [label=uses];
+	net_sf_jasperreports_engine_fill_JRFillObjectFactory -> net_sf_jasperreports_engine_fill_JRFillCrosstab [label=uses];
+}

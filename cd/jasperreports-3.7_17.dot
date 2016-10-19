@@ -1,0 +1,10 @@
+digraph cd {
+	net_sf_jasperreports_engine_JRAbstractScriptlet [label="<<package_exit>>
+net.sf.jasperreports.engine.JRAbstractScriptlet",style=filled,color="grey"];
+	net_sf_jasperreports_engine_JRField [label="<<package_entry>>
+net.sf.jasperreports.engine.JRField",style=filled,color="grey"];
+	net_sf_jasperreports_engine_fill_JRFillField [label="<<otherpackage1>>
+net.sf.jasperreports.engine.fill.JRFillField"];
+	net_sf_jasperreports_engine_JRAbstractScriptlet -> net_sf_jasperreports_engine_fill_JRFillField [label=uses];
+	net_sf_jasperreports_engine_fill_JRFillField -> net_sf_jasperreports_engine_JRField [label=implements];
+}

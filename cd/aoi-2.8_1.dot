@@ -1,0 +1,15 @@
+digraph cd {
+	artofillusion_view_SoftwareCanvasDrawer [label="<<package_exit>>
+artofillusion.view.SoftwareCanvasDrawer",style=filled,color="grey"];
+	artofillusion_view_VertexShader [label="<<package_entry>>
+artofillusion.view.VertexShader",style=filled,color="grey"];
+	artofillusion_RenderingMesh [label="<<otherpackage1>>
+artofillusion.RenderingMesh"];
+	artofillusion_object_Object3D [label="<<otherpackage2>>
+artofillusion.object.Object3D"];
+	artofillusion_texture_TextureMapping [label="artofillusion.texture.TextureMapping"];
+	artofillusion_view_SoftwareCanvasDrawer -> artofillusion_RenderingMesh [label=uses];
+	artofillusion_object_Object3D -> artofillusion_view_VertexShader [label=uses];
+	artofillusion_RenderingMesh -> artofillusion_texture_TextureMapping [label=uses];
+	artofillusion_texture_TextureMapping -> artofillusion_object_Object3D [label=uses];
+}

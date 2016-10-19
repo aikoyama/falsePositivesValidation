@@ -1,0 +1,12 @@
+digraph stk {
+	bsh_BlockNameSpace [label="<<type>>
+bsh.BlockNameSpace",style=filled,color="grey"];
+	bsh_NameSpace [label="<<supertype>>
+bsh.NameSpace",style=filled,color="grey"];
+	bsh_BshMethod [label="bsh.BshMethod"];
+	bsh_BSHBlock [label="bsh.BSHBlock"];
+	bsh_BlockNameSpace -> bsh_NameSpace [label=extends];
+	bsh_NameSpace -> bsh_BshMethod [label=uses];
+	bsh_BshMethod -> bsh_BSHBlock [label=uses];
+	bsh_BSHBlock -> bsh_BlockNameSpace [label=uses];
+}

@@ -1,0 +1,14 @@
+digraph stk {
+	artofillusion_texture_LayeredTriangle [label="<<type>>
+artofillusion.texture.LayeredTriangle",style=filled,color="grey"];
+	artofillusion_RenderingTriangle [label="<<supertype>>
+artofillusion.RenderingTriangle",style=filled,color="grey"];
+	artofillusion_object_Object3D [label="artofillusion.object.Object3D"];
+	artofillusion_texture_LayeredMapping [label="artofillusion.texture.LayeredMapping"];
+	artofillusion_texture_TextureMapping [label="artofillusion.texture.TextureMapping"];
+	artofillusion_texture_LayeredTriangle -> artofillusion_RenderingTriangle [label=extends];
+	artofillusion_RenderingTriangle -> artofillusion_texture_TextureMapping [label=uses];
+	artofillusion_texture_TextureMapping -> artofillusion_object_Object3D [label=uses];
+	artofillusion_object_Object3D -> artofillusion_texture_LayeredMapping [label=uses];
+	artofillusion_texture_LayeredMapping -> artofillusion_texture_LayeredTriangle [label=uses];
+}

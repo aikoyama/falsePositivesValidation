@@ -1,0 +1,10 @@
+digraph cd {
+	artofillusion_image_ImageOrColor [label="<<package_exit>>
+artofillusion.image.ImageOrColor",style=filled,color="grey"];
+	artofillusion_image_ImageMap [label="<<package_entry>>
+artofillusion.image.ImageMap",style=filled,color="grey"];
+	artofillusion_Scene [label="<<otherpackage1>>
+artofillusion.Scene"];
+	artofillusion_image_ImageOrColor -> artofillusion_Scene [label=uses];
+	artofillusion_Scene -> artofillusion_image_ImageMap [label=uses];
+}

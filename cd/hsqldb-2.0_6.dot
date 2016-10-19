@@ -1,0 +1,10 @@
+digraph cd {
+	org_hsqldb_rights_GranteeManager [label="<<package_exit>>
+org.hsqldb.rights.GranteeManager",style=filled,color="grey"];
+	org_hsqldb_rights_Grantee [label="<<package_entry>>
+org.hsqldb.rights.Grantee",style=filled,color="grey"];
+	org_hsqldb_RoutineSchema [label="<<otherpackage1>>
+org.hsqldb.RoutineSchema"];
+	org_hsqldb_rights_GranteeManager -> org_hsqldb_RoutineSchema [label=uses];
+	org_hsqldb_RoutineSchema -> org_hsqldb_rights_Grantee [label=uses];
+}

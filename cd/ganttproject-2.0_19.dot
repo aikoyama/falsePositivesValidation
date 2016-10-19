@@ -1,0 +1,10 @@
+digraph cd {
+	net_sourceforge_ganttproject_gui_OpenFileDialog [label="<<package_exit>>
+net.sourceforge.ganttproject.gui.OpenFileDialog",style=filled,color="grey"];
+	net_sourceforge_ganttproject_gui_TaskTreeUIFacade [label="<<package_entry>>
+net.sourceforge.ganttproject.gui.TaskTreeUIFacade",style=filled,color="grey"];
+	net_sourceforge_ganttproject_GanttProject [label="<<otherpackage1>>
+net.sourceforge.ganttproject.GanttProject"];
+	net_sourceforge_ganttproject_gui_OpenFileDialog -> net_sourceforge_ganttproject_GanttProject [label=uses];
+	net_sourceforge_ganttproject_GanttProject -> net_sourceforge_ganttproject_gui_TaskTreeUIFacade [label=uses];
+}

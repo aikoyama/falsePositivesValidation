@@ -1,0 +1,19 @@
+digraph cd {
+	org_argouml_profile_UserDefinedProfile [label="<<package_exit>>
+org.argouml.profile.UserDefinedProfile",style=filled,color="grey"];
+	org_argouml_profile_FigNodeStrategy [label="<<package_entry>>
+org.argouml.profile.FigNodeStrategy",style=filled,color="grey"];
+	org_argouml_profile_internal_ocl_CrOCL [label="<<otherpackage1>>
+org.argouml.profile.internal.ocl.CrOCL"];
+	org_argouml_kernel_ProfileConfiguration [label="<<otherpackage2>>
+org.argouml.kernel.ProfileConfiguration"];
+	org_argouml_kernel_Project [label="org.argouml.kernel.Project"];
+	org_argouml_uml_cognitive_UMLToDoItem [label="org.argouml.uml.cognitive.UMLToDoItem"];
+	org_argouml_uml_cognitive_critics_CrUML [label="org.argouml.uml.cognitive.critics.CrUML"];
+	org_argouml_profile_UserDefinedProfile -> org_argouml_profile_internal_ocl_CrOCL [label=uses];
+	org_argouml_kernel_ProfileConfiguration -> org_argouml_profile_FigNodeStrategy [label=uses];
+	org_argouml_profile_internal_ocl_CrOCL -> org_argouml_uml_cognitive_critics_CrUML [label=extends];
+	org_argouml_uml_cognitive_critics_CrUML -> org_argouml_uml_cognitive_UMLToDoItem [label=uses];
+	org_argouml_uml_cognitive_UMLToDoItem -> org_argouml_kernel_Project [label=uses];
+	org_argouml_kernel_Project -> org_argouml_kernel_ProfileConfiguration [label=uses];
+}

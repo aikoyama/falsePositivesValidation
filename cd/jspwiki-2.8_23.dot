@@ -1,0 +1,15 @@
+digraph cd {
+	com_ecyrd_jspwiki_auth_login_UserDatabaseCallback [label="<<package_exit>>
+com.ecyrd.jspwiki.auth.login.UserDatabaseCallback",style=filled,color="grey"];
+	com_ecyrd_jspwiki_auth_login_WebContainerCallbackHandler [label="<<package_entry>>
+com.ecyrd.jspwiki.auth.login.WebContainerCallbackHandler",style=filled,color="grey"];
+	com_ecyrd_jspwiki_auth_user_UserDatabase [label="<<otherpackage1>>
+com.ecyrd.jspwiki.auth.user.UserDatabase"];
+	com_ecyrd_jspwiki_auth_AuthenticationManager [label="<<otherpackage2>>
+com.ecyrd.jspwiki.auth.AuthenticationManager"];
+	com_ecyrd_jspwiki_WikiEngine [label="com.ecyrd.jspwiki.WikiEngine"];
+	com_ecyrd_jspwiki_auth_login_UserDatabaseCallback -> com_ecyrd_jspwiki_auth_user_UserDatabase [label=uses];
+	com_ecyrd_jspwiki_auth_AuthenticationManager -> com_ecyrd_jspwiki_auth_login_WebContainerCallbackHandler [label=uses];
+	com_ecyrd_jspwiki_auth_user_UserDatabase -> com_ecyrd_jspwiki_WikiEngine [label=uses];
+	com_ecyrd_jspwiki_WikiEngine -> com_ecyrd_jspwiki_auth_AuthenticationManager [label=uses];
+}

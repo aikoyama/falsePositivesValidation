@@ -1,0 +1,10 @@
+digraph stk {
+	net_sf_jasperreports_components_table_fill_TableReport$ColumnHeaderCreator [label="<<type>>
+net.sf.jasperreports.components.table.fill.TableReport$ColumnHeaderCreator",style=filled,color="grey"];
+	net_sf_jasperreports_components_table_fill_TableReport$ReportBandCreator [label="<<supertype>>
+net.sf.jasperreports.components.table.fill.TableReport$ReportBandCreator",style=filled,color="grey"];
+	net_sf_jasperreports_components_table_fill_TableReport [label="net.sf.jasperreports.components.table.fill.TableReport"];
+	net_sf_jasperreports_components_table_fill_TableReport$ColumnHeaderCreator -> net_sf_jasperreports_components_table_fill_TableReport$ReportBandCreator [label=extends];
+	net_sf_jasperreports_components_table_fill_TableReport$ReportBandCreator -> net_sf_jasperreports_components_table_fill_TableReport [label=uses];
+	net_sf_jasperreports_components_table_fill_TableReport -> net_sf_jasperreports_components_table_fill_TableReport$ColumnHeaderCreator [label=uses];
+}

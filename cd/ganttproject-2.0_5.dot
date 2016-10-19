@@ -1,0 +1,13 @@
+digraph cd {
+	net_sourceforge_ganttproject_gui_projectwizard_WeekendConfigurationPage [label="<<package_exit>>
+net.sourceforge.ganttproject.gui.projectwizard.WeekendConfigurationPage",style=filled,color="grey"];
+	net_sourceforge_ganttproject_gui_projectwizard_WizardImpl [label="<<package_entry>>
+net.sourceforge.ganttproject.gui.projectwizard.WizardImpl",style=filled,color="grey"];
+	net_sourceforge_ganttproject_GanttProject [label="<<otherpackage1>>
+net.sourceforge.ganttproject.GanttProject"];
+	net_sourceforge_ganttproject_importer_ImportFileWizardImpl [label="<<otherpackage2>>
+net.sourceforge.ganttproject.importer.ImportFileWizardImpl"];
+	net_sourceforge_ganttproject_gui_projectwizard_WeekendConfigurationPage -> net_sourceforge_ganttproject_GanttProject [label=uses];
+	net_sourceforge_ganttproject_importer_ImportFileWizardImpl -> net_sourceforge_ganttproject_gui_projectwizard_WizardImpl [label=extends];
+	net_sourceforge_ganttproject_GanttProject -> net_sourceforge_ganttproject_importer_ImportFileWizardImpl [label=uses];
+}

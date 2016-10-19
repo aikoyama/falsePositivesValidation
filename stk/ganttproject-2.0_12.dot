@@ -1,0 +1,18 @@
+digraph stk {
+	net_sourceforge_ganttproject_task_ResourceAssignmentCollectionImpl [label="<<type>>
+net.sourceforge.ganttproject.task.ResourceAssignmentCollectionImpl",style=filled,color="grey"];
+	net_sourceforge_ganttproject_task_ResourceAssignmentCollection [label="<<supertype>>
+net.sourceforge.ganttproject.task.ResourceAssignmentCollection",style=filled,color="grey"];
+	net_sourceforge_ganttproject_task_Task [label="net.sourceforge.ganttproject.task.Task"];
+	net_sourceforge_ganttproject_task_TaskManager [label="net.sourceforge.ganttproject.task.TaskManager"];
+	net_sourceforge_ganttproject_GanttTask [label="net.sourceforge.ganttproject.GanttTask"];
+	net_sourceforge_ganttproject_task_ResourceAssignment [label="net.sourceforge.ganttproject.task.ResourceAssignment"];
+	net_sourceforge_ganttproject_task_TaskImpl [label="net.sourceforge.ganttproject.task.TaskImpl"];
+	net_sourceforge_ganttproject_task_ResourceAssignmentCollectionImpl -> net_sourceforge_ganttproject_task_ResourceAssignmentCollection [label=implements];
+	net_sourceforge_ganttproject_task_ResourceAssignmentCollection -> net_sourceforge_ganttproject_task_ResourceAssignment [label=uses];
+	net_sourceforge_ganttproject_task_ResourceAssignment -> net_sourceforge_ganttproject_task_Task [label=uses];
+	net_sourceforge_ganttproject_task_Task -> net_sourceforge_ganttproject_task_TaskManager [label=uses];
+	net_sourceforge_ganttproject_task_TaskManager -> net_sourceforge_ganttproject_GanttTask [label=uses];
+	net_sourceforge_ganttproject_GanttTask -> net_sourceforge_ganttproject_task_TaskImpl [label=extends];
+	net_sourceforge_ganttproject_task_TaskImpl -> net_sourceforge_ganttproject_task_ResourceAssignmentCollectionImpl [label=uses];
+}

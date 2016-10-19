@@ -1,0 +1,10 @@
+digraph cd {
+	org_argouml_profile_internal_ocl_CrOCL [label="<<package_exit>>
+org.argouml.profile.internal.ocl.CrOCL",style=filled,color="grey"];
+	org_argouml_profile_internal_ocl_CompositeModelInterpreter [label="<<package_entry>>
+org.argouml.profile.internal.ocl.CompositeModelInterpreter",style=filled,color="grey"];
+	org_argouml_profile_internal_ocl_uml14_Uml14ModelInterpreter [label="<<otherpackage1>>
+org.argouml.profile.internal.ocl.uml14.Uml14ModelInterpreter"];
+	org_argouml_profile_internal_ocl_CrOCL -> org_argouml_profile_internal_ocl_uml14_Uml14ModelInterpreter [label=uses];
+	org_argouml_profile_internal_ocl_uml14_Uml14ModelInterpreter -> org_argouml_profile_internal_ocl_CompositeModelInterpreter [label=extends];
+}

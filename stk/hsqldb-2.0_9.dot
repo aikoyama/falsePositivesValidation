@@ -1,0 +1,12 @@
+digraph stk {
+	org_hsqldb_Constraint [label="<<type>>
+org.hsqldb.Constraint",style=filled,color="grey"];
+	org_hsqldb_SchemaObject [label="<<supertype>>
+org.hsqldb.SchemaObject",style=filled,color="grey"];
+	org_hsqldb_rights_Grantee [label="org.hsqldb.rights.Grantee"];
+	org_hsqldb_SchemaManager [label="org.hsqldb.SchemaManager"];
+	org_hsqldb_Constraint -> org_hsqldb_SchemaObject [label=implements];
+	org_hsqldb_SchemaObject -> org_hsqldb_rights_Grantee [label=uses];
+	org_hsqldb_rights_Grantee -> org_hsqldb_SchemaManager [label=uses];
+	org_hsqldb_SchemaManager -> org_hsqldb_Constraint [label=uses];
+}

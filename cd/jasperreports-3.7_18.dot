@@ -1,0 +1,21 @@
+digraph cd {
+	net_sf_jasperreports_crosstabs_JRCrosstabGroup [label="<<package_exit>>
+net.sf.jasperreports.crosstabs.JRCrosstabGroup",style=filled,color="grey"];
+	net_sf_jasperreports_crosstabs_JRCrosstabBucket [label="<<package_entry>>
+net.sf.jasperreports.crosstabs.JRCrosstabBucket",style=filled,color="grey"];
+	net_sf_jasperreports_engine_JRVariable [label="<<otherpackage1>>
+net.sf.jasperreports.engine.JRVariable"];
+	net_sf_jasperreports_engine_JRExpressionCollector [label="<<otherpackage2>>
+net.sf.jasperreports.engine.JRExpressionCollector"];
+	net_sf_jasperreports_engine_JRElementGroup [label="net.sf.jasperreports.engine.JRElementGroup"];
+	net_sf_jasperreports_engine_JRGroup [label="net.sf.jasperreports.engine.JRGroup"];
+	net_sf_jasperreports_engine_JRBand [label="net.sf.jasperreports.engine.JRBand"];
+	net_sf_jasperreports_engine_JRElement [label="net.sf.jasperreports.engine.JRElement"];
+	net_sf_jasperreports_crosstabs_JRCrosstabGroup -> net_sf_jasperreports_engine_JRVariable [label=uses];
+	net_sf_jasperreports_engine_JRExpressionCollector -> net_sf_jasperreports_crosstabs_JRCrosstabBucket [label=uses];
+	net_sf_jasperreports_engine_JRVariable -> net_sf_jasperreports_engine_JRGroup [label=uses];
+	net_sf_jasperreports_engine_JRGroup -> net_sf_jasperreports_engine_JRBand [label=uses];
+	net_sf_jasperreports_engine_JRBand -> net_sf_jasperreports_engine_JRElementGroup [label=extends];
+	net_sf_jasperreports_engine_JRElementGroup -> net_sf_jasperreports_engine_JRElement [label=uses];
+	net_sf_jasperreports_engine_JRElement -> net_sf_jasperreports_engine_JRExpressionCollector [label=uses];
+}

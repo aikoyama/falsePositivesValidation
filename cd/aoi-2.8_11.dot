@@ -1,0 +1,10 @@
+digraph cd {
+	artofillusion_animation_distortion_SkeletonShapeTrack$1 [label="<<package_exit>>
+artofillusion.animation.distortion.SkeletonShapeTrack$1",style=filled,color="grey"];
+	artofillusion_animation_distortion_CustomDistortionTrack [label="<<package_entry>>
+artofillusion.animation.distortion.CustomDistortionTrack",style=filled,color="grey"];
+	artofillusion_LayoutWindow [label="<<otherpackage1>>
+artofillusion.LayoutWindow"];
+	artofillusion_animation_distortion_SkeletonShapeTrack$1 -> artofillusion_LayoutWindow [label=uses];
+	artofillusion_LayoutWindow -> artofillusion_animation_distortion_CustomDistortionTrack [label=uses];
+}

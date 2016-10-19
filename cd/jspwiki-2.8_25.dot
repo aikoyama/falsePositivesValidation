@@ -1,0 +1,15 @@
+digraph cd {
+	com_ecyrd_jspwiki_auth_permissions_PermissionFactory [label="<<package_exit>>
+com.ecyrd.jspwiki.auth.permissions.PermissionFactory",style=filled,color="grey"];
+	com_ecyrd_jspwiki_auth_permissions_AllPermission [label="<<package_entry>>
+com.ecyrd.jspwiki.auth.permissions.AllPermission",style=filled,color="grey"];
+	com_ecyrd_jspwiki_WikiPage [label="<<otherpackage1>>
+com.ecyrd.jspwiki.WikiPage"];
+	com_ecyrd_jspwiki_WikiContext [label="<<otherpackage2>>
+com.ecyrd.jspwiki.WikiContext"];
+	com_ecyrd_jspwiki_WikiEngine [label="com.ecyrd.jspwiki.WikiEngine"];
+	com_ecyrd_jspwiki_auth_permissions_PermissionFactory -> com_ecyrd_jspwiki_WikiPage [label=uses];
+	com_ecyrd_jspwiki_WikiContext -> com_ecyrd_jspwiki_auth_permissions_AllPermission [label=uses];
+	com_ecyrd_jspwiki_WikiPage -> com_ecyrd_jspwiki_WikiEngine [label=uses];
+	com_ecyrd_jspwiki_WikiEngine -> com_ecyrd_jspwiki_WikiContext [label=uses];
+}

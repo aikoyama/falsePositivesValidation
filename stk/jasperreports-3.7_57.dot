@@ -1,0 +1,10 @@
+digraph stk {
+	net_sf_jasperreports_crosstabs_fill_JRFillCrosstabObjectFactory [label="<<type>>
+net.sf.jasperreports.crosstabs.fill.JRFillCrosstabObjectFactory",style=filled,color="grey"];
+	net_sf_jasperreports_engine_fill_JRFillObjectFactory [label="<<supertype>>
+net.sf.jasperreports.engine.fill.JRFillObjectFactory",style=filled,color="grey"];
+	net_sf_jasperreports_engine_fill_JRFillCrosstab [label="net.sf.jasperreports.engine.fill.JRFillCrosstab"];
+	net_sf_jasperreports_crosstabs_fill_JRFillCrosstabObjectFactory -> net_sf_jasperreports_engine_fill_JRFillObjectFactory [label=extends];
+	net_sf_jasperreports_engine_fill_JRFillObjectFactory -> net_sf_jasperreports_engine_fill_JRFillCrosstab [label=uses];
+	net_sf_jasperreports_engine_fill_JRFillCrosstab -> net_sf_jasperreports_crosstabs_fill_JRFillCrosstabObjectFactory [label=uses];
+}

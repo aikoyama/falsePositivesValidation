@@ -1,0 +1,10 @@
+digraph cd {
+	buoy_event_CellValueChangedEvent [label="<<package_exit>>
+buoy.event.CellValueChangedEvent",style=filled,color="grey"];
+	buoy_event_ToolTipEvent [label="<<package_entry>>
+buoy.event.ToolTipEvent",style=filled,color="grey"];
+	buoy_widget_Widget [label="<<otherpackage1>>
+buoy.widget.Widget"];
+	buoy_event_CellValueChangedEvent -> buoy_widget_Widget [label=uses];
+	buoy_widget_Widget -> buoy_event_ToolTipEvent [label=uses];
+}

@@ -1,0 +1,16 @@
+digraph stk {
+	net_sourceforge_ganttproject_ChartComponentBase$AbstractChartImplementation [label="<<type>>
+net.sourceforge.ganttproject.ChartComponentBase$AbstractChartImplementation",style=filled,color="grey"];
+	net_sourceforge_ganttproject_chart_Chart [label="<<supertype>>
+net.sourceforge.ganttproject.chart.Chart",style=filled,color="grey"];
+	net_sourceforge_ganttproject_task_TaskManager [label="net.sourceforge.ganttproject.task.TaskManager"];
+	net_sourceforge_ganttproject_GanttProject [label="net.sourceforge.ganttproject.GanttProject"];
+	net_sourceforge_ganttproject_ResourceLoadGraphicArea [label="net.sourceforge.ganttproject.ResourceLoadGraphicArea"];
+	net_sourceforge_ganttproject_calendar_GPCalendar [label="net.sourceforge.ganttproject.calendar.GPCalendar"];
+	net_sourceforge_ganttproject_ChartComponentBase$AbstractChartImplementation -> net_sourceforge_ganttproject_chart_Chart [label=implements];
+	net_sourceforge_ganttproject_chart_Chart -> net_sourceforge_ganttproject_task_TaskManager [label=uses];
+	net_sourceforge_ganttproject_task_TaskManager -> net_sourceforge_ganttproject_calendar_GPCalendar [label=uses];
+	net_sourceforge_ganttproject_calendar_GPCalendar -> net_sourceforge_ganttproject_GanttProject [label=uses];
+	net_sourceforge_ganttproject_GanttProject -> net_sourceforge_ganttproject_ResourceLoadGraphicArea [label=uses];
+	net_sourceforge_ganttproject_ResourceLoadGraphicArea -> net_sourceforge_ganttproject_ChartComponentBase$AbstractChartImplementation [label=uses];
+}

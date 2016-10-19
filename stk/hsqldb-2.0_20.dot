@@ -1,0 +1,14 @@
+digraph stk {
+	org_hsqldb_FunctionCustom [label="<<type>>
+org.hsqldb.FunctionCustom",style=filled,color="grey"];
+	org_hsqldb_FunctionSQL [label="<<supertype>>
+org.hsqldb.FunctionSQL",style=filled,color="grey"];
+	org_hsqldb_Session [label="org.hsqldb.Session"];
+	org_hsqldb_jdbc_JDBCConnection [label="org.hsqldb.jdbc.JDBCConnection"];
+	org_hsqldb_jdbc_JDBCDatabaseMetaData [label="org.hsqldb.jdbc.JDBCDatabaseMetaData"];
+	org_hsqldb_FunctionCustom -> org_hsqldb_FunctionSQL [label=extends];
+	org_hsqldb_FunctionSQL -> org_hsqldb_Session [label=uses];
+	org_hsqldb_Session -> org_hsqldb_jdbc_JDBCConnection [label=uses];
+	org_hsqldb_jdbc_JDBCConnection -> org_hsqldb_jdbc_JDBCDatabaseMetaData [label=uses];
+	org_hsqldb_jdbc_JDBCDatabaseMetaData -> org_hsqldb_FunctionCustom [label=uses];
+}

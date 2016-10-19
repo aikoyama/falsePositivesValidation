@@ -1,0 +1,14 @@
+digraph stk {
+	net_suberic_pooka_MultiMessageInfo [label="<<type>>
+net.suberic.pooka.MultiMessageInfo",style=filled,color="grey"];
+	net_suberic_pooka_MessageInfo [label="<<supertype>>
+net.suberic.pooka.MessageInfo",style=filled,color="grey"];
+	net_suberic_pooka_gui_MessageProxy [label="net.suberic.pooka.gui.MessageProxy"];
+	net_suberic_pooka_gui_FolderDisplayPanel [label="net.suberic.pooka.gui.FolderDisplayPanel"];
+	net_suberic_pooka_gui_MessageProxy$DeleteAction [label="net.suberic.pooka.gui.MessageProxy$DeleteAction"];
+	net_suberic_pooka_MultiMessageInfo -> net_suberic_pooka_MessageInfo [label=extends];
+	net_suberic_pooka_MessageInfo -> net_suberic_pooka_gui_MessageProxy [label=uses];
+	net_suberic_pooka_gui_MessageProxy -> net_suberic_pooka_gui_MessageProxy$DeleteAction [label=uses];
+	net_suberic_pooka_gui_MessageProxy$DeleteAction -> net_suberic_pooka_gui_FolderDisplayPanel [label=uses];
+	net_suberic_pooka_gui_FolderDisplayPanel -> net_suberic_pooka_MultiMessageInfo [label=uses];
+}

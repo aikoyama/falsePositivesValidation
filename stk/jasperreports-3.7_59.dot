@@ -1,0 +1,24 @@
+digraph stk {
+	net_sf_jasperreports_crosstabs_base_JRBaseCrosstabMeasure [label="<<type>>
+net.sf.jasperreports.crosstabs.base.JRBaseCrosstabMeasure",style=filled,color="grey"];
+	net_sf_jasperreports_crosstabs_JRCrosstabMeasure [label="<<supertype>>
+net.sf.jasperreports.crosstabs.JRCrosstabMeasure",style=filled,color="grey"];
+	net_sf_jasperreports_engine_JRVariable [label="net.sf.jasperreports.engine.JRVariable"];
+	net_sf_jasperreports_engine_JRElementGroup [label="net.sf.jasperreports.engine.JRElementGroup"];
+	net_sf_jasperreports_engine_JRElement [label="net.sf.jasperreports.engine.JRElement"];
+	net_sf_jasperreports_engine_base_JRBaseObjectFactory [label="net.sf.jasperreports.engine.base.JRBaseObjectFactory"];
+	net_sf_jasperreports_engine_JRExpressionCollector [label="net.sf.jasperreports.engine.JRExpressionCollector"];
+	net_sf_jasperreports_engine_JRGroup [label="net.sf.jasperreports.engine.JRGroup"];
+	net_sf_jasperreports_engine_JRBand [label="net.sf.jasperreports.engine.JRBand"];
+	net_sf_jasperreports_charts_util_JRMeterInterval [label="net.sf.jasperreports.charts.util.JRMeterInterval"];
+	net_sf_jasperreports_crosstabs_base_JRBaseCrosstabMeasure -> net_sf_jasperreports_crosstabs_JRCrosstabMeasure [label=implements];
+	net_sf_jasperreports_crosstabs_JRCrosstabMeasure -> net_sf_jasperreports_engine_JRVariable [label=uses];
+	net_sf_jasperreports_engine_JRVariable -> net_sf_jasperreports_engine_JRGroup [label=uses];
+	net_sf_jasperreports_engine_JRGroup -> net_sf_jasperreports_engine_JRBand [label=uses];
+	net_sf_jasperreports_engine_JRBand -> net_sf_jasperreports_engine_JRElementGroup [label=extends];
+	net_sf_jasperreports_engine_JRElementGroup -> net_sf_jasperreports_engine_JRElement [label=uses];
+	net_sf_jasperreports_engine_JRElement -> net_sf_jasperreports_engine_JRExpressionCollector [label=uses];
+	net_sf_jasperreports_engine_JRExpressionCollector -> net_sf_jasperreports_charts_util_JRMeterInterval [label=uses];
+	net_sf_jasperreports_charts_util_JRMeterInterval -> net_sf_jasperreports_engine_base_JRBaseObjectFactory [label=uses];
+	net_sf_jasperreports_engine_base_JRBaseObjectFactory -> net_sf_jasperreports_crosstabs_base_JRBaseCrosstabMeasure [label=uses];
+}

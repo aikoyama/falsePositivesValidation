@@ -1,0 +1,8 @@
+digraph cd {
+	org_argouml_uml_diagram_state_ui_FigConcurrentRegion [label="<<package_exit>>
+org.argouml.uml.diagram.state.ui.FigConcurrentRegion",style=filled,color="grey"];
+	org_argouml_uml_diagram_ui_ActionAddConcurrentRegion [label="<<otherpackage1>>
+org.argouml.uml.diagram.ui.ActionAddConcurrentRegion"];
+	org_argouml_uml_diagram_state_ui_FigConcurrentRegion -> org_argouml_uml_diagram_ui_ActionAddConcurrentRegion [label=uses];
+	org_argouml_uml_diagram_ui_ActionAddConcurrentRegion -> org_argouml_uml_diagram_state_ui_FigConcurrentRegion [label=uses];
+}

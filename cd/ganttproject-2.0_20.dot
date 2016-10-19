@@ -1,0 +1,21 @@
+digraph cd {
+	net_sourceforge_ganttproject_chart_item_TaskRegularAreaChartItem [label="<<package_exit>>
+net.sourceforge.ganttproject.chart.item.TaskRegularAreaChartItem",style=filled,color="grey"];
+	net_sourceforge_ganttproject_chart_item_ChartItem [label="<<package_entry>>
+net.sourceforge.ganttproject.chart.item.ChartItem",style=filled,color="grey"];
+	net_sourceforge_ganttproject_task_Task [label="<<otherpackage1>>
+net.sourceforge.ganttproject.task.Task"];
+	net_sourceforge_ganttproject_GanttGraphicArea$MouseSupport [label="<<otherpackage2>>
+net.sourceforge.ganttproject.GanttGraphicArea$MouseSupport"];
+	net_sourceforge_ganttproject_GanttProject [label="net.sourceforge.ganttproject.GanttProject"];
+	net_sourceforge_ganttproject_calendar_GPCalendar [label="net.sourceforge.ganttproject.calendar.GPCalendar"];
+	net_sourceforge_ganttproject_task_TaskManager [label="net.sourceforge.ganttproject.task.TaskManager"];
+	net_sourceforge_ganttproject_GanttProject$7 [label="net.sourceforge.ganttproject.GanttProject$7"];
+	net_sourceforge_ganttproject_chart_item_TaskRegularAreaChartItem -> net_sourceforge_ganttproject_task_Task [label=uses];
+	net_sourceforge_ganttproject_GanttGraphicArea$MouseSupport -> net_sourceforge_ganttproject_chart_item_ChartItem [label=uses];
+	net_sourceforge_ganttproject_task_Task -> net_sourceforge_ganttproject_task_TaskManager [label=uses];
+	net_sourceforge_ganttproject_task_TaskManager -> net_sourceforge_ganttproject_calendar_GPCalendar [label=uses];
+	net_sourceforge_ganttproject_calendar_GPCalendar -> net_sourceforge_ganttproject_GanttProject [label=uses];
+	net_sourceforge_ganttproject_GanttProject -> net_sourceforge_ganttproject_GanttProject$7 [label=uses];
+	net_sourceforge_ganttproject_GanttProject$7 -> net_sourceforge_ganttproject_GanttGraphicArea$MouseSupport [label=uses];
+}

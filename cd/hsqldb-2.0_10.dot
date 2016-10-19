@@ -1,0 +1,10 @@
+digraph cd {
+	org_hsqldb_rowio_RowOutputText [label="<<package_exit>>
+org.hsqldb.rowio.RowOutputText",style=filled,color="grey"];
+	org_hsqldb_rowio_RowOutputInterface [label="<<package_entry>>
+org.hsqldb.rowio.RowOutputInterface",style=filled,color="grey"];
+	org_hsqldb_Row [label="<<otherpackage1>>
+org.hsqldb.Row"];
+	org_hsqldb_rowio_RowOutputText -> org_hsqldb_Row [label=uses];
+	org_hsqldb_Row -> org_hsqldb_rowio_RowOutputInterface [label=uses];
+}

@@ -1,0 +1,10 @@
+digraph cd {
+	net_sf_jasperreports_engine_data_JRHibernateListDataSource [label="<<package_exit>>
+net.sf.jasperreports.engine.data.JRHibernateListDataSource",style=filled,color="grey"];
+	net_sf_jasperreports_engine_data_JRHibernateIterateDataSource [label="<<package_entry>>
+net.sf.jasperreports.engine.data.JRHibernateIterateDataSource",style=filled,color="grey"];
+	net_sf_jasperreports_engine_query_JRHibernateQueryExecuter [label="<<otherpackage1>>
+net.sf.jasperreports.engine.query.JRHibernateQueryExecuter"];
+	net_sf_jasperreports_engine_data_JRHibernateListDataSource -> net_sf_jasperreports_engine_query_JRHibernateQueryExecuter [label=uses];
+	net_sf_jasperreports_engine_query_JRHibernateQueryExecuter -> net_sf_jasperreports_engine_data_JRHibernateIterateDataSource [label=uses];
+}

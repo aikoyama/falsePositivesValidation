@@ -1,0 +1,10 @@
+digraph cd {
+	buoy_internal_SingleWidgetPanel [label="<<package_exit>>
+buoy.internal.SingleWidgetPanel",style=filled,color="grey"];
+	buoy_internal_EventLinkAdapter [label="<<package_entry>>
+buoy.internal.EventLinkAdapter",style=filled,color="grey"];
+	buoy_widget_Widget [label="<<otherpackage1>>
+buoy.widget.Widget"];
+	buoy_internal_SingleWidgetPanel -> buoy_widget_Widget [label=uses];
+	buoy_widget_Widget -> buoy_internal_EventLinkAdapter [label=uses];
+}

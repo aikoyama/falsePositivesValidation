@@ -1,0 +1,14 @@
+digraph stk {
+	net_suberic_pooka_gui_FolderPanel [label="<<type>>
+net.suberic.pooka.gui.FolderPanel",style=filled,color="grey"];
+	net_suberic_pooka_UserProfileContainer [label="<<supertype>>
+net.suberic.pooka.UserProfileContainer",style=filled,color="grey"];
+	net_suberic_pooka_FolderInfo [label="net.suberic.pooka.FolderInfo"];
+	net_suberic_pooka_UserProfile [label="net.suberic.pooka.UserProfile"];
+	net_suberic_pooka_FolderInfo$4 [label="net.suberic.pooka.FolderInfo$4"];
+	net_suberic_pooka_gui_FolderPanel -> net_suberic_pooka_UserProfileContainer [label=implements];
+	net_suberic_pooka_UserProfileContainer -> net_suberic_pooka_UserProfile [label=uses];
+	net_suberic_pooka_UserProfile -> net_suberic_pooka_FolderInfo [label=uses];
+	net_suberic_pooka_FolderInfo -> net_suberic_pooka_FolderInfo$4 [label=uses];
+	net_suberic_pooka_FolderInfo$4 -> net_suberic_pooka_gui_FolderPanel [label=uses];
+}

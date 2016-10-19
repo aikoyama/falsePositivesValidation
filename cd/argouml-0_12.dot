@@ -1,0 +1,10 @@
+digraph cd {
+	org_argouml_kernel_ProjectSettings [label="<<package_exit>>
+org.argouml.kernel.ProjectSettings",style=filled,color="grey"];
+	org_argouml_kernel_ProfileConfiguration [label="<<package_entry>>
+org.argouml.kernel.ProfileConfiguration",style=filled,color="grey"];
+	org_argouml_uml_diagram_DiagramSettings [label="<<otherpackage1>>
+org.argouml.uml.diagram.DiagramSettings"];
+	org_argouml_kernel_ProjectSettings -> org_argouml_uml_diagram_DiagramSettings [label=uses];
+	org_argouml_uml_diagram_DiagramSettings -> org_argouml_kernel_ProfileConfiguration [label=uses];
+}

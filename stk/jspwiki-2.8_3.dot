@@ -1,0 +1,14 @@
+digraph stk {
+	com_ecyrd_jspwiki_providers_CachingProvider [label="<<type>>
+com.ecyrd.jspwiki.providers.CachingProvider",style=filled,color="grey"];
+	com_ecyrd_jspwiki_providers_WikiPageProvider [label="<<supertype>>
+com.ecyrd.jspwiki.providers.WikiPageProvider",style=filled,color="grey"];
+	com_ecyrd_jspwiki_WikiEngine [label="com.ecyrd.jspwiki.WikiEngine"];
+	com_ecyrd_jspwiki_PageManager [label="com.ecyrd.jspwiki.PageManager"];
+	com_ecyrd_jspwiki_WikiPage [label="com.ecyrd.jspwiki.WikiPage"];
+	com_ecyrd_jspwiki_providers_CachingProvider -> com_ecyrd_jspwiki_providers_WikiPageProvider [label=implements];
+	com_ecyrd_jspwiki_providers_WikiPageProvider -> com_ecyrd_jspwiki_WikiPage [label=uses];
+	com_ecyrd_jspwiki_WikiPage -> com_ecyrd_jspwiki_WikiEngine [label=uses];
+	com_ecyrd_jspwiki_WikiEngine -> com_ecyrd_jspwiki_PageManager [label=uses];
+	com_ecyrd_jspwiki_PageManager -> com_ecyrd_jspwiki_providers_CachingProvider [label=uses];
+}

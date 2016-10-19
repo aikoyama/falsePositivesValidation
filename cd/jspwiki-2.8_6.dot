@@ -1,0 +1,13 @@
+digraph cd {
+	com_ecyrd_jspwiki_providers_CachingProvider [label="<<package_exit>>
+com.ecyrd.jspwiki.providers.CachingProvider",style=filled,color="grey"];
+	com_ecyrd_jspwiki_providers_ProviderException [label="<<package_entry>>
+com.ecyrd.jspwiki.providers.ProviderException",style=filled,color="grey"];
+	com_ecyrd_jspwiki_WikiContext [label="<<otherpackage1>>
+com.ecyrd.jspwiki.WikiContext"];
+	com_ecyrd_jspwiki_ui_CommandResolver [label="<<otherpackage2>>
+com.ecyrd.jspwiki.ui.CommandResolver"];
+	com_ecyrd_jspwiki_providers_CachingProvider -> com_ecyrd_jspwiki_WikiContext [label=uses];
+	com_ecyrd_jspwiki_ui_CommandResolver -> com_ecyrd_jspwiki_providers_ProviderException [label=uses];
+	com_ecyrd_jspwiki_WikiContext -> com_ecyrd_jspwiki_ui_CommandResolver [label=uses];
+}

@@ -1,0 +1,17 @@
+digraph cd {
+	org_argouml_uml_diagram_ui_FigNodeModelElement [label="<<package_exit>>
+org.argouml.uml.diagram.ui.FigNodeModelElement",style=filled,color="grey"];
+	org_argouml_uml_diagram_ui_UMLDiagram [label="<<package_entry>>
+org.argouml.uml.diagram.ui.UMLDiagram",style=filled,color="grey"];
+	org_argouml_cognitive_ui_ActionGoToCritique [label="<<otherpackage1>>
+org.argouml.cognitive.ui.ActionGoToCritique"];
+	org_argouml_uml_ui_UMLTreeCellRenderer [label="<<otherpackage2>>
+org.argouml.uml.ui.UMLTreeCellRenderer"];
+	org_argouml_cognitive_ui_ToDoPane [label="org.argouml.cognitive.ui.ToDoPane"];
+	org_argouml_cognitive_ui_ToDoTreeRenderer [label="org.argouml.cognitive.ui.ToDoTreeRenderer"];
+	org_argouml_uml_diagram_ui_FigNodeModelElement -> org_argouml_cognitive_ui_ActionGoToCritique [label=uses];
+	org_argouml_uml_ui_UMLTreeCellRenderer -> org_argouml_uml_diagram_ui_UMLDiagram [label=uses];
+	org_argouml_cognitive_ui_ActionGoToCritique -> org_argouml_cognitive_ui_ToDoPane [label=uses];
+	org_argouml_cognitive_ui_ToDoPane -> org_argouml_cognitive_ui_ToDoTreeRenderer [label=uses];
+	org_argouml_cognitive_ui_ToDoTreeRenderer -> org_argouml_uml_ui_UMLTreeCellRenderer [label=uses];
+}

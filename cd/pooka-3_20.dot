@@ -1,0 +1,10 @@
+digraph cd {
+	javax_help_PrintSetupAction [label="<<package_exit>>
+javax.help.PrintSetupAction",style=filled,color="grey"];
+	javax_help_HelpSet [label="<<package_entry>>
+javax.help.HelpSet",style=filled,color="grey"];
+	com_sun_java_help_impl_JHelpPrintHandler [label="<<otherpackage1>>
+com.sun.java.help.impl.JHelpPrintHandler"];
+	javax_help_PrintSetupAction -> com_sun_java_help_impl_JHelpPrintHandler [label=uses];
+	com_sun_java_help_impl_JHelpPrintHandler -> javax_help_HelpSet [label=uses];
+}

@@ -1,0 +1,15 @@
+digraph cd {
+	net_sourceforge_ganttproject_task_hierarchy_TaskHierarchyItem [label="<<package_exit>>
+net.sourceforge.ganttproject.task.hierarchy.TaskHierarchyItem",style=filled,color="grey"];
+	net_sourceforge_ganttproject_task_Task [label="<<otherpackage1>>
+net.sourceforge.ganttproject.task.Task"];
+	net_sourceforge_ganttproject_task_TaskImpl [label="<<otherpackage2>>
+net.sourceforge.ganttproject.task.TaskImpl"];
+	net_sourceforge_ganttproject_GanttTaskRelationship [label="net.sourceforge.ganttproject.GanttTaskRelationship"];
+	net_sourceforge_ganttproject_GanttTask [label="net.sourceforge.ganttproject.GanttTask"];
+	net_sourceforge_ganttproject_task_hierarchy_TaskHierarchyItem -> net_sourceforge_ganttproject_task_Task [label=uses];
+	net_sourceforge_ganttproject_task_TaskImpl -> net_sourceforge_ganttproject_task_hierarchy_TaskHierarchyItem [label=uses];
+	net_sourceforge_ganttproject_task_Task -> net_sourceforge_ganttproject_GanttTaskRelationship [label=uses];
+	net_sourceforge_ganttproject_GanttTaskRelationship -> net_sourceforge_ganttproject_GanttTask [label=uses];
+	net_sourceforge_ganttproject_GanttTask -> net_sourceforge_ganttproject_task_TaskImpl [label=extends];
+}

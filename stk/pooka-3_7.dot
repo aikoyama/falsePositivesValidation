@@ -1,0 +1,8 @@
+digraph stk {
+	com_sun_mail_imap_protocol_FetchResponse [label="<<type>>
+com.sun.mail.imap.protocol.FetchResponse",style=filled,color="grey"];
+	com_sun_mail_imap_protocol_IMAPResponse [label="<<supertype>>
+com.sun.mail.imap.protocol.IMAPResponse",style=filled,color="grey"];
+	com_sun_mail_imap_protocol_FetchResponse -> com_sun_mail_imap_protocol_IMAPResponse [label=extends];
+	com_sun_mail_imap_protocol_IMAPResponse -> com_sun_mail_imap_protocol_FetchResponse [label=uses];
+}

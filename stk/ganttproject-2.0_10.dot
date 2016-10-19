@@ -1,0 +1,8 @@
+digraph stk {
+	net_sourceforge_ganttproject_task_TaskImpl$1 [label="<<type>>
+net.sourceforge.ganttproject.task.TaskImpl$1",style=filled,color="grey"];
+	net_sourceforge_ganttproject_task_TaskImpl [label="<<supertype>>
+net.sourceforge.ganttproject.task.TaskImpl",style=filled,color="grey"];
+	net_sourceforge_ganttproject_task_TaskImpl$1 -> net_sourceforge_ganttproject_task_TaskImpl [label=extends];
+	net_sourceforge_ganttproject_task_TaskImpl -> net_sourceforge_ganttproject_task_TaskImpl$1 [label=uses];
+}

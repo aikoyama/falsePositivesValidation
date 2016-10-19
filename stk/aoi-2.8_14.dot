@@ -1,0 +1,14 @@
+digraph stk {
+	artofillusion_object_SplineMesh [label="<<type>>
+artofillusion.object.SplineMesh",style=filled,color="grey"];
+	artofillusion_object_Object3D [label="<<supertype>>
+artofillusion.object.Object3D",style=filled,color="grey"];
+	artofillusion_LayoutWindow [label="artofillusion.LayoutWindow"];
+	artofillusion_animation_PoseTrack [label="artofillusion.animation.PoseTrack"];
+	artofillusion_CreateSplineMeshTool [label="artofillusion.CreateSplineMeshTool"];
+	artofillusion_object_SplineMesh -> artofillusion_object_Object3D [label=extends];
+	artofillusion_object_Object3D -> artofillusion_animation_PoseTrack [label=uses];
+	artofillusion_animation_PoseTrack -> artofillusion_LayoutWindow [label=uses];
+	artofillusion_LayoutWindow -> artofillusion_CreateSplineMeshTool [label=uses];
+	artofillusion_CreateSplineMeshTool -> artofillusion_object_SplineMesh [label=uses];
+}

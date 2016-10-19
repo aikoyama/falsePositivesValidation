@@ -1,0 +1,14 @@
+digraph stk {
+	org_hsqldb_navigator_RowSetNavigatorDataChange [label="<<type>>
+org.hsqldb.navigator.RowSetNavigatorDataChange",style=filled,color="grey"];
+	org_hsqldb_navigator_RowSetNavigator [label="<<supertype>>
+org.hsqldb.navigator.RowSetNavigator",style=filled,color="grey"];
+	org_hsqldb_RangeVariable [label="org.hsqldb.RangeVariable"];
+	org_hsqldb_StatementResultUpdate [label="org.hsqldb.StatementResultUpdate"];
+	org_hsqldb_Session [label="org.hsqldb.Session"];
+	org_hsqldb_navigator_RowSetNavigatorDataChange -> org_hsqldb_navigator_RowSetNavigator [label=extends];
+	org_hsqldb_navigator_RowSetNavigator -> org_hsqldb_RangeVariable [label=uses];
+	org_hsqldb_RangeVariable -> org_hsqldb_Session [label=uses];
+	org_hsqldb_Session -> org_hsqldb_StatementResultUpdate [label=uses];
+	org_hsqldb_StatementResultUpdate -> org_hsqldb_navigator_RowSetNavigatorDataChange [label=uses];
+}

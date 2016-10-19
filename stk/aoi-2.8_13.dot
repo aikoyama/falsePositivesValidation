@@ -1,0 +1,18 @@
+digraph stk {
+	artofillusion_animation_MeshGesture [label="<<type>>
+artofillusion.animation.MeshGesture",style=filled,color="grey"];
+	artofillusion_animation_Gesture [label="<<supertype>>
+artofillusion.animation.Gesture",style=filled,color="grey"];
+	artofillusion_TextureParameter [label="artofillusion.TextureParameter"];
+	artofillusion_object_TriangleMesh [label="artofillusion.object.TriangleMesh"];
+	artofillusion_object_Object3D [label="artofillusion.object.Object3D"];
+	artofillusion_object_TriangleMesh$TriangleMeshKeyframe [label="artofillusion.object.TriangleMesh$TriangleMeshKeyframe"];
+	artofillusion_texture_Texture [label="artofillusion.texture.Texture"];
+	artofillusion_animation_MeshGesture -> artofillusion_animation_Gesture [label=implements];
+	artofillusion_animation_Gesture -> artofillusion_TextureParameter [label=uses];
+	artofillusion_TextureParameter -> artofillusion_texture_Texture [label=uses];
+	artofillusion_texture_Texture -> artofillusion_object_Object3D [label=uses];
+	artofillusion_object_Object3D -> artofillusion_object_TriangleMesh [label=uses];
+	artofillusion_object_TriangleMesh -> artofillusion_object_TriangleMesh$TriangleMeshKeyframe [label=uses];
+	artofillusion_object_TriangleMesh$TriangleMeshKeyframe -> artofillusion_animation_MeshGesture [label=extends];
+}

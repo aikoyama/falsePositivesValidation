@@ -1,0 +1,10 @@
+digraph stk {
+	org_hsqldb_types_ClobDataID [label="<<type>>
+org.hsqldb.types.ClobDataID",style=filled,color="grey"];
+	org_hsqldb_types_ClobData [label="<<supertype>>
+org.hsqldb.types.ClobData",style=filled,color="grey"];
+	org_hsqldb_SessionInterface [label="org.hsqldb.SessionInterface"];
+	org_hsqldb_types_ClobDataID -> org_hsqldb_types_ClobData [label=implements];
+	org_hsqldb_types_ClobData -> org_hsqldb_SessionInterface [label=uses];
+	org_hsqldb_SessionInterface -> org_hsqldb_types_ClobDataID [label=uses];
+}

@@ -1,0 +1,10 @@
+digraph cd {
+	buoy_widget_BTree$1 [label="<<package_exit>>
+buoy.widget.BTree$1",style=filled,color="grey"];
+	buoy_widget_Widget [label="<<package_entry>>
+buoy.widget.Widget",style=filled,color="grey"];
+	buoy_event_SelectionChangedEvent [label="<<otherpackage1>>
+buoy.event.SelectionChangedEvent"];
+	buoy_widget_BTree$1 -> buoy_event_SelectionChangedEvent [label=uses];
+	buoy_event_SelectionChangedEvent -> buoy_widget_Widget [label=uses];
+}

@@ -1,0 +1,13 @@
+digraph cd {
+	com_ecyrd_jspwiki_filters_CreoleFilter [label="<<package_exit>>
+com.ecyrd.jspwiki.filters.CreoleFilter",style=filled,color="grey"];
+	com_ecyrd_jspwiki_filters_FilterManager [label="<<package_entry>>
+com.ecyrd.jspwiki.filters.FilterManager",style=filled,color="grey"];
+	com_ecyrd_jspwiki_WikiContext [label="<<otherpackage1>>
+com.ecyrd.jspwiki.WikiContext"];
+	com_ecyrd_jspwiki_WikiEngine [label="<<otherpackage2>>
+com.ecyrd.jspwiki.WikiEngine"];
+	com_ecyrd_jspwiki_filters_CreoleFilter -> com_ecyrd_jspwiki_WikiContext [label=uses];
+	com_ecyrd_jspwiki_WikiEngine -> com_ecyrd_jspwiki_filters_FilterManager [label=uses];
+	com_ecyrd_jspwiki_WikiContext -> com_ecyrd_jspwiki_WikiEngine [label=uses];
+}

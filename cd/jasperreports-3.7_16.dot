@@ -1,0 +1,10 @@
+digraph cd {
+	net_sf_jasperreports_engine_export_JRXhtmlExporter [label="<<package_exit>>
+net.sf.jasperreports.engine.export.JRXhtmlExporter",style=filled,color="grey"];
+	net_sf_jasperreports_engine_export_ExporterFilterFactory [label="<<package_entry>>
+net.sf.jasperreports.engine.export.ExporterFilterFactory",style=filled,color="grey"];
+	net_sf_jasperreports_engine_JRAbstractExporter [label="<<otherpackage1>>
+net.sf.jasperreports.engine.JRAbstractExporter"];
+	net_sf_jasperreports_engine_export_JRXhtmlExporter -> net_sf_jasperreports_engine_JRAbstractExporter [label=extends];
+	net_sf_jasperreports_engine_JRAbstractExporter -> net_sf_jasperreports_engine_export_ExporterFilterFactory [label=uses];
+}

@@ -1,0 +1,10 @@
+digraph stk {
+	net_sf_jasperreports_engine_fill_JRVerticalFiller [label="<<type>>
+net.sf.jasperreports.engine.fill.JRVerticalFiller",style=filled,color="grey"];
+	net_sf_jasperreports_engine_fill_JRBaseFiller [label="<<supertype>>
+net.sf.jasperreports.engine.fill.JRBaseFiller",style=filled,color="grey"];
+	net_sf_jasperreports_engine_fill_JRFillSubreport [label="net.sf.jasperreports.engine.fill.JRFillSubreport"];
+	net_sf_jasperreports_engine_fill_JRVerticalFiller -> net_sf_jasperreports_engine_fill_JRBaseFiller [label=extends];
+	net_sf_jasperreports_engine_fill_JRBaseFiller -> net_sf_jasperreports_engine_fill_JRFillSubreport [label=uses];
+	net_sf_jasperreports_engine_fill_JRFillSubreport -> net_sf_jasperreports_engine_fill_JRVerticalFiller [label=uses];
+}

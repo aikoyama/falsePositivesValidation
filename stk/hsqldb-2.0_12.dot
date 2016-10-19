@@ -1,0 +1,14 @@
+digraph stk {
+	org_hsqldb_persist_RowStoreAVL [label="<<type>>
+org.hsqldb.persist.RowStoreAVL",style=filled,color="grey"];
+	org_hsqldb_persist_PersistentStore [label="<<supertype>>
+org.hsqldb.persist.PersistentStore",style=filled,color="grey"];
+	org_hsqldb_Session [label="org.hsqldb.Session"];
+	org_hsqldb_persist_RowStoreAVLHybrid [label="org.hsqldb.persist.RowStoreAVLHybrid"];
+	org_hsqldb_persist_Logger [label="org.hsqldb.persist.Logger"];
+	org_hsqldb_persist_RowStoreAVL -> org_hsqldb_persist_PersistentStore [label=implements];
+	org_hsqldb_persist_PersistentStore -> org_hsqldb_Session [label=uses];
+	org_hsqldb_Session -> org_hsqldb_persist_Logger [label=uses];
+	org_hsqldb_persist_Logger -> org_hsqldb_persist_RowStoreAVLHybrid [label=uses];
+	org_hsqldb_persist_RowStoreAVLHybrid -> org_hsqldb_persist_RowStoreAVL [label=extends];
+}

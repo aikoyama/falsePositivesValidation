@@ -1,0 +1,10 @@
+digraph stk {
+	artofillusion_animation_Actor [label="<<type>>
+artofillusion.animation.Actor",style=filled,color="grey"];
+	artofillusion_object_ObjectWrapper [label="<<supertype>>
+artofillusion.object.ObjectWrapper",style=filled,color="grey"];
+	artofillusion_object_TriangleMesh [label="artofillusion.object.TriangleMesh"];
+	artofillusion_animation_Actor -> artofillusion_object_ObjectWrapper [label=extends];
+	artofillusion_object_ObjectWrapper -> artofillusion_object_TriangleMesh [label=uses];
+	artofillusion_object_TriangleMesh -> artofillusion_animation_Actor [label=uses];
+}

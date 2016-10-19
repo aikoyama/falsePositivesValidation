@@ -1,0 +1,12 @@
+digraph stk {
+	org_htmlparser_lexer_Lexer [label="<<type>>
+org.htmlparser.lexer.Lexer",style=filled,color="grey"];
+	org_htmlparser_NodeFactory [label="<<supertype>>
+org.htmlparser.NodeFactory",style=filled,color="grey"];
+	org_htmlparser_scanners_Scanner [label="org.htmlparser.scanners.Scanner"];
+	org_htmlparser_Tag [label="org.htmlparser.Tag"];
+	org_htmlparser_lexer_Lexer -> org_htmlparser_NodeFactory [label=implements];
+	org_htmlparser_NodeFactory -> org_htmlparser_Tag [label=uses];
+	org_htmlparser_Tag -> org_htmlparser_scanners_Scanner [label=uses];
+	org_htmlparser_scanners_Scanner -> org_htmlparser_lexer_Lexer [label=uses];
+}

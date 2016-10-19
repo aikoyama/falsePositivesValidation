@@ -1,0 +1,10 @@
+digraph cd {
+	com_ecyrd_jspwiki_PageManager [label="<<package_exit>>
+com.ecyrd.jspwiki.PageManager",style=filled,color="grey"];
+	com_ecyrd_jspwiki_WikiException [label="<<package_entry>>
+com.ecyrd.jspwiki.WikiException",style=filled,color="grey"];
+	com_ecyrd_jspwiki_auth_WikiSecurityException [label="<<otherpackage1>>
+com.ecyrd.jspwiki.auth.WikiSecurityException"];
+	com_ecyrd_jspwiki_PageManager -> com_ecyrd_jspwiki_auth_WikiSecurityException [label=uses];
+	com_ecyrd_jspwiki_auth_WikiSecurityException -> com_ecyrd_jspwiki_WikiException [label=extends];
+}

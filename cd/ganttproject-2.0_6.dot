@@ -1,0 +1,19 @@
+digraph cd {
+	net_sourceforge_ganttproject_chart_ChartModel [label="<<package_exit>>
+net.sourceforge.ganttproject.chart.ChartModel",style=filled,color="grey"];
+	net_sourceforge_ganttproject_chart_ToggleChartAction [label="<<package_entry>>
+net.sourceforge.ganttproject.chart.ToggleChartAction",style=filled,color="grey"];
+	net_sourceforge_ganttproject_task_TaskContainmentHierarchyFacade [label="<<otherpackage1>>
+net.sourceforge.ganttproject.task.TaskContainmentHierarchyFacade"];
+	net_sourceforge_ganttproject_GanttProject [label="<<otherpackage2>>
+net.sourceforge.ganttproject.GanttProject"];
+	net_sourceforge_ganttproject_task_Task [label="net.sourceforge.ganttproject.task.Task"];
+	net_sourceforge_ganttproject_calendar_GPCalendar [label="net.sourceforge.ganttproject.calendar.GPCalendar"];
+	net_sourceforge_ganttproject_task_TaskManager [label="net.sourceforge.ganttproject.task.TaskManager"];
+	net_sourceforge_ganttproject_chart_ChartModel -> net_sourceforge_ganttproject_task_TaskContainmentHierarchyFacade [label=uses];
+	net_sourceforge_ganttproject_GanttProject -> net_sourceforge_ganttproject_chart_ToggleChartAction [label=uses];
+	net_sourceforge_ganttproject_task_TaskContainmentHierarchyFacade -> net_sourceforge_ganttproject_task_Task [label=uses];
+	net_sourceforge_ganttproject_task_Task -> net_sourceforge_ganttproject_task_TaskManager [label=uses];
+	net_sourceforge_ganttproject_task_TaskManager -> net_sourceforge_ganttproject_calendar_GPCalendar [label=uses];
+	net_sourceforge_ganttproject_calendar_GPCalendar -> net_sourceforge_ganttproject_GanttProject [label=uses];
+}

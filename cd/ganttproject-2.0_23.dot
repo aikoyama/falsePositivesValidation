@@ -1,0 +1,8 @@
+digraph cd {
+	net_sourceforge_ganttproject_export_CommandLineExportApplication [label="<<package_exit>>
+net.sourceforge.ganttproject.export.CommandLineExportApplication",style=filled,color="grey"];
+	net_sourceforge_ganttproject_GanttProject [label="<<otherpackage1>>
+net.sourceforge.ganttproject.GanttProject"];
+	net_sourceforge_ganttproject_export_CommandLineExportApplication -> net_sourceforge_ganttproject_GanttProject [label=uses];
+	net_sourceforge_ganttproject_GanttProject -> net_sourceforge_ganttproject_export_CommandLineExportApplication [label=uses];
+}

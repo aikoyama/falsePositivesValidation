@@ -1,0 +1,16 @@
+digraph stk {
+	net_sourceforge_ganttproject_task_TaskActivityImpl [label="<<type>>
+net.sourceforge.ganttproject.task.TaskActivityImpl",style=filled,color="grey"];
+	net_sourceforge_ganttproject_task_TaskActivity [label="<<supertype>>
+net.sourceforge.ganttproject.task.TaskActivity",style=filled,color="grey"];
+	net_sourceforge_ganttproject_task_Task [label="net.sourceforge.ganttproject.task.Task"];
+	net_sourceforge_ganttproject_task_TaskManager [label="net.sourceforge.ganttproject.task.TaskManager"];
+	net_sourceforge_ganttproject_GanttTask [label="net.sourceforge.ganttproject.GanttTask"];
+	net_sourceforge_ganttproject_task_TaskImpl [label="net.sourceforge.ganttproject.task.TaskImpl"];
+	net_sourceforge_ganttproject_task_TaskActivityImpl -> net_sourceforge_ganttproject_task_TaskActivity [label=implements];
+	net_sourceforge_ganttproject_task_TaskActivity -> net_sourceforge_ganttproject_task_Task [label=uses];
+	net_sourceforge_ganttproject_task_Task -> net_sourceforge_ganttproject_task_TaskManager [label=uses];
+	net_sourceforge_ganttproject_task_TaskManager -> net_sourceforge_ganttproject_GanttTask [label=uses];
+	net_sourceforge_ganttproject_GanttTask -> net_sourceforge_ganttproject_task_TaskImpl [label=extends];
+	net_sourceforge_ganttproject_task_TaskImpl -> net_sourceforge_ganttproject_task_TaskActivityImpl [label=uses];
+}

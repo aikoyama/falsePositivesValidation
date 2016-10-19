@@ -1,0 +1,8 @@
+digraph cd {
+	net_suberic_pooka_gui_dnd_AttachmentTransferHandler [label="<<package_exit>>
+net.suberic.pooka.gui.dnd.AttachmentTransferHandler",style=filled,color="grey"];
+	net_suberic_pooka_gui_AttachmentPane [label="<<otherpackage1>>
+net.suberic.pooka.gui.AttachmentPane"];
+	net_suberic_pooka_gui_dnd_AttachmentTransferHandler -> net_suberic_pooka_gui_AttachmentPane [label=uses];
+	net_suberic_pooka_gui_AttachmentPane -> net_suberic_pooka_gui_dnd_AttachmentTransferHandler [label=uses];
+}

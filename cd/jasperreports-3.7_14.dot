@@ -1,0 +1,17 @@
+digraph cd {
+	net_sf_jasperreports_engine_util_JRApiWriterVisitor [label="<<package_exit>>
+net.sf.jasperreports.engine.util.JRApiWriterVisitor",style=filled,color="grey"];
+	net_sf_jasperreports_engine_util_FormatFactory [label="<<package_entry>>
+net.sf.jasperreports.engine.util.FormatFactory",style=filled,color="grey"];
+	net_sf_jasperreports_engine_JRVisitor [label="<<otherpackage1>>
+net.sf.jasperreports.engine.JRVisitor"];
+	net_sf_jasperreports_engine_design_JRVerifier [label="<<otherpackage2>>
+net.sf.jasperreports.engine.design.JRVerifier"];
+	net_sf_jasperreports_engine_JRChart [label="net.sf.jasperreports.engine.JRChart"];
+	net_sf_jasperreports_engine_JRChartDataset [label="net.sf.jasperreports.engine.JRChartDataset"];
+	net_sf_jasperreports_engine_util_JRApiWriterVisitor -> net_sf_jasperreports_engine_JRVisitor [label=implements];
+	net_sf_jasperreports_engine_design_JRVerifier -> net_sf_jasperreports_engine_util_FormatFactory [label=uses];
+	net_sf_jasperreports_engine_JRVisitor -> net_sf_jasperreports_engine_JRChart [label=uses];
+	net_sf_jasperreports_engine_JRChart -> net_sf_jasperreports_engine_JRChartDataset [label=uses];
+	net_sf_jasperreports_engine_JRChartDataset -> net_sf_jasperreports_engine_design_JRVerifier [label=uses];
+}

@@ -1,0 +1,10 @@
+digraph cd {
+	org_apache_log4j_pattern_PropertiesPatternConverter [label="<<package_exit>>
+org.apache.log4j.pattern.PropertiesPatternConverter",style=filled,color="grey"];
+	org_apache_log4j_pattern_LogEvent [label="<<package_entry>>
+org.apache.log4j.pattern.LogEvent",style=filled,color="grey"];
+	org_apache_log4j_helpers_MDCKeySetExtractor [label="<<otherpackage1>>
+org.apache.log4j.helpers.MDCKeySetExtractor"];
+	org_apache_log4j_pattern_PropertiesPatternConverter -> org_apache_log4j_helpers_MDCKeySetExtractor [label=uses];
+	org_apache_log4j_helpers_MDCKeySetExtractor -> org_apache_log4j_pattern_LogEvent [label=uses];
+}

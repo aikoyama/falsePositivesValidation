@@ -1,0 +1,10 @@
+digraph cd {
+	javax_mail_search_SubjectTerm [label="<<package_exit>>
+javax.mail.search.SubjectTerm",style=filled,color="grey"];
+	javax_mail_search_SearchTerm [label="<<package_entry>>
+javax.mail.search.SearchTerm",style=filled,color="grey"];
+	javax_mail_Message [label="<<otherpackage1>>
+javax.mail.Message"];
+	javax_mail_search_SubjectTerm -> javax_mail_Message [label=uses];
+	javax_mail_Message -> javax_mail_search_SearchTerm [label=uses];
+}

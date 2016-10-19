@@ -1,0 +1,15 @@
+digraph cd {
+	com_ecyrd_jspwiki_ui_admin_beans_PlainEditorAdminBean [label="<<package_exit>>
+com.ecyrd.jspwiki.ui.admin.beans.PlainEditorAdminBean",style=filled,color="grey"];
+	com_ecyrd_jspwiki_ui_admin_beans_CoreBean [label="<<package_entry>>
+com.ecyrd.jspwiki.ui.admin.beans.CoreBean",style=filled,color="grey"];
+	com_ecyrd_jspwiki_WikiContext [label="<<otherpackage1>>
+com.ecyrd.jspwiki.WikiContext"];
+	com_ecyrd_jspwiki_ui_admin_AdminBeanManager [label="<<otherpackage2>>
+com.ecyrd.jspwiki.ui.admin.AdminBeanManager"];
+	com_ecyrd_jspwiki_WikiEngine [label="com.ecyrd.jspwiki.WikiEngine"];
+	com_ecyrd_jspwiki_ui_admin_beans_PlainEditorAdminBean -> com_ecyrd_jspwiki_WikiContext [label=uses];
+	com_ecyrd_jspwiki_ui_admin_AdminBeanManager -> com_ecyrd_jspwiki_ui_admin_beans_CoreBean [label=uses];
+	com_ecyrd_jspwiki_WikiContext -> com_ecyrd_jspwiki_WikiEngine [label=uses];
+	com_ecyrd_jspwiki_WikiEngine -> com_ecyrd_jspwiki_ui_admin_AdminBeanManager [label=uses];
+}

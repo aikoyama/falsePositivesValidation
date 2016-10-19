@@ -1,0 +1,16 @@
+digraph stk {
+	artofillusion_material_LinearMaterialMapping [label="<<type>>
+artofillusion.material.LinearMaterialMapping",style=filled,color="grey"];
+	artofillusion_material_MaterialMapping [label="<<supertype>>
+artofillusion.material.MaterialMapping",style=filled,color="grey"];
+	artofillusion_MaterialPreviewer [label="artofillusion.MaterialPreviewer"];
+	artofillusion_LayoutWindow [label="artofillusion.LayoutWindow"];
+	artofillusion_ArtOfIllusion [label="artofillusion.ArtOfIllusion"];
+	artofillusion_object_SceneCamera [label="artofillusion.object.SceneCamera"];
+	artofillusion_material_LinearMaterialMapping -> artofillusion_material_MaterialMapping [label=extends];
+	artofillusion_material_MaterialMapping -> artofillusion_MaterialPreviewer [label=uses];
+	artofillusion_MaterialPreviewer -> artofillusion_object_SceneCamera [label=uses];
+	artofillusion_object_SceneCamera -> artofillusion_LayoutWindow [label=uses];
+	artofillusion_LayoutWindow -> artofillusion_ArtOfIllusion [label=uses];
+	artofillusion_ArtOfIllusion -> artofillusion_material_LinearMaterialMapping [label=uses];
+}

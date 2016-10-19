@@ -1,0 +1,12 @@
+digraph stk {
+	org_hsqldb_types_BinaryData [label="<<type>>
+org.hsqldb.types.BinaryData",style=filled,color="grey"];
+	org_hsqldb_types_BlobData [label="<<supertype>>
+org.hsqldb.types.BlobData",style=filled,color="grey"];
+	org_hsqldb_SessionInterface [label="org.hsqldb.SessionInterface"];
+	org_hsqldb_Scanner [label="org.hsqldb.Scanner"];
+	org_hsqldb_types_BinaryData -> org_hsqldb_types_BlobData [label=implements];
+	org_hsqldb_types_BlobData -> org_hsqldb_SessionInterface [label=uses];
+	org_hsqldb_SessionInterface -> org_hsqldb_Scanner [label=uses];
+	org_hsqldb_Scanner -> org_hsqldb_types_BinaryData [label=uses];
+}

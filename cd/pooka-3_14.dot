@@ -1,0 +1,11 @@
+digraph cd {
+	org_htmlparser_visitors_NodeVisitor [label="<<package_exit>>
+org.htmlparser.visitors.NodeVisitor",style=filled,color="grey"];
+	org_htmlparser_Tag [label="<<otherpackage1>>
+org.htmlparser.Tag"];
+	org_htmlparser_Node [label="<<otherpackage2>>
+org.htmlparser.Node"];
+	org_htmlparser_visitors_NodeVisitor -> org_htmlparser_Tag [label=uses];
+	org_htmlparser_Node -> org_htmlparser_visitors_NodeVisitor [label=uses];
+	org_htmlparser_Tag -> org_htmlparser_Node [label=extends];
+}

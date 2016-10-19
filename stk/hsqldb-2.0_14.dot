@@ -1,0 +1,12 @@
+digraph stk {
+	org_hsqldb_TransactionManagerMVCC [label="<<type>>
+org.hsqldb.TransactionManagerMVCC",style=filled,color="grey"];
+	org_hsqldb_TransactionManager [label="<<supertype>>
+org.hsqldb.TransactionManager",style=filled,color="grey"];
+	org_hsqldb_Session [label="org.hsqldb.Session"];
+	org_hsqldb_persist_Logger [label="org.hsqldb.persist.Logger"];
+	org_hsqldb_TransactionManagerMVCC -> org_hsqldb_TransactionManager [label=implements];
+	org_hsqldb_TransactionManager -> org_hsqldb_Session [label=uses];
+	org_hsqldb_Session -> org_hsqldb_persist_Logger [label=uses];
+	org_hsqldb_persist_Logger -> org_hsqldb_TransactionManagerMVCC [label=uses];
+}

@@ -1,0 +1,10 @@
+digraph stk {
+	org_hsqldb_types_BitType [label="<<type>>
+org.hsqldb.types.BitType",style=filled,color="grey"];
+	org_hsqldb_types_BinaryType [label="<<supertype>>
+org.hsqldb.types.BinaryType",style=filled,color="grey"];
+	org_hsqldb_types_Type [label="org.hsqldb.types.Type"];
+	org_hsqldb_types_BitType -> org_hsqldb_types_BinaryType [label=extends];
+	org_hsqldb_types_BinaryType -> org_hsqldb_types_Type [label=extends];
+	org_hsqldb_types_Type -> org_hsqldb_types_BitType [label=uses];
+}

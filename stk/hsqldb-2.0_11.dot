@@ -1,0 +1,8 @@
+digraph stk {
+	org_hsqldb_StatementCompound [label="<<type>>
+org.hsqldb.StatementCompound",style=filled,color="grey"];
+	org_hsqldb_Statement [label="<<supertype>>
+org.hsqldb.Statement",style=filled,color="grey"];
+	org_hsqldb_StatementCompound -> org_hsqldb_Statement [label=extends];
+	org_hsqldb_Statement -> org_hsqldb_StatementCompound [label=uses];
+}

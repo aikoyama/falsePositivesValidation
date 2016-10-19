@@ -1,0 +1,15 @@
+digraph cd {
+	net_sourceforge_ganttproject_resource_LoadDistribution [label="<<package_exit>>
+net.sourceforge.ganttproject.resource.LoadDistribution",style=filled,color="grey"];
+	net_sourceforge_ganttproject_resource_ProjectResource [label="<<package_entry>>
+net.sourceforge.ganttproject.resource.ProjectResource",style=filled,color="grey"];
+	net_sourceforge_ganttproject_task_TaskActivity [label="<<otherpackage1>>
+net.sourceforge.ganttproject.task.TaskActivity"];
+	net_sourceforge_ganttproject_task_ResourceAssignmentCollection [label="<<otherpackage2>>
+net.sourceforge.ganttproject.task.ResourceAssignmentCollection"];
+	net_sourceforge_ganttproject_task_Task [label="net.sourceforge.ganttproject.task.Task"];
+	net_sourceforge_ganttproject_resource_LoadDistribution -> net_sourceforge_ganttproject_task_TaskActivity [label=uses];
+	net_sourceforge_ganttproject_task_ResourceAssignmentCollection -> net_sourceforge_ganttproject_resource_ProjectResource [label=uses];
+	net_sourceforge_ganttproject_task_TaskActivity -> net_sourceforge_ganttproject_task_Task [label=uses];
+	net_sourceforge_ganttproject_task_Task -> net_sourceforge_ganttproject_task_ResourceAssignmentCollection [label=uses];
+}

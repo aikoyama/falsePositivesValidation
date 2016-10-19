@@ -1,0 +1,19 @@
+digraph cd {
+	net_sourceforge_ganttproject_parser_BlankLineTagHandler [label="<<package_exit>>
+net.sourceforge.ganttproject.parser.BlankLineTagHandler",style=filled,color="grey"];
+	net_sourceforge_ganttproject_parser_ParserFactory [label="<<package_entry>>
+net.sourceforge.ganttproject.parser.ParserFactory",style=filled,color="grey"];
+	net_sourceforge_ganttproject_chart_GanttChart [label="<<otherpackage1>>
+net.sourceforge.ganttproject.chart.GanttChart"];
+	net_sourceforge_ganttproject_GanttProject [label="<<otherpackage2>>
+net.sourceforge.ganttproject.GanttProject"];
+	net_sourceforge_ganttproject_calendar_GPCalendar [label="net.sourceforge.ganttproject.calendar.GPCalendar"];
+	net_sourceforge_ganttproject_chart_Chart [label="net.sourceforge.ganttproject.chart.Chart"];
+	net_sourceforge_ganttproject_task_TaskManager [label="net.sourceforge.ganttproject.task.TaskManager"];
+	net_sourceforge_ganttproject_parser_BlankLineTagHandler -> net_sourceforge_ganttproject_chart_GanttChart [label=uses];
+	net_sourceforge_ganttproject_GanttProject -> net_sourceforge_ganttproject_parser_ParserFactory [label=uses];
+	net_sourceforge_ganttproject_chart_GanttChart -> net_sourceforge_ganttproject_chart_Chart [label=extends];
+	net_sourceforge_ganttproject_chart_Chart -> net_sourceforge_ganttproject_task_TaskManager [label=uses];
+	net_sourceforge_ganttproject_task_TaskManager -> net_sourceforge_ganttproject_calendar_GPCalendar [label=uses];
+	net_sourceforge_ganttproject_calendar_GPCalendar -> net_sourceforge_ganttproject_GanttProject [label=uses];
+}

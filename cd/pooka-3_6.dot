@@ -1,0 +1,10 @@
+digraph cd {
+	com_sun_mail_imap_IMAPFolder$4 [label="<<package_exit>>
+com.sun.mail.imap.IMAPFolder$4",style=filled,color="grey"];
+	com_sun_mail_imap_AppendUID [label="<<package_entry>>
+com.sun.mail.imap.AppendUID",style=filled,color="grey"];
+	com_sun_mail_imap_protocol_IMAPProtocol [label="<<otherpackage1>>
+com.sun.mail.imap.protocol.IMAPProtocol"];
+	com_sun_mail_imap_IMAPFolder$4 -> com_sun_mail_imap_protocol_IMAPProtocol [label=uses];
+	com_sun_mail_imap_protocol_IMAPProtocol -> com_sun_mail_imap_AppendUID [label=uses];
+}

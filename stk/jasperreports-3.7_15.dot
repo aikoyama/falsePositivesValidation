@@ -1,0 +1,26 @@
+digraph stk {
+	net_sf_jasperreports_crosstabs_fill_JRFillCrosstabRowGroup [label="<<type>>
+net.sf.jasperreports.crosstabs.fill.JRFillCrosstabRowGroup",style=filled,color="grey"];
+	net_sf_jasperreports_crosstabs_JRCrosstabRowGroup [label="<<supertype>>
+net.sf.jasperreports.crosstabs.JRCrosstabRowGroup",style=filled,color="grey"];
+	net_sf_jasperreports_engine_JRElementGroup [label="net.sf.jasperreports.engine.JRElementGroup"];
+	net_sf_jasperreports_crosstabs_JRCellContents [label="net.sf.jasperreports.crosstabs.JRCellContents"];
+	net_sf_jasperreports_engine_fill_JRFillCrosstab [label="net.sf.jasperreports.engine.fill.JRFillCrosstab"];
+	net_sf_jasperreports_engine_JRElement [label="net.sf.jasperreports.engine.JRElement"];
+	net_sf_jasperreports_engine_component_ComponentManager [label="net.sf.jasperreports.engine.component.ComponentManager"];
+	net_sf_jasperreports_engine_component_ComponentFillFactory [label="net.sf.jasperreports.engine.component.ComponentFillFactory"];
+	net_sf_jasperreports_engine_JRExpressionCollector [label="net.sf.jasperreports.engine.JRExpressionCollector"];
+	net_sf_jasperreports_engine_fill_JRFillObjectFactory [label="net.sf.jasperreports.engine.fill.JRFillObjectFactory"];
+	net_sf_jasperreports_crosstabs_JRCrosstabGroup [label="net.sf.jasperreports.crosstabs.JRCrosstabGroup"];
+	net_sf_jasperreports_crosstabs_fill_JRFillCrosstabRowGroup -> net_sf_jasperreports_crosstabs_JRCrosstabRowGroup [label=implements];
+	net_sf_jasperreports_crosstabs_JRCrosstabRowGroup -> net_sf_jasperreports_crosstabs_JRCrosstabGroup [label=extends];
+	net_sf_jasperreports_crosstabs_JRCrosstabGroup -> net_sf_jasperreports_crosstabs_JRCellContents [label=uses];
+	net_sf_jasperreports_crosstabs_JRCellContents -> net_sf_jasperreports_engine_JRElementGroup [label=extends];
+	net_sf_jasperreports_engine_JRElementGroup -> net_sf_jasperreports_engine_JRElement [label=uses];
+	net_sf_jasperreports_engine_JRElement -> net_sf_jasperreports_engine_JRExpressionCollector [label=uses];
+	net_sf_jasperreports_engine_JRExpressionCollector -> net_sf_jasperreports_engine_component_ComponentManager [label=uses];
+	net_sf_jasperreports_engine_component_ComponentManager -> net_sf_jasperreports_engine_component_ComponentFillFactory [label=uses];
+	net_sf_jasperreports_engine_component_ComponentFillFactory -> net_sf_jasperreports_engine_fill_JRFillObjectFactory [label=uses];
+	net_sf_jasperreports_engine_fill_JRFillObjectFactory -> net_sf_jasperreports_engine_fill_JRFillCrosstab [label=uses];
+	net_sf_jasperreports_engine_fill_JRFillCrosstab -> net_sf_jasperreports_crosstabs_fill_JRFillCrosstabRowGroup [label=uses];
+}

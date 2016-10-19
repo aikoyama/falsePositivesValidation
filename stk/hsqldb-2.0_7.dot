@@ -1,0 +1,18 @@
+digraph stk {
+	org_hsqldb_rowio_RowOutputBase [label="<<type>>
+org.hsqldb.rowio.RowOutputBase",style=filled,color="grey"];
+	org_hsqldb_rowio_RowOutputInterface [label="<<supertype>>
+org.hsqldb.rowio.RowOutputInterface",style=filled,color="grey"];
+	org_hsqldb_types_Type [label="org.hsqldb.types.Type"];
+	org_hsqldb_result_ResultMetaData [label="org.hsqldb.result.ResultMetaData"];
+	org_hsqldb_Session [label="org.hsqldb.Session"];
+	org_hsqldb_rowio_RowOutputBinary [label="org.hsqldb.rowio.RowOutputBinary"];
+	org_hsqldb_rowio_RowInputBinary [label="org.hsqldb.rowio.RowInputBinary"];
+	org_hsqldb_rowio_RowOutputBase -> org_hsqldb_rowio_RowOutputInterface [label=implements];
+	org_hsqldb_rowio_RowOutputInterface -> org_hsqldb_types_Type [label=uses];
+	org_hsqldb_types_Type -> org_hsqldb_Session [label=uses];
+	org_hsqldb_Session -> org_hsqldb_result_ResultMetaData [label=uses];
+	org_hsqldb_result_ResultMetaData -> org_hsqldb_rowio_RowInputBinary [label=uses];
+	org_hsqldb_rowio_RowInputBinary -> org_hsqldb_rowio_RowOutputBinary [label=uses];
+	org_hsqldb_rowio_RowOutputBinary -> org_hsqldb_rowio_RowOutputBase [label=extends];
+}

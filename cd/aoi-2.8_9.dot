@@ -1,0 +1,13 @@
+digraph cd {
+	artofillusion_procedural_ColorModule [label="<<package_exit>>
+artofillusion.procedural.ColorModule",style=filled,color="grey"];
+	artofillusion_procedural_Module [label="<<package_entry>>
+artofillusion.procedural.Module",style=filled,color="grey"];
+	artofillusion_Scene [label="<<otherpackage1>>
+artofillusion.Scene"];
+	artofillusion_animation_ProceduralPositionTrack [label="<<otherpackage2>>
+artofillusion.animation.ProceduralPositionTrack"];
+	artofillusion_procedural_ColorModule -> artofillusion_Scene [label=uses];
+	artofillusion_animation_ProceduralPositionTrack -> artofillusion_procedural_Module [label=uses];
+	artofillusion_Scene -> artofillusion_animation_ProceduralPositionTrack [label=uses];
+}

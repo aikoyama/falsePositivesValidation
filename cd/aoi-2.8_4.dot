@@ -1,0 +1,13 @@
+digraph cd {
+	artofillusion_object_Tube [label="<<package_exit>>
+artofillusion.object.Tube",style=filled,color="grey"];
+	artofillusion_object_Object3D [label="<<package_entry>>
+artofillusion.object.Object3D",style=filled,color="grey"];
+	artofillusion_RenderingMesh [label="<<otherpackage1>>
+artofillusion.RenderingMesh"];
+	artofillusion_texture_TextureMapping [label="<<otherpackage2>>
+artofillusion.texture.TextureMapping"];
+	artofillusion_object_Tube -> artofillusion_RenderingMesh [label=uses];
+	artofillusion_texture_TextureMapping -> artofillusion_object_Object3D [label=uses];
+	artofillusion_RenderingMesh -> artofillusion_texture_TextureMapping [label=uses];
+}

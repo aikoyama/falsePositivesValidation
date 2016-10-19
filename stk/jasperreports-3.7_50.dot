@@ -1,0 +1,20 @@
+digraph stk {
+	net_sf_jasperreports_crosstabs_base_JRBaseCrosstabGroup [label="<<type>>
+net.sf.jasperreports.crosstabs.base.JRBaseCrosstabGroup",style=filled,color="grey"];
+	net_sf_jasperreports_crosstabs_JRCrosstabGroup [label="<<supertype>>
+net.sf.jasperreports.crosstabs.JRCrosstabGroup",style=filled,color="grey"];
+	net_sf_jasperreports_crosstabs_design_JRDesignCrosstabGroup [label="net.sf.jasperreports.crosstabs.design.JRDesignCrosstabGroup"];
+	net_sf_jasperreports_engine_JRElementGroup [label="net.sf.jasperreports.engine.JRElementGroup"];
+	net_sf_jasperreports_crosstabs_JRCellContents [label="net.sf.jasperreports.crosstabs.JRCellContents"];
+	net_sf_jasperreports_engine_JRElement [label="net.sf.jasperreports.engine.JRElement"];
+	net_sf_jasperreports_crosstabs_design_JRDesignCrosstab [label="net.sf.jasperreports.crosstabs.design.JRDesignCrosstab"];
+	net_sf_jasperreports_engine_JRExpressionCollector [label="net.sf.jasperreports.engine.JRExpressionCollector"];
+	net_sf_jasperreports_crosstabs_base_JRBaseCrosstabGroup -> net_sf_jasperreports_crosstabs_JRCrosstabGroup [label=implements];
+	net_sf_jasperreports_crosstabs_JRCrosstabGroup -> net_sf_jasperreports_crosstabs_JRCellContents [label=uses];
+	net_sf_jasperreports_crosstabs_JRCellContents -> net_sf_jasperreports_engine_JRElementGroup [label=extends];
+	net_sf_jasperreports_engine_JRElementGroup -> net_sf_jasperreports_engine_JRElement [label=uses];
+	net_sf_jasperreports_engine_JRElement -> net_sf_jasperreports_engine_JRExpressionCollector [label=uses];
+	net_sf_jasperreports_engine_JRExpressionCollector -> net_sf_jasperreports_crosstabs_design_JRDesignCrosstab [label=uses];
+	net_sf_jasperreports_crosstabs_design_JRDesignCrosstab -> net_sf_jasperreports_crosstabs_design_JRDesignCrosstabGroup [label=uses];
+	net_sf_jasperreports_crosstabs_design_JRDesignCrosstabGroup -> net_sf_jasperreports_crosstabs_base_JRBaseCrosstabGroup [label=extends];
+}

@@ -1,0 +1,10 @@
+digraph cd {
+	org_hsqldb_types_BitType [label="<<package_exit>>
+org.hsqldb.types.BitType",style=filled,color="grey"];
+	org_hsqldb_types_Type [label="<<package_entry>>
+org.hsqldb.types.Type",style=filled,color="grey"];
+	org_hsqldb_Session [label="<<otherpackage1>>
+org.hsqldb.Session"];
+	org_hsqldb_types_BitType -> org_hsqldb_Session [label=uses];
+	org_hsqldb_Session -> org_hsqldb_types_Type [label=uses];
+}

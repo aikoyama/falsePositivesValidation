@@ -1,0 +1,10 @@
+digraph cd {
+	net_sourceforge_ganttproject_calendar_WeekendCalendarImpl [label="<<package_exit>>
+net.sourceforge.ganttproject.calendar.WeekendCalendarImpl",style=filled,color="grey"];
+	net_sourceforge_ganttproject_calendar_GPCalendar [label="<<package_entry>>
+net.sourceforge.ganttproject.calendar.GPCalendar",style=filled,color="grey"];
+	net_sourceforge_ganttproject_GanttProject [label="<<otherpackage1>>
+net.sourceforge.ganttproject.GanttProject"];
+	net_sourceforge_ganttproject_calendar_WeekendCalendarImpl -> net_sourceforge_ganttproject_GanttProject [label=uses];
+	net_sourceforge_ganttproject_GanttProject -> net_sourceforge_ganttproject_calendar_GPCalendar [label=uses];
+}

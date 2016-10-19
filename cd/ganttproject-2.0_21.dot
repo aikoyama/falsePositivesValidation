@@ -1,0 +1,10 @@
+digraph cd {
+	net_sourceforge_ganttproject_time_gregorian_GPTimeUnitStack [label="<<package_exit>>
+net.sourceforge.ganttproject.time.gregorian.GPTimeUnitStack",style=filled,color="grey"];
+	net_sourceforge_ganttproject_time_gregorian_GregorianCalendar [label="<<package_entry>>
+net.sourceforge.ganttproject.time.gregorian.GregorianCalendar",style=filled,color="grey"];
+	net_sourceforge_ganttproject_language_GanttLanguage [label="<<otherpackage1>>
+net.sourceforge.ganttproject.language.GanttLanguage"];
+	net_sourceforge_ganttproject_time_gregorian_GPTimeUnitStack -> net_sourceforge_ganttproject_language_GanttLanguage [label=uses];
+	net_sourceforge_ganttproject_language_GanttLanguage -> net_sourceforge_ganttproject_time_gregorian_GregorianCalendar [label=uses];
+}

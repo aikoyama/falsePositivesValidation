@@ -1,0 +1,11 @@
+digraph cd {
+	net_suberic_pooka_crypto_CryptoAttachment [label="<<package_exit>>
+net.suberic.pooka.crypto.CryptoAttachment",style=filled,color="grey"];
+	net_suberic_pooka_Attachment [label="<<otherpackage1>>
+net.suberic.pooka.Attachment"];
+	net_suberic_pooka_AttachmentBundle [label="<<otherpackage2>>
+net.suberic.pooka.AttachmentBundle"];
+	net_suberic_pooka_crypto_CryptoAttachment -> net_suberic_pooka_Attachment [label=extends];
+	net_suberic_pooka_AttachmentBundle -> net_suberic_pooka_crypto_CryptoAttachment [label=uses];
+	net_suberic_pooka_Attachment -> net_suberic_pooka_AttachmentBundle [label=uses];
+}

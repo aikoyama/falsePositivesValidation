@@ -1,0 +1,14 @@
+digraph stk {
+	artofillusion_procedural_SineModule [label="<<type>>
+artofillusion.procedural.SineModule",style=filled,color="grey"];
+	artofillusion_procedural_Module [label="<<supertype>>
+artofillusion.procedural.Module",style=filled,color="grey"];
+	artofillusion_animation_ProceduralRotationTrack [label="artofillusion.animation.ProceduralRotationTrack"];
+	artofillusion_Scene [label="artofillusion.Scene"];
+	artofillusion_procedural_ProcedureEditor [label="artofillusion.procedural.ProcedureEditor"];
+	artofillusion_procedural_SineModule -> artofillusion_procedural_Module [label=extends];
+	artofillusion_procedural_Module -> artofillusion_Scene [label=uses];
+	artofillusion_Scene -> artofillusion_animation_ProceduralRotationTrack [label=uses];
+	artofillusion_animation_ProceduralRotationTrack -> artofillusion_procedural_ProcedureEditor [label=uses];
+	artofillusion_procedural_ProcedureEditor -> artofillusion_procedural_SineModule [label=uses];
+}

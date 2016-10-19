@@ -1,0 +1,10 @@
+digraph stk {
+	org_hsqldb_RangeVariable$RangeIteratorRight [label="<<type>>
+org.hsqldb.RangeVariable$RangeIteratorRight",style=filled,color="grey"];
+	org_hsqldb_RangeVariable$RangeIteratorMain [label="<<supertype>>
+org.hsqldb.RangeVariable$RangeIteratorMain",style=filled,color="grey"];
+	org_hsqldb_RangeVariable [label="org.hsqldb.RangeVariable"];
+	org_hsqldb_RangeVariable$RangeIteratorRight -> org_hsqldb_RangeVariable$RangeIteratorMain [label=extends];
+	org_hsqldb_RangeVariable$RangeIteratorMain -> org_hsqldb_RangeVariable [label=uses];
+	org_hsqldb_RangeVariable -> org_hsqldb_RangeVariable$RangeIteratorRight [label=uses];
+}

@@ -1,0 +1,13 @@
+digraph cd {
+	com_ecyrd_jspwiki_url_ShortURLConstructor [label="<<package_exit>>
+com.ecyrd.jspwiki.url.ShortURLConstructor",style=filled,color="grey"];
+	com_ecyrd_jspwiki_url_URLConstructor [label="<<package_entry>>
+com.ecyrd.jspwiki.url.URLConstructor",style=filled,color="grey"];
+	com_ecyrd_jspwiki_WikiContext [label="<<otherpackage1>>
+com.ecyrd.jspwiki.WikiContext"];
+	com_ecyrd_jspwiki_WikiEngine [label="<<otherpackage2>>
+com.ecyrd.jspwiki.WikiEngine"];
+	com_ecyrd_jspwiki_url_ShortURLConstructor -> com_ecyrd_jspwiki_WikiContext [label=uses];
+	com_ecyrd_jspwiki_WikiEngine -> com_ecyrd_jspwiki_url_URLConstructor [label=uses];
+	com_ecyrd_jspwiki_WikiContext -> com_ecyrd_jspwiki_WikiEngine [label=uses];
+}

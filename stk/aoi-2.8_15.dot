@@ -1,0 +1,12 @@
+digraph stk {
+	bsh_TargetError [label="<<type>>
+bsh.TargetError",style=filled,color="grey"];
+	bsh_EvalError [label="<<supertype>>
+bsh.EvalError",style=filled,color="grey"];
+	bsh_Interpreter [label="bsh.Interpreter"];
+	bsh_SimpleNode [label="bsh.SimpleNode"];
+	bsh_TargetError -> bsh_EvalError [label=extends];
+	bsh_EvalError -> bsh_SimpleNode [label=uses];
+	bsh_SimpleNode -> bsh_Interpreter [label=uses];
+	bsh_Interpreter -> bsh_TargetError [label=uses];
+}

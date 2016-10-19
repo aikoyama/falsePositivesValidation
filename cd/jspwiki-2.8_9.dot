@@ -1,0 +1,10 @@
+digraph cd {
+	com_ecyrd_jspwiki_attachment_Attachment [label="<<package_exit>>
+com.ecyrd.jspwiki.attachment.Attachment",style=filled,color="grey"];
+	com_ecyrd_jspwiki_attachment_AttachmentManager [label="<<package_entry>>
+com.ecyrd.jspwiki.attachment.AttachmentManager",style=filled,color="grey"];
+	com_ecyrd_jspwiki_WikiEngine [label="<<otherpackage1>>
+com.ecyrd.jspwiki.WikiEngine"];
+	com_ecyrd_jspwiki_attachment_Attachment -> com_ecyrd_jspwiki_WikiEngine [label=uses];
+	com_ecyrd_jspwiki_WikiEngine -> com_ecyrd_jspwiki_attachment_AttachmentManager [label=uses];
+}

@@ -1,0 +1,20 @@
+digraph stk {
+	net_sf_jasperreports_charts_fill_JRFillPieDataset [label="<<type>>
+net.sf.jasperreports.charts.fill.JRFillPieDataset",style=filled,color="grey"];
+	net_sf_jasperreports_charts_JRPieDataset [label="<<supertype>>
+net.sf.jasperreports.charts.JRPieDataset",style=filled,color="grey"];
+	net_sf_jasperreports_engine_design_JRVerifier [label="net.sf.jasperreports.engine.design.JRVerifier"];
+	net_sf_jasperreports_engine_JRChartDataset [label="net.sf.jasperreports.engine.JRChartDataset"];
+	net_sf_jasperreports_engine_component_ComponentManager [label="net.sf.jasperreports.engine.component.ComponentManager"];
+	net_sf_jasperreports_engine_component_ComponentFillFactory [label="net.sf.jasperreports.engine.component.ComponentFillFactory"];
+	net_sf_jasperreports_engine_JRExpressionCollector [label="net.sf.jasperreports.engine.JRExpressionCollector"];
+	net_sf_jasperreports_engine_fill_JRFillObjectFactory [label="net.sf.jasperreports.engine.fill.JRFillObjectFactory"];
+	net_sf_jasperreports_charts_fill_JRFillPieDataset -> net_sf_jasperreports_charts_JRPieDataset [label=implements];
+	net_sf_jasperreports_charts_JRPieDataset -> net_sf_jasperreports_engine_JRChartDataset [label=extends];
+	net_sf_jasperreports_engine_JRChartDataset -> net_sf_jasperreports_engine_design_JRVerifier [label=uses];
+	net_sf_jasperreports_engine_design_JRVerifier -> net_sf_jasperreports_engine_JRExpressionCollector [label=uses];
+	net_sf_jasperreports_engine_JRExpressionCollector -> net_sf_jasperreports_engine_component_ComponentManager [label=uses];
+	net_sf_jasperreports_engine_component_ComponentManager -> net_sf_jasperreports_engine_component_ComponentFillFactory [label=uses];
+	net_sf_jasperreports_engine_component_ComponentFillFactory -> net_sf_jasperreports_engine_fill_JRFillObjectFactory [label=uses];
+	net_sf_jasperreports_engine_fill_JRFillObjectFactory -> net_sf_jasperreports_charts_fill_JRFillPieDataset [label=uses];
+}

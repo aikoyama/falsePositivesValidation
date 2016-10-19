@@ -1,0 +1,14 @@
+digraph stk {
+	net_suberic_pooka_OutgoingMailServerManager$DefaultOutgoingMailServer [label="<<type>>
+net.suberic.pooka.OutgoingMailServerManager$DefaultOutgoingMailServer",style=filled,color="grey"];
+	net_suberic_pooka_OutgoingMailServer [label="<<supertype>>
+net.suberic.pooka.OutgoingMailServer",style=filled,color="grey"];
+	net_suberic_pooka_FolderInfo [label="net.suberic.pooka.FolderInfo"];
+	net_suberic_pooka_Pooka [label="net.suberic.pooka.Pooka"];
+	net_suberic_pooka_OutgoingMailServerManager [label="net.suberic.pooka.OutgoingMailServerManager"];
+	net_suberic_pooka_OutgoingMailServerManager$DefaultOutgoingMailServer -> net_suberic_pooka_OutgoingMailServer [label=extends];
+	net_suberic_pooka_OutgoingMailServer -> net_suberic_pooka_FolderInfo [label=uses];
+	net_suberic_pooka_FolderInfo -> net_suberic_pooka_Pooka [label=uses];
+	net_suberic_pooka_Pooka -> net_suberic_pooka_OutgoingMailServerManager [label=uses];
+	net_suberic_pooka_OutgoingMailServerManager -> net_suberic_pooka_OutgoingMailServerManager$DefaultOutgoingMailServer [label=uses];
+}

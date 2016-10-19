@@ -1,0 +1,13 @@
+digraph cd {
+	com_ecyrd_jspwiki_modules_ModuleManager [label="<<package_exit>>
+com.ecyrd.jspwiki.modules.ModuleManager",style=filled,color="grey"];
+	com_ecyrd_jspwiki_modules_InternalModule [label="<<package_entry>>
+com.ecyrd.jspwiki.modules.InternalModule",style=filled,color="grey"];
+	com_ecyrd_jspwiki_WikiEngine [label="<<otherpackage1>>
+com.ecyrd.jspwiki.WikiEngine"];
+	com_ecyrd_jspwiki_search_SearchManager [label="<<otherpackage2>>
+com.ecyrd.jspwiki.search.SearchManager"];
+	com_ecyrd_jspwiki_modules_ModuleManager -> com_ecyrd_jspwiki_WikiEngine [label=uses];
+	com_ecyrd_jspwiki_search_SearchManager -> com_ecyrd_jspwiki_modules_InternalModule [label=implements];
+	com_ecyrd_jspwiki_WikiEngine -> com_ecyrd_jspwiki_search_SearchManager [label=uses];
+}

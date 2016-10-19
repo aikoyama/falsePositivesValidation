@@ -1,0 +1,13 @@
+digraph cd {
+	net_sourceforge_ganttproject_gui_options_model_OptionPageProvider [label="<<package_exit>>
+net.sourceforge.ganttproject.gui.options.model.OptionPageProvider",style=filled,color="grey"];
+	net_sourceforge_ganttproject_gui_options_model_GPOptionGroup [label="<<package_entry>>
+net.sourceforge.ganttproject.gui.options.model.GPOptionGroup",style=filled,color="grey"];
+	net_sourceforge_ganttproject_gui_UIFacade [label="<<otherpackage1>>
+net.sourceforge.ganttproject.gui.UIFacade"];
+	net_sourceforge_ganttproject_chart_Chart [label="<<otherpackage2>>
+net.sourceforge.ganttproject.chart.Chart"];
+	net_sourceforge_ganttproject_gui_options_model_OptionPageProvider -> net_sourceforge_ganttproject_gui_UIFacade [label=uses];
+	net_sourceforge_ganttproject_chart_Chart -> net_sourceforge_ganttproject_gui_options_model_GPOptionGroup [label=uses];
+	net_sourceforge_ganttproject_gui_UIFacade -> net_sourceforge_ganttproject_chart_Chart [label=uses];
+}

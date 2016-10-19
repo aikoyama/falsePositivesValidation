@@ -1,0 +1,10 @@
+digraph stk {
+	org_hsqldb_navigator_RowSetNavigatorDataTable [label="<<type>>
+org.hsqldb.navigator.RowSetNavigatorDataTable",style=filled,color="grey"];
+	org_hsqldb_navigator_RowSetNavigatorData [label="<<supertype>>
+org.hsqldb.navigator.RowSetNavigatorData",style=filled,color="grey"];
+	org_hsqldb_QueryExpression [label="org.hsqldb.QueryExpression"];
+	org_hsqldb_navigator_RowSetNavigatorDataTable -> org_hsqldb_navigator_RowSetNavigatorData [label=extends];
+	org_hsqldb_navigator_RowSetNavigatorData -> org_hsqldb_QueryExpression [label=uses];
+	org_hsqldb_QueryExpression -> org_hsqldb_navigator_RowSetNavigatorDataTable [label=uses];
+}

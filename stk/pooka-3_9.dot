@@ -1,0 +1,16 @@
+digraph stk {
+	net_suberic_util_gui_propedit_CompositeSwingPropertyEditor [label="<<type>>
+net.suberic.util.gui.propedit.CompositeSwingPropertyEditor",style=filled,color="grey"];
+	net_suberic_util_gui_propedit_SwingPropertyEditor [label="<<supertype>>
+net.suberic.util.gui.propedit.SwingPropertyEditor",style=filled,color="grey"];
+	net_suberic_util_gui_propedit_PropertyEditorManager [label="net.suberic.util.gui.propedit.PropertyEditorManager"];
+	net_suberic_util_gui_propedit_WizardPropertyEditor [label="net.suberic.util.gui.propedit.WizardPropertyEditor"];
+	net_suberic_util_gui_propedit_WizardEditorPane [label="net.suberic.util.gui.propedit.WizardEditorPane"];
+	net_suberic_util_gui_propedit_PropertyEditorFactory [label="net.suberic.util.gui.propedit.PropertyEditorFactory"];
+	net_suberic_util_gui_propedit_CompositeSwingPropertyEditor -> net_suberic_util_gui_propedit_SwingPropertyEditor [label=extends];
+	net_suberic_util_gui_propedit_SwingPropertyEditor -> net_suberic_util_gui_propedit_PropertyEditorManager [label=uses];
+	net_suberic_util_gui_propedit_PropertyEditorManager -> net_suberic_util_gui_propedit_PropertyEditorFactory [label=uses];
+	net_suberic_util_gui_propedit_PropertyEditorFactory -> net_suberic_util_gui_propedit_WizardPropertyEditor [label=uses];
+	net_suberic_util_gui_propedit_WizardPropertyEditor -> net_suberic_util_gui_propedit_WizardEditorPane [label=uses];
+	net_suberic_util_gui_propedit_WizardEditorPane -> net_suberic_util_gui_propedit_CompositeSwingPropertyEditor [label=extends];
+}

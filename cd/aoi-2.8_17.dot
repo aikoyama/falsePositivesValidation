@@ -1,0 +1,17 @@
+digraph cd {
+	artofillusion_keystroke_KeystrokeManager [label="<<package_exit>>
+artofillusion.keystroke.KeystrokeManager",style=filled,color="grey"];
+	artofillusion_keystroke_KeystrokePreferencesPanel [label="<<package_entry>>
+artofillusion.keystroke.KeystrokePreferencesPanel",style=filled,color="grey"];
+	artofillusion_ui_EditingWindow [label="<<otherpackage1>>
+artofillusion.ui.EditingWindow"];
+	artofillusion_PreferencesWindow [label="<<otherpackage2>>
+artofillusion.PreferencesWindow"];
+	artofillusion_LayoutWindow [label="artofillusion.LayoutWindow"];
+	artofillusion_UndoRecord [label="artofillusion.UndoRecord"];
+	artofillusion_keystroke_KeystrokeManager -> artofillusion_ui_EditingWindow [label=uses];
+	artofillusion_PreferencesWindow -> artofillusion_keystroke_KeystrokePreferencesPanel [label=uses];
+	artofillusion_ui_EditingWindow -> artofillusion_UndoRecord [label=uses];
+	artofillusion_UndoRecord -> artofillusion_LayoutWindow [label=uses];
+	artofillusion_LayoutWindow -> artofillusion_PreferencesWindow [label=uses];
+}

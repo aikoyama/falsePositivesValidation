@@ -1,0 +1,12 @@
+digraph stk {
+	org_apache_log4j_Category [label="<<type>>
+org.apache.log4j.Category",style=filled,color="grey"];
+	org_apache_log4j_spi_AppenderAttachable [label="<<supertype>>
+org.apache.log4j.spi.AppenderAttachable",style=filled,color="grey"];
+	org_apache_log4j_spi_LoggingEvent [label="org.apache.log4j.spi.LoggingEvent"];
+	org_apache_log4j_Appender [label="org.apache.log4j.Appender"];
+	org_apache_log4j_Category -> org_apache_log4j_spi_AppenderAttachable [label=implements];
+	org_apache_log4j_spi_AppenderAttachable -> org_apache_log4j_Appender [label=uses];
+	org_apache_log4j_Appender -> org_apache_log4j_spi_LoggingEvent [label=uses];
+	org_apache_log4j_spi_LoggingEvent -> org_apache_log4j_Category [label=uses];
+}

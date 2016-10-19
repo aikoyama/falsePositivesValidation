@@ -1,0 +1,8 @@
+digraph cd {
+	org_htmlparser_tags_ScriptTag [label="<<package_exit>>
+org.htmlparser.tags.ScriptTag",style=filled,color="grey"];
+	org_htmlparser_scanners_ScriptScanner [label="<<otherpackage1>>
+org.htmlparser.scanners.ScriptScanner"];
+	org_htmlparser_tags_ScriptTag -> org_htmlparser_scanners_ScriptScanner [label=uses];
+	org_htmlparser_scanners_ScriptScanner -> org_htmlparser_tags_ScriptTag [label=uses];
+}

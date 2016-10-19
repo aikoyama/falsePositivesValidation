@@ -1,0 +1,12 @@
+digraph stk {
+	buoy_widget_WindowWidget [label="<<type>>
+buoy.widget.WindowWidget",style=filled,color="grey"];
+	buoy_widget_WidgetContainer [label="<<supertype>>
+buoy.widget.WidgetContainer",style=filled,color="grey"];
+	buoy_internal_EventLinkAdapter [label="buoy.internal.EventLinkAdapter"];
+	buoy_widget_Widget [label="buoy.widget.Widget"];
+	buoy_widget_WindowWidget -> buoy_widget_WidgetContainer [label=extends];
+	buoy_widget_WidgetContainer -> buoy_widget_Widget [label=extends];
+	buoy_widget_Widget -> buoy_internal_EventLinkAdapter [label=uses];
+	buoy_internal_EventLinkAdapter -> buoy_widget_WindowWidget [label=uses];
+}

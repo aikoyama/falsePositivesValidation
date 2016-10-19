@@ -1,0 +1,12 @@
+digraph stk {
+	org_argouml_cognitive_CompoundCritic [label="<<type>>
+org.argouml.cognitive.CompoundCritic",style=filled,color="grey"];
+	org_argouml_cognitive_Critic [label="<<supertype>>
+org.argouml.cognitive.Critic",style=filled,color="grey"];
+	org_argouml_cognitive_Designer [label="org.argouml.cognitive.Designer"];
+	org_argouml_cognitive_Agency [label="org.argouml.cognitive.Agency"];
+	org_argouml_cognitive_CompoundCritic -> org_argouml_cognitive_Critic [label=extends];
+	org_argouml_cognitive_Critic -> org_argouml_cognitive_Designer [label=uses];
+	org_argouml_cognitive_Designer -> org_argouml_cognitive_Agency [label=uses];
+	org_argouml_cognitive_Agency -> org_argouml_cognitive_CompoundCritic [label=uses];
+}

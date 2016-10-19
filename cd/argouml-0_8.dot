@@ -1,0 +1,8 @@
+digraph cd {
+	org_argouml_uml_diagram_collaboration_ui_FigAssociationRole [label="<<package_exit>>
+org.argouml.uml.diagram.collaboration.ui.FigAssociationRole",style=filled,color="grey"];
+	org_argouml_uml_diagram_ui_FigMessage [label="<<otherpackage1>>
+org.argouml.uml.diagram.ui.FigMessage"];
+	org_argouml_uml_diagram_collaboration_ui_FigAssociationRole -> org_argouml_uml_diagram_ui_FigMessage [label=uses];
+	org_argouml_uml_diagram_ui_FigMessage -> org_argouml_uml_diagram_collaboration_ui_FigAssociationRole [label=uses];
+}

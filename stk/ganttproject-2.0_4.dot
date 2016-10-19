@@ -1,0 +1,12 @@
+digraph stk {
+	net_sourceforge_ganttproject_GanttProjectBase [label="<<type>>
+net.sourceforge.ganttproject.GanttProjectBase",style=filled,color="grey"];
+	net_sourceforge_ganttproject_IGanttProject [label="<<supertype>>
+net.sourceforge.ganttproject.IGanttProject",style=filled,color="grey"];
+	net_sourceforge_ganttproject_GanttProject [label="net.sourceforge.ganttproject.GanttProject"];
+	net_sourceforge_ganttproject_calendar_GPCalendar [label="net.sourceforge.ganttproject.calendar.GPCalendar"];
+	net_sourceforge_ganttproject_GanttProjectBase -> net_sourceforge_ganttproject_IGanttProject [label=implements];
+	net_sourceforge_ganttproject_IGanttProject -> net_sourceforge_ganttproject_calendar_GPCalendar [label=uses];
+	net_sourceforge_ganttproject_calendar_GPCalendar -> net_sourceforge_ganttproject_GanttProject [label=uses];
+	net_sourceforge_ganttproject_GanttProject -> net_sourceforge_ganttproject_GanttProjectBase [label=extends];
+}

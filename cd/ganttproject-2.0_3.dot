@@ -1,0 +1,10 @@
+digraph cd {
+	net_sourceforge_ganttproject_task_MutableResourceAssignmentCollection [label="<<package_exit>>
+net.sourceforge.ganttproject.task.MutableResourceAssignmentCollection",style=filled,color="grey"];
+	net_sourceforge_ganttproject_task_ResourceAssignment [label="<<package_entry>>
+net.sourceforge.ganttproject.task.ResourceAssignment",style=filled,color="grey"];
+	net_sourceforge_ganttproject_resource_ProjectResource [label="<<otherpackage1>>
+net.sourceforge.ganttproject.resource.ProjectResource"];
+	net_sourceforge_ganttproject_task_MutableResourceAssignmentCollection -> net_sourceforge_ganttproject_resource_ProjectResource [label=uses];
+	net_sourceforge_ganttproject_resource_ProjectResource -> net_sourceforge_ganttproject_task_ResourceAssignment [label=uses];
+}

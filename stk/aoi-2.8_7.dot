@@ -1,0 +1,10 @@
+digraph stk {
+	artofillusion_material_UniformMaterial [label="<<type>>
+artofillusion.material.UniformMaterial",style=filled,color="grey"];
+	artofillusion_material_Material [label="<<supertype>>
+artofillusion.material.Material",style=filled,color="grey"];
+	artofillusion_Scene [label="artofillusion.Scene"];
+	artofillusion_material_UniformMaterial -> artofillusion_material_Material [label=extends];
+	artofillusion_material_Material -> artofillusion_Scene [label=uses];
+	artofillusion_Scene -> artofillusion_material_UniformMaterial [label=uses];
+}

@@ -1,0 +1,11 @@
+digraph cd {
+	org_argouml_ui_cmd_GenericArgoMenuBar [label="<<package_exit>>
+org.argouml.ui.cmd.GenericArgoMenuBar",style=filled,color="grey"];
+	org_argouml_ui_ActionImportXMI [label="<<otherpackage1>>
+org.argouml.ui.ActionImportXMI"];
+	org_argouml_ui_ProjectBrowser [label="<<otherpackage2>>
+org.argouml.ui.ProjectBrowser"];
+	org_argouml_ui_cmd_GenericArgoMenuBar -> org_argouml_ui_ActionImportXMI [label=uses];
+	org_argouml_ui_ProjectBrowser -> org_argouml_ui_cmd_GenericArgoMenuBar [label=uses];
+	org_argouml_ui_ActionImportXMI -> org_argouml_ui_ProjectBrowser [label=uses];
+}

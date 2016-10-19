@@ -1,0 +1,10 @@
+digraph stk {
+	artofillusion_animation_PositionTrack [label="<<type>>
+artofillusion.animation.PositionTrack",style=filled,color="grey"];
+	artofillusion_animation_Track [label="<<supertype>>
+artofillusion.animation.Track",style=filled,color="grey"];
+	artofillusion_LayoutWindow [label="artofillusion.LayoutWindow"];
+	artofillusion_animation_PositionTrack -> artofillusion_animation_Track [label=extends];
+	artofillusion_animation_Track -> artofillusion_LayoutWindow [label=uses];
+	artofillusion_LayoutWindow -> artofillusion_animation_PositionTrack [label=uses];
+}

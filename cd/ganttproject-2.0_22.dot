@@ -1,0 +1,19 @@
+digraph cd {
+	net_sourceforge_ganttproject_task_dependency_constraint_FinishFinishConstraintImpl [label="<<package_exit>>
+net.sourceforge.ganttproject.task.dependency.constraint.FinishFinishConstraintImpl",style=filled,color="grey"];
+	net_sourceforge_ganttproject_task_TaskActivity [label="<<otherpackage1>>
+net.sourceforge.ganttproject.task.TaskActivity"];
+	net_sourceforge_ganttproject_task_TaskManagerImpl [label="<<otherpackage2>>
+net.sourceforge.ganttproject.task.TaskManagerImpl"];
+	net_sourceforge_ganttproject_task_Task [label="net.sourceforge.ganttproject.task.Task"];
+	net_sourceforge_ganttproject_GanttTaskRelationship [label="net.sourceforge.ganttproject.GanttTaskRelationship"];
+	net_sourceforge_ganttproject_GanttTask [label="net.sourceforge.ganttproject.GanttTask"];
+	net_sourceforge_ganttproject_task_TaskImpl [label="net.sourceforge.ganttproject.task.TaskImpl"];
+	net_sourceforge_ganttproject_task_dependency_constraint_FinishFinishConstraintImpl -> net_sourceforge_ganttproject_task_TaskActivity [label=uses];
+	net_sourceforge_ganttproject_task_TaskManagerImpl -> net_sourceforge_ganttproject_task_dependency_constraint_FinishFinishConstraintImpl [label=uses];
+	net_sourceforge_ganttproject_task_TaskActivity -> net_sourceforge_ganttproject_task_Task [label=uses];
+	net_sourceforge_ganttproject_task_Task -> net_sourceforge_ganttproject_GanttTaskRelationship [label=uses];
+	net_sourceforge_ganttproject_GanttTaskRelationship -> net_sourceforge_ganttproject_GanttTask [label=uses];
+	net_sourceforge_ganttproject_GanttTask -> net_sourceforge_ganttproject_task_TaskImpl [label=extends];
+	net_sourceforge_ganttproject_task_TaskImpl -> net_sourceforge_ganttproject_task_TaskManagerImpl [label=uses];
+}

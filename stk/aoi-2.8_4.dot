@@ -1,0 +1,10 @@
+digraph stk {
+	artofillusion_texture_LayeredMapping [label="<<type>>
+artofillusion.texture.LayeredMapping",style=filled,color="grey"];
+	artofillusion_texture_TextureMapping [label="<<supertype>>
+artofillusion.texture.TextureMapping",style=filled,color="grey"];
+	artofillusion_object_Object3D [label="artofillusion.object.Object3D"];
+	artofillusion_texture_LayeredMapping -> artofillusion_texture_TextureMapping [label=extends];
+	artofillusion_texture_TextureMapping -> artofillusion_object_Object3D [label=uses];
+	artofillusion_object_Object3D -> artofillusion_texture_LayeredMapping [label=uses];
+}

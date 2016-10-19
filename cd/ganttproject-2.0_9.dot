@@ -1,0 +1,10 @@
+digraph cd {
+	net_sourceforge_ganttproject_task_dependency_MutableTaskDependencyCollection [label="<<package_exit>>
+net.sourceforge.ganttproject.task.dependency.MutableTaskDependencyCollection",style=filled,color="grey"];
+	net_sourceforge_ganttproject_task_dependency_TaskDependencySlice [label="<<package_entry>>
+net.sourceforge.ganttproject.task.dependency.TaskDependencySlice",style=filled,color="grey"];
+	net_sourceforge_ganttproject_task_Task [label="<<otherpackage1>>
+net.sourceforge.ganttproject.task.Task"];
+	net_sourceforge_ganttproject_task_dependency_MutableTaskDependencyCollection -> net_sourceforge_ganttproject_task_Task [label=uses];
+	net_sourceforge_ganttproject_task_Task -> net_sourceforge_ganttproject_task_dependency_TaskDependencySlice [label=uses];
+}

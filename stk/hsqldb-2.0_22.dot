@@ -1,0 +1,8 @@
+digraph stk {
+	org_hsqldb_View [label="<<type>>
+org.hsqldb.View",style=filled,color="grey"];
+	org_hsqldb_TableDerived [label="<<supertype>>
+org.hsqldb.TableDerived",style=filled,color="grey"];
+	org_hsqldb_View -> org_hsqldb_TableDerived [label=extends];
+	org_hsqldb_TableDerived -> org_hsqldb_View [label=uses];
+}

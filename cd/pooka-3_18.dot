@@ -1,0 +1,13 @@
+digraph cd {
+	net_suberic_pooka_messaging_PookaMessageHandler [label="<<package_exit>>
+net.suberic.pooka.messaging.PookaMessageHandler",style=filled,color="grey"];
+	net_suberic_pooka_messaging_PookaMessageListener [label="<<package_entry>>
+net.suberic.pooka.messaging.PookaMessageListener",style=filled,color="grey"];
+	net_suberic_pooka_Pooka [label="<<otherpackage1>>
+net.suberic.pooka.Pooka"];
+	net_suberic_pooka_StartupManager [label="<<otherpackage2>>
+net.suberic.pooka.StartupManager"];
+	net_suberic_pooka_messaging_PookaMessageHandler -> net_suberic_pooka_Pooka [label=uses];
+	net_suberic_pooka_StartupManager -> net_suberic_pooka_messaging_PookaMessageListener [label=uses];
+	net_suberic_pooka_Pooka -> net_suberic_pooka_StartupManager [label=uses];
+}

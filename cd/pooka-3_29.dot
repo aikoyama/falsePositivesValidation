@@ -1,0 +1,10 @@
+digraph cd {
+	net_suberic_pooka_event_MessageLoadedEvent [label="<<package_exit>>
+net.suberic.pooka.event.MessageLoadedEvent",style=filled,color="grey"];
+	net_suberic_pooka_event_MessageLoadedListener [label="<<package_entry>>
+net.suberic.pooka.event.MessageLoadedListener",style=filled,color="grey"];
+	net_suberic_pooka_thread_LoadMessageThread [label="<<otherpackage1>>
+net.suberic.pooka.thread.LoadMessageThread"];
+	net_suberic_pooka_event_MessageLoadedEvent -> net_suberic_pooka_thread_LoadMessageThread [label=uses];
+	net_suberic_pooka_thread_LoadMessageThread -> net_suberic_pooka_event_MessageLoadedListener [label=uses];
+}

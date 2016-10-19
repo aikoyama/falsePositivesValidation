@@ -1,0 +1,10 @@
+digraph stk {
+	net_sourceforge_ganttproject_resource_HumanResource [label="<<type>>
+net.sourceforge.ganttproject.resource.HumanResource",style=filled,color="grey"];
+	net_sourceforge_ganttproject_resource_ProjectResource [label="<<supertype>>
+net.sourceforge.ganttproject.resource.ProjectResource",style=filled,color="grey"];
+	net_sourceforge_ganttproject_resource_LoadDistribution [label="net.sourceforge.ganttproject.resource.LoadDistribution"];
+	net_sourceforge_ganttproject_resource_HumanResource -> net_sourceforge_ganttproject_resource_ProjectResource [label=extends];
+	net_sourceforge_ganttproject_resource_ProjectResource -> net_sourceforge_ganttproject_resource_LoadDistribution [label=uses];
+	net_sourceforge_ganttproject_resource_LoadDistribution -> net_sourceforge_ganttproject_resource_HumanResource [label=uses];
+}

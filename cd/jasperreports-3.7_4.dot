@@ -1,0 +1,13 @@
+digraph cd {
+	net_sf_jasperreports_crosstabs_base_JRBaseCrosstabParameter [label="<<package_exit>>
+net.sf.jasperreports.crosstabs.base.JRBaseCrosstabParameter",style=filled,color="grey"];
+	net_sf_jasperreports_crosstabs_base_JRBaseCrosstab [label="<<package_entry>>
+net.sf.jasperreports.crosstabs.base.JRBaseCrosstab",style=filled,color="grey"];
+	net_sf_jasperreports_engine_base_JRBaseParameter [label="<<otherpackage1>>
+net.sf.jasperreports.engine.base.JRBaseParameter"];
+	net_sf_jasperreports_engine_base_JRBaseObjectFactory [label="<<otherpackage2>>
+net.sf.jasperreports.engine.base.JRBaseObjectFactory"];
+	net_sf_jasperreports_crosstabs_base_JRBaseCrosstabParameter -> net_sf_jasperreports_engine_base_JRBaseParameter [label=extends];
+	net_sf_jasperreports_engine_base_JRBaseObjectFactory -> net_sf_jasperreports_crosstabs_base_JRBaseCrosstab [label=uses];
+	net_sf_jasperreports_engine_base_JRBaseParameter -> net_sf_jasperreports_engine_base_JRBaseObjectFactory [label=uses];
+}

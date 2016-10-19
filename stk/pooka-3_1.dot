@@ -1,0 +1,10 @@
+digraph stk {
+	javax_help_TryMap [label="<<type>>
+javax.help.TryMap",style=filled,color="grey"];
+	javax_help_Map [label="<<supertype>>
+javax.help.Map",style=filled,color="grey"];
+	javax_help_HelpSet [label="javax.help.HelpSet"];
+	javax_help_TryMap -> javax_help_Map [label=implements];
+	javax_help_Map -> javax_help_HelpSet [label=uses];
+	javax_help_HelpSet -> javax_help_TryMap [label=uses];
+}

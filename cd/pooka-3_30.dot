@@ -1,0 +1,15 @@
+digraph cd {
+	net_suberic_pooka_gui_search_SearchForm [label="<<package_exit>>
+net.suberic.pooka.gui.search.SearchForm",style=filled,color="grey"];
+	net_suberic_pooka_FolderInfo [label="<<otherpackage1>>
+net.suberic.pooka.FolderInfo"];
+	net_suberic_pooka_gui_SwingUIFactory [label="<<otherpackage2>>
+net.suberic.pooka.gui.SwingUIFactory"];
+	net_suberic_pooka_gui_PookaDesktopPaneUIFactory [label="net.suberic.pooka.gui.PookaDesktopPaneUIFactory"];
+	net_suberic_pooka_StartupManager [label="net.suberic.pooka.StartupManager"];
+	net_suberic_pooka_gui_search_SearchForm -> net_suberic_pooka_FolderInfo [label=uses];
+	net_suberic_pooka_gui_SwingUIFactory -> net_suberic_pooka_gui_search_SearchForm [label=uses];
+	net_suberic_pooka_FolderInfo -> net_suberic_pooka_StartupManager [label=uses];
+	net_suberic_pooka_StartupManager -> net_suberic_pooka_gui_PookaDesktopPaneUIFactory [label=uses];
+	net_suberic_pooka_gui_PookaDesktopPaneUIFactory -> net_suberic_pooka_gui_SwingUIFactory [label=extends];
+}

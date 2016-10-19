@@ -1,0 +1,17 @@
+digraph cd {
+	org_argouml_uml_ui_ActionImportFromSources [label="<<package_exit>>
+org.argouml.uml.ui.ActionImportFromSources",style=filled,color="grey"];
+	org_argouml_uml_ui_ActionDeleteModelElements [label="<<package_entry>>
+org.argouml.uml.ui.ActionDeleteModelElements",style=filled,color="grey"];
+	org_argouml_uml_reveng_Import [label="<<otherpackage1>>
+org.argouml.uml.reveng.Import"];
+	org_argouml_uml_diagram_ui_FigNodeModelElement [label="<<otherpackage2>>
+org.argouml.uml.diagram.ui.FigNodeModelElement"];
+	org_argouml_uml_reveng_ImportCommon [label="org.argouml.uml.reveng.ImportCommon"];
+	org_argouml_uml_reveng_DiagramInterface [label="org.argouml.uml.reveng.DiagramInterface"];
+	org_argouml_uml_ui_ActionImportFromSources -> org_argouml_uml_reveng_Import [label=uses];
+	org_argouml_uml_diagram_ui_FigNodeModelElement -> org_argouml_uml_ui_ActionDeleteModelElements [label=uses];
+	org_argouml_uml_reveng_Import -> org_argouml_uml_reveng_ImportCommon [label=extends];
+	org_argouml_uml_reveng_ImportCommon -> org_argouml_uml_reveng_DiagramInterface [label=uses];
+	org_argouml_uml_reveng_DiagramInterface -> org_argouml_uml_diagram_ui_FigNodeModelElement [label=uses];
+}

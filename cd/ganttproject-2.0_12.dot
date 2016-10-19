@@ -1,0 +1,23 @@
+digraph cd {
+	net_sourceforge_ganttproject_document_DocumentCreator [label="<<package_exit>>
+net.sourceforge.ganttproject.document.DocumentCreator",style=filled,color="grey"];
+	net_sourceforge_ganttproject_document_OpenDocumentAction [label="<<package_entry>>
+net.sourceforge.ganttproject.document.OpenDocumentAction",style=filled,color="grey"];
+	net_sourceforge_ganttproject_parser_ParserFactory [label="<<otherpackage1>>
+net.sourceforge.ganttproject.parser.ParserFactory"];
+	net_sourceforge_ganttproject_GanttProject [label="<<otherpackage2>>
+net.sourceforge.ganttproject.GanttProject"];
+	net_sourceforge_ganttproject_task_Task [label="net.sourceforge.ganttproject.task.Task"];
+	net_sourceforge_ganttproject_calendar_GPCalendar [label="net.sourceforge.ganttproject.calendar.GPCalendar"];
+	net_sourceforge_ganttproject_task_TaskManager [label="net.sourceforge.ganttproject.task.TaskManager"];
+	net_sourceforge_ganttproject_parser_GPParser [label="net.sourceforge.ganttproject.parser.GPParser"];
+	net_sourceforge_ganttproject_parser_ParsingContext [label="net.sourceforge.ganttproject.parser.ParsingContext"];
+	net_sourceforge_ganttproject_document_DocumentCreator -> net_sourceforge_ganttproject_parser_ParserFactory [label=uses];
+	net_sourceforge_ganttproject_GanttProject -> net_sourceforge_ganttproject_document_OpenDocumentAction [label=uses];
+	net_sourceforge_ganttproject_parser_ParserFactory -> net_sourceforge_ganttproject_parser_GPParser [label=uses];
+	net_sourceforge_ganttproject_parser_GPParser -> net_sourceforge_ganttproject_parser_ParsingContext [label=uses];
+	net_sourceforge_ganttproject_parser_ParsingContext -> net_sourceforge_ganttproject_task_Task [label=uses];
+	net_sourceforge_ganttproject_task_Task -> net_sourceforge_ganttproject_task_TaskManager [label=uses];
+	net_sourceforge_ganttproject_task_TaskManager -> net_sourceforge_ganttproject_calendar_GPCalendar [label=uses];
+	net_sourceforge_ganttproject_calendar_GPCalendar -> net_sourceforge_ganttproject_GanttProject [label=uses];
+}

@@ -1,0 +1,10 @@
+digraph stk {
+	net_sourceforge_ganttproject_resource_ProjectResource$ResourceAssignmentImpl [label="<<type>>
+net.sourceforge.ganttproject.resource.ProjectResource$ResourceAssignmentImpl",style=filled,color="grey"];
+	net_sourceforge_ganttproject_task_ResourceAssignment [label="<<supertype>>
+net.sourceforge.ganttproject.task.ResourceAssignment",style=filled,color="grey"];
+	net_sourceforge_ganttproject_resource_ProjectResource [label="net.sourceforge.ganttproject.resource.ProjectResource"];
+	net_sourceforge_ganttproject_resource_ProjectResource$ResourceAssignmentImpl -> net_sourceforge_ganttproject_task_ResourceAssignment [label=implements];
+	net_sourceforge_ganttproject_task_ResourceAssignment -> net_sourceforge_ganttproject_resource_ProjectResource [label=uses];
+	net_sourceforge_ganttproject_resource_ProjectResource -> net_sourceforge_ganttproject_resource_ProjectResource$ResourceAssignmentImpl [label=uses];
+}

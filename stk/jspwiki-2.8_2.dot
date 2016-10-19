@@ -1,0 +1,12 @@
+digraph stk {
+	com_ecyrd_jspwiki_workflow_AbstractStep [label="<<type>>
+com.ecyrd.jspwiki.workflow.AbstractStep",style=filled,color="grey"];
+	com_ecyrd_jspwiki_workflow_Step [label="<<supertype>>
+com.ecyrd.jspwiki.workflow.Step",style=filled,color="grey"];
+	com_ecyrd_jspwiki_workflow_Decision [label="com.ecyrd.jspwiki.workflow.Decision"];
+	com_ecyrd_jspwiki_workflow_Workflow [label="com.ecyrd.jspwiki.workflow.Workflow"];
+	com_ecyrd_jspwiki_workflow_AbstractStep -> com_ecyrd_jspwiki_workflow_Step [label=implements];
+	com_ecyrd_jspwiki_workflow_Step -> com_ecyrd_jspwiki_workflow_Workflow [label=uses];
+	com_ecyrd_jspwiki_workflow_Workflow -> com_ecyrd_jspwiki_workflow_Decision [label=uses];
+	com_ecyrd_jspwiki_workflow_Decision -> com_ecyrd_jspwiki_workflow_AbstractStep [label=extends];
+}

@@ -1,0 +1,15 @@
+digraph cd {
+	com_sun_java_help_impl_JHelpPrintHandler1_2 [label="<<package_exit>>
+com.sun.java.help.impl.JHelpPrintHandler1_2",style=filled,color="grey"];
+	com_sun_java_help_impl_ParserEvent [label="<<package_entry>>
+com.sun.java.help.impl.ParserEvent",style=filled,color="grey"];
+	javax_help_JHelp [label="<<otherpackage1>>
+javax.help.JHelp"];
+	javax_help_HelpSet$HelpSetParser [label="<<otherpackage2>>
+javax.help.HelpSet$HelpSetParser"];
+	javax_help_HelpSet [label="javax.help.HelpSet"];
+	com_sun_java_help_impl_JHelpPrintHandler1_2 -> javax_help_JHelp [label=uses];
+	javax_help_HelpSet$HelpSetParser -> com_sun_java_help_impl_ParserEvent [label=uses];
+	javax_help_JHelp -> javax_help_HelpSet [label=uses];
+	javax_help_HelpSet -> javax_help_HelpSet$HelpSetParser [label=uses];
+}

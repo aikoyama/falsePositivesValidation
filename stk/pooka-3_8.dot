@@ -1,0 +1,12 @@
+digraph stk {
+	net_suberic_pooka_gui_PookaMinimalUIFactory [label="<<type>>
+net.suberic.pooka.gui.PookaMinimalUIFactory",style=filled,color="grey"];
+	net_suberic_pooka_gui_PookaUIFactory [label="<<supertype>>
+net.suberic.pooka.gui.PookaUIFactory",style=filled,color="grey"];
+	net_suberic_pooka_FolderInfo [label="net.suberic.pooka.FolderInfo"];
+	net_suberic_pooka_StartupManager [label="net.suberic.pooka.StartupManager"];
+	net_suberic_pooka_gui_PookaMinimalUIFactory -> net_suberic_pooka_gui_PookaUIFactory [label=implements];
+	net_suberic_pooka_gui_PookaUIFactory -> net_suberic_pooka_FolderInfo [label=uses];
+	net_suberic_pooka_FolderInfo -> net_suberic_pooka_StartupManager [label=uses];
+	net_suberic_pooka_StartupManager -> net_suberic_pooka_gui_PookaMinimalUIFactory [label=uses];
+}

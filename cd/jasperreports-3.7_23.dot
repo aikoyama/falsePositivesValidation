@@ -1,0 +1,11 @@
+digraph cd {
+	net_sf_jasperreports_charts_util_JRMeterInterval [label="<<package_exit>>
+net.sf.jasperreports.charts.util.JRMeterInterval",style=filled,color="grey"];
+	net_sf_jasperreports_engine_base_JRBaseObjectFactory [label="<<otherpackage1>>
+net.sf.jasperreports.engine.base.JRBaseObjectFactory"];
+	net_sf_jasperreports_charts_base_JRBaseMeterPlot [label="<<otherpackage2>>
+net.sf.jasperreports.charts.base.JRBaseMeterPlot"];
+	net_sf_jasperreports_charts_util_JRMeterInterval -> net_sf_jasperreports_engine_base_JRBaseObjectFactory [label=uses];
+	net_sf_jasperreports_charts_base_JRBaseMeterPlot -> net_sf_jasperreports_charts_util_JRMeterInterval [label=uses];
+	net_sf_jasperreports_engine_base_JRBaseObjectFactory -> net_sf_jasperreports_charts_base_JRBaseMeterPlot [label=uses];
+}

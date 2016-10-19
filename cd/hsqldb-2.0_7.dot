@@ -1,0 +1,15 @@
+digraph cd {
+	org_hsqldb_scriptio_ScriptReaderDecode [label="<<package_exit>>
+org.hsqldb.scriptio.ScriptReaderDecode",style=filled,color="grey"];
+	org_hsqldb_scriptio_ScriptWriterBase [label="<<package_entry>>
+org.hsqldb.scriptio.ScriptWriterBase",style=filled,color="grey"];
+	org_hsqldb_Database [label="<<otherpackage1>>
+org.hsqldb.Database"];
+	org_hsqldb_persist_DataFileCache [label="<<otherpackage2>>
+org.hsqldb.persist.DataFileCache"];
+	org_hsqldb_persist_Logger [label="org.hsqldb.persist.Logger"];
+	org_hsqldb_scriptio_ScriptReaderDecode -> org_hsqldb_Database [label=uses];
+	org_hsqldb_persist_DataFileCache -> org_hsqldb_scriptio_ScriptWriterBase [label=uses];
+	org_hsqldb_Database -> org_hsqldb_persist_Logger [label=uses];
+	org_hsqldb_persist_Logger -> org_hsqldb_persist_DataFileCache [label=uses];
+}

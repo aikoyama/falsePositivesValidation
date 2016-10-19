@@ -1,0 +1,19 @@
+digraph cd {
+	buoy_xml_delegate_IndexedContainerDelegate [label="<<package_exit>>
+buoy.xml.delegate.IndexedContainerDelegate",style=filled,color="grey"];
+	buoy_xml_delegate_StaticFieldDelegate [label="<<package_entry>>
+buoy.xml.delegate.StaticFieldDelegate",style=filled,color="grey"];
+	buoy_widget_WidgetContainer [label="<<otherpackage1>>
+buoy.widget.WidgetContainer"];
+	buoy_widget_BButton [label="<<otherpackage2>>
+buoy.widget.BButton"];
+	buoy_widget_WindowWidget [label="buoy.widget.WindowWidget"];
+	buoy_internal_EventLinkAdapter [label="buoy.internal.EventLinkAdapter"];
+	buoy_widget_Widget [label="buoy.widget.Widget"];
+	buoy_xml_delegate_IndexedContainerDelegate -> buoy_widget_WidgetContainer [label=uses];
+	buoy_widget_BButton -> buoy_xml_delegate_StaticFieldDelegate [label=uses];
+	buoy_widget_WidgetContainer -> buoy_widget_Widget [label=extends];
+	buoy_widget_Widget -> buoy_internal_EventLinkAdapter [label=uses];
+	buoy_internal_EventLinkAdapter -> buoy_widget_WindowWidget [label=uses];
+	buoy_widget_WindowWidget -> buoy_widget_BButton [label=uses];
+}

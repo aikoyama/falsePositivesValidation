@@ -1,0 +1,16 @@
+digraph stk {
+	org_argouml_cognitive_CompositeCM [label="<<type>>
+org.argouml.cognitive.CompositeCM",style=filled,color="grey"];
+	org_argouml_cognitive_ControlMech [label="<<supertype>>
+org.argouml.cognitive.ControlMech",style=filled,color="grey"];
+	org_argouml_cognitive_Designer [label="org.argouml.cognitive.Designer"];
+	org_argouml_cognitive_AndCM [label="org.argouml.cognitive.AndCM"];
+	org_argouml_cognitive_StandardCM [label="org.argouml.cognitive.StandardCM"];
+	org_argouml_cognitive_Agency [label="org.argouml.cognitive.Agency"];
+	org_argouml_cognitive_CompositeCM -> org_argouml_cognitive_ControlMech [label=implements];
+	org_argouml_cognitive_ControlMech -> org_argouml_cognitive_Designer [label=uses];
+	org_argouml_cognitive_Designer -> org_argouml_cognitive_Agency [label=uses];
+	org_argouml_cognitive_Agency -> org_argouml_cognitive_StandardCM [label=uses];
+	org_argouml_cognitive_StandardCM -> org_argouml_cognitive_AndCM [label=extends];
+	org_argouml_cognitive_AndCM -> org_argouml_cognitive_CompositeCM [label=extends];
+}

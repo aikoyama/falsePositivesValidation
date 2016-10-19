@@ -1,0 +1,13 @@
+digraph cd {
+	org_hsqldb_dbinfo_DatabaseInformationMain [label="<<package_exit>>
+org.hsqldb.dbinfo.DatabaseInformationMain",style=filled,color="grey"];
+	org_hsqldb_dbinfo_DatabaseInformation [label="<<package_entry>>
+org.hsqldb.dbinfo.DatabaseInformation",style=filled,color="grey"];
+	org_hsqldb_ColumnSchema [label="<<otherpackage1>>
+org.hsqldb.ColumnSchema"];
+	org_hsqldb_Table [label="<<otherpackage2>>
+org.hsqldb.Table"];
+	org_hsqldb_dbinfo_DatabaseInformationMain -> org_hsqldb_ColumnSchema [label=uses];
+	org_hsqldb_Table -> org_hsqldb_dbinfo_DatabaseInformation [label=uses];
+	org_hsqldb_ColumnSchema -> org_hsqldb_Table [label=uses];
+}

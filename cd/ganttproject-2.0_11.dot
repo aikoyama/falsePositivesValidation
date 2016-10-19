@@ -1,0 +1,10 @@
+digraph cd {
+	net_sourceforge_ganttproject_action_NewHumanAction [label="<<package_exit>>
+net.sourceforge.ganttproject.action.NewHumanAction",style=filled,color="grey"];
+	net_sourceforge_ganttproject_action_ScrollGanttChartLeftAction [label="<<package_entry>>
+net.sourceforge.ganttproject.action.ScrollGanttChartLeftAction",style=filled,color="grey"];
+	net_sourceforge_ganttproject_GanttProject [label="<<otherpackage1>>
+net.sourceforge.ganttproject.GanttProject"];
+	net_sourceforge_ganttproject_action_NewHumanAction -> net_sourceforge_ganttproject_GanttProject [label=uses];
+	net_sourceforge_ganttproject_GanttProject -> net_sourceforge_ganttproject_action_ScrollGanttChartLeftAction [label=uses];
+}

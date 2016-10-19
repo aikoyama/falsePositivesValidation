@@ -1,0 +1,10 @@
+digraph stk {
+	net_suberic_pooka_VirtualFolderInfo [label="<<type>>
+net.suberic.pooka.VirtualFolderInfo",style=filled,color="grey"];
+	net_suberic_pooka_FolderInfo [label="<<supertype>>
+net.suberic.pooka.FolderInfo",style=filled,color="grey"];
+	net_suberic_pooka_FolderInfo$9 [label="net.suberic.pooka.FolderInfo$9"];
+	net_suberic_pooka_VirtualFolderInfo -> net_suberic_pooka_FolderInfo [label=extends];
+	net_suberic_pooka_FolderInfo -> net_suberic_pooka_FolderInfo$9 [label=uses];
+	net_suberic_pooka_FolderInfo$9 -> net_suberic_pooka_VirtualFolderInfo [label=uses];
+}

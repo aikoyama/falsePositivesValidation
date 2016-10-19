@@ -1,0 +1,15 @@
+digraph cd {
+	org_argouml_uml_diagram_activity_ui_ActivityDiagramRenderer [label="<<package_exit>>
+org.argouml.uml.diagram.activity.ui.ActivityDiagramRenderer",style=filled,color="grey"];
+	org_argouml_uml_diagram_activity_ui_FigPool [label="<<package_entry>>
+org.argouml.uml.diagram.activity.ui.FigPool",style=filled,color="grey"];
+	org_argouml_uml_diagram_state_ui_StateDiagramRenderer [label="<<otherpackage1>>
+org.argouml.uml.diagram.state.ui.StateDiagramRenderer"];
+	org_argouml_uml_diagram_ArgoDiagramImpl [label="<<otherpackage2>>
+org.argouml.uml.diagram.ArgoDiagramImpl"];
+	org_argouml_uml_diagram_ui_UMLDiagram [label="org.argouml.uml.diagram.ui.UMLDiagram"];
+	org_argouml_uml_diagram_activity_ui_ActivityDiagramRenderer -> org_argouml_uml_diagram_state_ui_StateDiagramRenderer [label=extends];
+	org_argouml_uml_diagram_ArgoDiagramImpl -> org_argouml_uml_diagram_activity_ui_FigPool [label=uses];
+	org_argouml_uml_diagram_state_ui_StateDiagramRenderer -> org_argouml_uml_diagram_ui_UMLDiagram [label=uses];
+	org_argouml_uml_diagram_ui_UMLDiagram -> org_argouml_uml_diagram_ArgoDiagramImpl [label=extends];
+}

@@ -1,0 +1,19 @@
+digraph cd {
+	net_sourceforge_ganttproject_action_resource_ResourcePropertiesAction [label="<<package_exit>>
+net.sourceforge.ganttproject.action.resource.ResourcePropertiesAction",style=filled,color="grey"];
+	net_sourceforge_ganttproject_gui_UIFacade [label="<<otherpackage1>>
+net.sourceforge.ganttproject.gui.UIFacade"];
+	net_sourceforge_ganttproject_GanttResourcePanel [label="<<otherpackage2>>
+net.sourceforge.ganttproject.GanttResourcePanel"];
+	net_sourceforge_ganttproject_GanttProject [label="net.sourceforge.ganttproject.GanttProject"];
+	net_sourceforge_ganttproject_calendar_GPCalendar [label="net.sourceforge.ganttproject.calendar.GPCalendar"];
+	net_sourceforge_ganttproject_chart_Chart [label="net.sourceforge.ganttproject.chart.Chart"];
+	net_sourceforge_ganttproject_task_TaskManager [label="net.sourceforge.ganttproject.task.TaskManager"];
+	net_sourceforge_ganttproject_action_resource_ResourcePropertiesAction -> net_sourceforge_ganttproject_gui_UIFacade [label=uses];
+	net_sourceforge_ganttproject_GanttResourcePanel -> net_sourceforge_ganttproject_action_resource_ResourcePropertiesAction [label=uses];
+	net_sourceforge_ganttproject_gui_UIFacade -> net_sourceforge_ganttproject_chart_Chart [label=uses];
+	net_sourceforge_ganttproject_chart_Chart -> net_sourceforge_ganttproject_task_TaskManager [label=uses];
+	net_sourceforge_ganttproject_task_TaskManager -> net_sourceforge_ganttproject_calendar_GPCalendar [label=uses];
+	net_sourceforge_ganttproject_calendar_GPCalendar -> net_sourceforge_ganttproject_GanttProject [label=uses];
+	net_sourceforge_ganttproject_GanttProject -> net_sourceforge_ganttproject_GanttResourcePanel [label=uses];
+}

@@ -1,0 +1,21 @@
+digraph cd {
+	net_sf_jasperreports_engine_convert_ImageConverter [label="<<package_exit>>
+net.sf.jasperreports.engine.convert.ImageConverter",style=filled,color="grey"];
+	net_sf_jasperreports_engine_convert_ReportConverter [label="<<package_entry>>
+net.sf.jasperreports.engine.convert.ReportConverter",style=filled,color="grey"];
+	net_sf_jasperreports_engine_JRImage [label="<<otherpackage1>>
+net.sf.jasperreports.engine.JRImage"];
+	net_sf_jasperreports_engine_component_ComponentDesignConverter [label="<<otherpackage2>>
+net.sf.jasperreports.engine.component.ComponentDesignConverter"];
+	net_sf_jasperreports_engine_component_ComponentManager [label="net.sf.jasperreports.engine.component.ComponentManager"];
+	net_sf_jasperreports_engine_JRGraphicElement [label="net.sf.jasperreports.engine.JRGraphicElement"];
+	net_sf_jasperreports_engine_JRExpressionCollector [label="net.sf.jasperreports.engine.JRExpressionCollector"];
+	net_sf_jasperreports_engine_JRElement [label="net.sf.jasperreports.engine.JRElement"];
+	net_sf_jasperreports_engine_convert_ImageConverter -> net_sf_jasperreports_engine_JRImage [label=uses];
+	net_sf_jasperreports_engine_component_ComponentDesignConverter -> net_sf_jasperreports_engine_convert_ReportConverter [label=uses];
+	net_sf_jasperreports_engine_JRImage -> net_sf_jasperreports_engine_JRGraphicElement [label=extends];
+	net_sf_jasperreports_engine_JRGraphicElement -> net_sf_jasperreports_engine_JRElement [label=extends];
+	net_sf_jasperreports_engine_JRElement -> net_sf_jasperreports_engine_JRExpressionCollector [label=uses];
+	net_sf_jasperreports_engine_JRExpressionCollector -> net_sf_jasperreports_engine_component_ComponentManager [label=uses];
+	net_sf_jasperreports_engine_component_ComponentManager -> net_sf_jasperreports_engine_component_ComponentDesignConverter [label=uses];
+}

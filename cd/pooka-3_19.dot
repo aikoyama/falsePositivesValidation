@@ -1,0 +1,10 @@
+digraph cd {
+	net_suberic_pooka_thread_FolderTracker$UpdateInfo [label="<<package_exit>>
+net.suberic.pooka.thread.FolderTracker$UpdateInfo",style=filled,color="grey"];
+	net_suberic_pooka_thread_FolderTracker [label="<<package_entry>>
+net.suberic.pooka.thread.FolderTracker",style=filled,color="grey"];
+	net_suberic_pooka_FolderInfo [label="<<otherpackage1>>
+net.suberic.pooka.FolderInfo"];
+	net_suberic_pooka_thread_FolderTracker$UpdateInfo -> net_suberic_pooka_FolderInfo [label=uses];
+	net_suberic_pooka_FolderInfo -> net_suberic_pooka_thread_FolderTracker [label=uses];
+}

@@ -1,0 +1,8 @@
+digraph cd {
+	org_java_plugin_standard_StandardObjectFactory [label="<<package_exit>>
+org.java.plugin.standard.StandardObjectFactory",style=filled,color="grey"];
+	org_java_plugin_ObjectFactory [label="<<otherpackage1>>
+org.java.plugin.ObjectFactory"];
+	org_java_plugin_standard_StandardObjectFactory -> org_java_plugin_ObjectFactory [label=extends];
+	org_java_plugin_ObjectFactory -> org_java_plugin_standard_StandardObjectFactory [label=uses];
+}

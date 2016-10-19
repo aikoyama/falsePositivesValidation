@@ -1,0 +1,13 @@
+digraph cd {
+	net_sf_jasperreports_charts_JRTimeSeriesPlot [label="<<package_exit>>
+net.sf.jasperreports.charts.JRTimeSeriesPlot",style=filled,color="grey"];
+	net_sf_jasperreports_charts_JRValueDataset [label="<<package_entry>>
+net.sf.jasperreports.charts.JRValueDataset",style=filled,color="grey"];
+	net_sf_jasperreports_engine_JRChartPlot [label="<<otherpackage1>>
+net.sf.jasperreports.engine.JRChartPlot"];
+	net_sf_jasperreports_engine_JRExpressionCollector [label="<<otherpackage2>>
+net.sf.jasperreports.engine.JRExpressionCollector"];
+	net_sf_jasperreports_charts_JRTimeSeriesPlot -> net_sf_jasperreports_engine_JRChartPlot [label=extends];
+	net_sf_jasperreports_engine_JRExpressionCollector -> net_sf_jasperreports_charts_JRValueDataset [label=uses];
+	net_sf_jasperreports_engine_JRChartPlot -> net_sf_jasperreports_engine_JRExpressionCollector [label=uses];
+}

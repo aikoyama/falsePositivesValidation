@@ -1,0 +1,15 @@
+digraph cd {
+	net_sourceforge_ganttproject_task_algorithm_AdjustTaskBoundsAlgorithm$AlgorithmImpl [label="<<package_exit>>
+net.sourceforge.ganttproject.task.algorithm.AdjustTaskBoundsAlgorithm$AlgorithmImpl",style=filled,color="grey"];
+	net_sourceforge_ganttproject_task_algorithm_AlgorithmCollection [label="<<package_entry>>
+net.sourceforge.ganttproject.task.algorithm.AlgorithmCollection",style=filled,color="grey"];
+	net_sourceforge_ganttproject_task_TaskContainmentHierarchyFacade [label="<<otherpackage1>>
+net.sourceforge.ganttproject.task.TaskContainmentHierarchyFacade"];
+	net_sourceforge_ganttproject_task_TaskManager [label="<<otherpackage2>>
+net.sourceforge.ganttproject.task.TaskManager"];
+	net_sourceforge_ganttproject_task_Task [label="net.sourceforge.ganttproject.task.Task"];
+	net_sourceforge_ganttproject_task_algorithm_AdjustTaskBoundsAlgorithm$AlgorithmImpl -> net_sourceforge_ganttproject_task_TaskContainmentHierarchyFacade [label=uses];
+	net_sourceforge_ganttproject_task_TaskManager -> net_sourceforge_ganttproject_task_algorithm_AlgorithmCollection [label=uses];
+	net_sourceforge_ganttproject_task_TaskContainmentHierarchyFacade -> net_sourceforge_ganttproject_task_Task [label=uses];
+	net_sourceforge_ganttproject_task_Task -> net_sourceforge_ganttproject_task_TaskManager [label=uses];
+}

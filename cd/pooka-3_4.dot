@@ -1,0 +1,13 @@
+digraph cd {
+	org_htmlparser_nodes_TagNode [label="<<package_exit>>
+org.htmlparser.nodes.TagNode",style=filled,color="grey"];
+	org_htmlparser_Tag [label="<<otherpackage1>>
+org.htmlparser.Tag"];
+	org_htmlparser_lexer_Lexer [label="<<otherpackage2>>
+org.htmlparser.lexer.Lexer"];
+	org_htmlparser_scanners_Scanner [label="org.htmlparser.scanners.Scanner"];
+	org_htmlparser_nodes_TagNode -> org_htmlparser_Tag [label=implements];
+	org_htmlparser_lexer_Lexer -> org_htmlparser_nodes_TagNode [label=uses];
+	org_htmlparser_Tag -> org_htmlparser_scanners_Scanner [label=uses];
+	org_htmlparser_scanners_Scanner -> org_htmlparser_lexer_Lexer [label=uses];
+}

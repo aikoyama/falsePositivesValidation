@@ -1,0 +1,13 @@
+digraph cd {
+	org_apache_log4j_helpers_PatternParser$LiteralPatternConverter [label="<<package_exit>>
+org.apache.log4j.helpers.PatternParser$LiteralPatternConverter",style=filled,color="grey"];
+	org_apache_log4j_helpers_AppenderAttachableImpl [label="<<package_entry>>
+org.apache.log4j.helpers.AppenderAttachableImpl",style=filled,color="grey"];
+	org_apache_log4j_spi_LoggingEvent [label="<<otherpackage1>>
+org.apache.log4j.spi.LoggingEvent"];
+	org_apache_log4j_Category [label="<<otherpackage2>>
+org.apache.log4j.Category"];
+	org_apache_log4j_helpers_PatternParser$LiteralPatternConverter -> org_apache_log4j_spi_LoggingEvent [label=uses];
+	org_apache_log4j_Category -> org_apache_log4j_helpers_AppenderAttachableImpl [label=uses];
+	org_apache_log4j_spi_LoggingEvent -> org_apache_log4j_Category [label=uses];
+}

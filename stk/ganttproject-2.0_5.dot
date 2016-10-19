@@ -1,0 +1,16 @@
+digraph stk {
+	net_sourceforge_ganttproject_chart_ChartModelImpl [label="<<type>>
+net.sourceforge.ganttproject.chart.ChartModelImpl",style=filled,color="grey"];
+	net_sourceforge_ganttproject_chart_ChartModelBase [label="<<supertype>>
+net.sourceforge.ganttproject.chart.ChartModelBase",style=filled,color="grey"];
+	net_sourceforge_ganttproject_chart_ChartModelBase$1 [label="net.sourceforge.ganttproject.chart.ChartModelBase$1"];
+	net_sourceforge_ganttproject_GanttProjectBase$RowHeightAligner [label="net.sourceforge.ganttproject.GanttProjectBase$RowHeightAligner"];
+	net_sourceforge_ganttproject_GanttProject [label="net.sourceforge.ganttproject.GanttProject"];
+	net_sourceforge_ganttproject_calendar_GPCalendar [label="net.sourceforge.ganttproject.calendar.GPCalendar"];
+	net_sourceforge_ganttproject_chart_ChartModelImpl -> net_sourceforge_ganttproject_chart_ChartModelBase [label=extends];
+	net_sourceforge_ganttproject_chart_ChartModelBase -> net_sourceforge_ganttproject_chart_ChartModelBase$1 [label=uses];
+	net_sourceforge_ganttproject_chart_ChartModelBase$1 -> net_sourceforge_ganttproject_calendar_GPCalendar [label=uses];
+	net_sourceforge_ganttproject_calendar_GPCalendar -> net_sourceforge_ganttproject_GanttProject [label=uses];
+	net_sourceforge_ganttproject_GanttProject -> net_sourceforge_ganttproject_GanttProjectBase$RowHeightAligner [label=uses];
+	net_sourceforge_ganttproject_GanttProjectBase$RowHeightAligner -> net_sourceforge_ganttproject_chart_ChartModelImpl [label=uses];
+}

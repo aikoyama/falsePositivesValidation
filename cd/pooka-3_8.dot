@@ -1,0 +1,13 @@
+digraph cd {
+	net_suberic_pooka_filter_CachedSearchTerm [label="<<package_exit>>
+net.suberic.pooka.filter.CachedSearchTerm",style=filled,color="grey"];
+	net_suberic_pooka_filter_FilterAction [label="<<package_entry>>
+net.suberic.pooka.filter.FilterAction",style=filled,color="grey"];
+	net_suberic_pooka_cache_CachingFolderInfo [label="<<otherpackage1>>
+net.suberic.pooka.cache.CachingFolderInfo"];
+	net_suberic_pooka_MessageInfo [label="<<otherpackage2>>
+net.suberic.pooka.MessageInfo"];
+	net_suberic_pooka_filter_CachedSearchTerm -> net_suberic_pooka_cache_CachingFolderInfo [label=uses];
+	net_suberic_pooka_MessageInfo -> net_suberic_pooka_filter_FilterAction [label=uses];
+	net_suberic_pooka_cache_CachingFolderInfo -> net_suberic_pooka_MessageInfo [label=uses];
+}

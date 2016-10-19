@@ -1,0 +1,10 @@
+digraph cd {
+	org_argouml_uml_diagram_UMLMutableGraphSupport [label="<<package_exit>>
+org.argouml.uml.diagram.UMLMutableGraphSupport",style=filled,color="grey"];
+	org_argouml_uml_diagram_ArgoDiagram [label="<<package_entry>>
+org.argouml.uml.diagram.ArgoDiagram",style=filled,color="grey"];
+	org_argouml_kernel_Project [label="<<otherpackage1>>
+org.argouml.kernel.Project"];
+	org_argouml_uml_diagram_UMLMutableGraphSupport -> org_argouml_kernel_Project [label=uses];
+	org_argouml_kernel_Project -> org_argouml_uml_diagram_ArgoDiagram [label=uses];
+}

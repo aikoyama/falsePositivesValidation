@@ -1,0 +1,21 @@
+digraph cd {
+	net_sf_jasperreports_engine_xml_JRElementFactory [label="<<package_exit>>
+net.sf.jasperreports.engine.xml.JRElementFactory",style=filled,color="grey"];
+	net_sf_jasperreports_engine_xml_JRXmlWriter [label="<<package_entry>>
+net.sf.jasperreports.engine.xml.JRXmlWriter",style=filled,color="grey"];
+	net_sf_jasperreports_engine_design_JRDesignElement [label="<<otherpackage1>>
+net.sf.jasperreports.engine.design.JRDesignElement"];
+	net_sf_jasperreports_engine_component_ComponentXmlWriter [label="<<otherpackage2>>
+net.sf.jasperreports.engine.component.ComponentXmlWriter"];
+	net_sf_jasperreports_engine_component_ComponentManager [label="net.sf.jasperreports.engine.component.ComponentManager"];
+	net_sf_jasperreports_engine_JRElementGroup [label="net.sf.jasperreports.engine.JRElementGroup"];
+	net_sf_jasperreports_engine_JRExpressionCollector [label="net.sf.jasperreports.engine.JRExpressionCollector"];
+	net_sf_jasperreports_engine_JRElement [label="net.sf.jasperreports.engine.JRElement"];
+	net_sf_jasperreports_engine_xml_JRElementFactory -> net_sf_jasperreports_engine_design_JRDesignElement [label=uses];
+	net_sf_jasperreports_engine_component_ComponentXmlWriter -> net_sf_jasperreports_engine_xml_JRXmlWriter [label=uses];
+	net_sf_jasperreports_engine_design_JRDesignElement -> net_sf_jasperreports_engine_JRElementGroup [label=uses];
+	net_sf_jasperreports_engine_JRElementGroup -> net_sf_jasperreports_engine_JRElement [label=uses];
+	net_sf_jasperreports_engine_JRElement -> net_sf_jasperreports_engine_JRExpressionCollector [label=uses];
+	net_sf_jasperreports_engine_JRExpressionCollector -> net_sf_jasperreports_engine_component_ComponentManager [label=uses];
+	net_sf_jasperreports_engine_component_ComponentManager -> net_sf_jasperreports_engine_component_ComponentXmlWriter [label=uses];
+}

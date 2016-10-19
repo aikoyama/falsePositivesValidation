@@ -1,0 +1,10 @@
+digraph stk {
+	org_java_plugin_registry_Extension [label="<<type>>
+org.java.plugin.registry.Extension",style=filled,color="grey"];
+	org_java_plugin_registry_PluginElement [label="<<supertype>>
+org.java.plugin.registry.PluginElement",style=filled,color="grey"];
+	org_java_plugin_registry_PluginDescriptor [label="org.java.plugin.registry.PluginDescriptor"];
+	org_java_plugin_registry_Extension -> org_java_plugin_registry_PluginElement [label=extends];
+	org_java_plugin_registry_PluginElement -> org_java_plugin_registry_PluginDescriptor [label=uses];
+	org_java_plugin_registry_PluginDescriptor -> org_java_plugin_registry_Extension [label=uses];
+}

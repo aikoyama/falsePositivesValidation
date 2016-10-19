@@ -1,0 +1,12 @@
+digraph stk {
+	artofillusion_raytracer_CompoundPhotonSource [label="<<type>>
+artofillusion.raytracer.CompoundPhotonSource",style=filled,color="grey"];
+	artofillusion_raytracer_PhotonSource [label="<<supertype>>
+artofillusion.raytracer.PhotonSource",style=filled,color="grey"];
+	artofillusion_raytracer_Raytracer [label="artofillusion.raytracer.Raytracer"];
+	artofillusion_raytracer_PhotonMap [label="artofillusion.raytracer.PhotonMap"];
+	artofillusion_raytracer_CompoundPhotonSource -> artofillusion_raytracer_PhotonSource [label=implements];
+	artofillusion_raytracer_PhotonSource -> artofillusion_raytracer_PhotonMap [label=uses];
+	artofillusion_raytracer_PhotonMap -> artofillusion_raytracer_Raytracer [label=uses];
+	artofillusion_raytracer_Raytracer -> artofillusion_raytracer_CompoundPhotonSource [label=uses];
+}

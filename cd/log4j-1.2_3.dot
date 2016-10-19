@@ -1,0 +1,10 @@
+digraph cd {
+	org_apache_log4j_PatternLayout [label="<<package_exit>>
+org.apache.log4j.PatternLayout",style=filled,color="grey"];
+	org_apache_log4j_Level [label="<<package_entry>>
+org.apache.log4j.Level",style=filled,color="grey"];
+	org_apache_log4j_spi_LoggingEvent [label="<<otherpackage1>>
+org.apache.log4j.spi.LoggingEvent"];
+	org_apache_log4j_PatternLayout -> org_apache_log4j_spi_LoggingEvent [label=uses];
+	org_apache_log4j_spi_LoggingEvent -> org_apache_log4j_Level [label=uses];
+}

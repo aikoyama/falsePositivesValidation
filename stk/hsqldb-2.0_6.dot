@@ -1,0 +1,8 @@
+digraph stk {
+	org_hsqldb_QuerySpecification [label="<<type>>
+org.hsqldb.QuerySpecification",style=filled,color="grey"];
+	org_hsqldb_QueryExpression [label="<<supertype>>
+org.hsqldb.QueryExpression",style=filled,color="grey"];
+	org_hsqldb_QuerySpecification -> org_hsqldb_QueryExpression [label=extends];
+	org_hsqldb_QueryExpression -> org_hsqldb_QuerySpecification [label=uses];
+}

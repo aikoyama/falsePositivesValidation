@@ -1,0 +1,10 @@
+digraph cd {
+	org_argouml_ui_MultiEditorPane [label="<<package_exit>>
+org.argouml.ui.MultiEditorPane",style=filled,color="grey"];
+	org_argouml_ui_TabModelTarget [label="<<package_entry>>
+org.argouml.ui.TabModelTarget",style=filled,color="grey"];
+	org_argouml_uml_diagram_ui_TabDiagram [label="<<otherpackage1>>
+org.argouml.uml.diagram.ui.TabDiagram"];
+	org_argouml_ui_MultiEditorPane -> org_argouml_uml_diagram_ui_TabDiagram [label=uses];
+	org_argouml_uml_diagram_ui_TabDiagram -> org_argouml_ui_TabModelTarget [label=implements];
+}

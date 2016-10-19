@@ -1,0 +1,10 @@
+digraph cd {
+	org_htmlparser_Parser [label="<<package_exit>>
+org.htmlparser.Parser",style=filled,color="grey"];
+	org_htmlparser_Node [label="<<package_entry>>
+org.htmlparser.Node",style=filled,color="grey"];
+	org_htmlparser_util_NodeIterator [label="<<otherpackage1>>
+org.htmlparser.util.NodeIterator"];
+	org_htmlparser_Parser -> org_htmlparser_util_NodeIterator [label=uses];
+	org_htmlparser_util_NodeIterator -> org_htmlparser_Node [label=uses];
+}

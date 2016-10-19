@@ -1,0 +1,15 @@
+digraph cd {
+	org_hsqldb_jdbc_Util [label="<<package_exit>>
+org.hsqldb.jdbc.Util",style=filled,color="grey"];
+	org_hsqldb_jdbc_JDBCConnection [label="<<package_entry>>
+org.hsqldb.jdbc.JDBCConnection",style=filled,color="grey"];
+	org_hsqldb_HsqlException [label="<<otherpackage1>>
+org.hsqldb.HsqlException"];
+	org_hsqldb_Session [label="<<otherpackage2>>
+org.hsqldb.Session"];
+	org_hsqldb_result_Result [label="org.hsqldb.result.Result"];
+	org_hsqldb_jdbc_Util -> org_hsqldb_HsqlException [label=uses];
+	org_hsqldb_Session -> org_hsqldb_jdbc_JDBCConnection [label=uses];
+	org_hsqldb_HsqlException -> org_hsqldb_result_Result [label=uses];
+	org_hsqldb_result_Result -> org_hsqldb_Session [label=uses];
+}

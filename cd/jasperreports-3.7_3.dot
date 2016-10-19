@@ -1,0 +1,15 @@
+digraph cd {
+	net_sf_jasperreports_engine_base_JRBasePrintLine [label="<<package_exit>>
+net.sf.jasperreports.engine.base.JRBasePrintLine",style=filled,color="grey"];
+	net_sf_jasperreports_engine_base_JRBoxPen [label="<<package_entry>>
+net.sf.jasperreports.engine.base.JRBoxPen",style=filled,color="grey"];
+	net_sf_jasperreports_engine_JRDefaultStyleProvider [label="<<otherpackage1>>
+net.sf.jasperreports.engine.JRDefaultStyleProvider"];
+	net_sf_jasperreports_engine_JRLineBox [label="<<otherpackage2>>
+net.sf.jasperreports.engine.JRLineBox"];
+	net_sf_jasperreports_engine_JRStyle [label="net.sf.jasperreports.engine.JRStyle"];
+	net_sf_jasperreports_engine_base_JRBasePrintLine -> net_sf_jasperreports_engine_JRDefaultStyleProvider [label=uses];
+	net_sf_jasperreports_engine_JRLineBox -> net_sf_jasperreports_engine_base_JRBoxPen [label=uses];
+	net_sf_jasperreports_engine_JRDefaultStyleProvider -> net_sf_jasperreports_engine_JRStyle [label=uses];
+	net_sf_jasperreports_engine_JRStyle -> net_sf_jasperreports_engine_JRLineBox [label=uses];
+}

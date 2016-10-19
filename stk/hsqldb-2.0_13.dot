@@ -1,0 +1,8 @@
+digraph stk {
+	org_hsqldb_types_IntervalType [label="<<type>>
+org.hsqldb.types.IntervalType",style=filled,color="grey"];
+	org_hsqldb_types_DTIType [label="<<supertype>>
+org.hsqldb.types.DTIType",style=filled,color="grey"];
+	org_hsqldb_types_IntervalType -> org_hsqldb_types_DTIType [label=extends];
+	org_hsqldb_types_DTIType -> org_hsqldb_types_IntervalType [label=uses];
+}

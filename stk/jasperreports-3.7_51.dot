@@ -1,0 +1,10 @@
+digraph stk {
+	net_sf_jasperreports_engine_export_OccupiedGridCell [label="<<type>>
+net.sf.jasperreports.engine.export.OccupiedGridCell",style=filled,color="grey"];
+	net_sf_jasperreports_engine_export_JRExporterGridCell [label="<<supertype>>
+net.sf.jasperreports.engine.export.JRExporterGridCell",style=filled,color="grey"];
+	net_sf_jasperreports_engine_export_JRGridLayout [label="net.sf.jasperreports.engine.export.JRGridLayout"];
+	net_sf_jasperreports_engine_export_OccupiedGridCell -> net_sf_jasperreports_engine_export_JRExporterGridCell [label=extends];
+	net_sf_jasperreports_engine_export_JRExporterGridCell -> net_sf_jasperreports_engine_export_JRGridLayout [label=uses];
+	net_sf_jasperreports_engine_export_JRGridLayout -> net_sf_jasperreports_engine_export_OccupiedGridCell [label=uses];
+}

@@ -1,0 +1,10 @@
+digraph stk {
+	org_hsqldb_ExpressionOp [label="<<type>>
+org.hsqldb.ExpressionOp",style=filled,color="grey"];
+	org_hsqldb_Expression [label="<<supertype>>
+org.hsqldb.Expression",style=filled,color="grey"];
+	org_hsqldb_ExpressionLogical [label="org.hsqldb.ExpressionLogical"];
+	org_hsqldb_ExpressionOp -> org_hsqldb_Expression [label=extends];
+	org_hsqldb_Expression -> org_hsqldb_ExpressionLogical [label=uses];
+	org_hsqldb_ExpressionLogical -> org_hsqldb_ExpressionOp [label=uses];
+}

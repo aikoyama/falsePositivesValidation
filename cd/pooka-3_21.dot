@@ -1,0 +1,19 @@
+digraph cd {
+	net_suberic_pooka_gui_filter_MoveFilterEditor [label="<<package_exit>>
+net.suberic.pooka.gui.filter.MoveFilterEditor",style=filled,color="grey"];
+	net_suberic_pooka_gui_filter_FilterEditor [label="<<package_entry>>
+net.suberic.pooka.gui.filter.FilterEditor",style=filled,color="grey"];
+	net_suberic_pooka_gui_propedit_FolderSelectorPane [label="<<otherpackage1>>
+net.suberic.pooka.gui.propedit.FolderSelectorPane"];
+	net_suberic_pooka_SearchTermManager [label="<<otherpackage2>>
+net.suberic.pooka.SearchTermManager"];
+	net_suberic_pooka_gui_SearchTermIconManager [label="net.suberic.pooka.gui.SearchTermIconManager"];
+	net_suberic_pooka_FolderInfo [label="net.suberic.pooka.FolderInfo"];
+	net_suberic_pooka_StoreInfo [label="net.suberic.pooka.StoreInfo"];
+	net_suberic_pooka_gui_filter_MoveFilterEditor -> net_suberic_pooka_gui_propedit_FolderSelectorPane [label=uses];
+	net_suberic_pooka_SearchTermManager -> net_suberic_pooka_gui_filter_FilterEditor [label=uses];
+	net_suberic_pooka_gui_propedit_FolderSelectorPane -> net_suberic_pooka_StoreInfo [label=uses];
+	net_suberic_pooka_StoreInfo -> net_suberic_pooka_FolderInfo [label=uses];
+	net_suberic_pooka_FolderInfo -> net_suberic_pooka_gui_SearchTermIconManager [label=uses];
+	net_suberic_pooka_gui_SearchTermIconManager -> net_suberic_pooka_SearchTermManager [label=uses];
+}

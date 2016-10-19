@@ -1,0 +1,10 @@
+digraph cd {
+	com_ecyrd_jspwiki_workflow_WorkflowBuilder [label="<<package_exit>>
+com.ecyrd.jspwiki.workflow.WorkflowBuilder",style=filled,color="grey"];
+	com_ecyrd_jspwiki_workflow_Fact [label="<<package_entry>>
+com.ecyrd.jspwiki.workflow.Fact",style=filled,color="grey"];
+	com_ecyrd_jspwiki_WikiEngine [label="<<otherpackage1>>
+com.ecyrd.jspwiki.WikiEngine"];
+	com_ecyrd_jspwiki_workflow_WorkflowBuilder -> com_ecyrd_jspwiki_WikiEngine [label=uses];
+	com_ecyrd_jspwiki_WikiEngine -> com_ecyrd_jspwiki_workflow_Fact [label=uses];
+}
